@@ -1,8 +1,5 @@
-This is a simple example:
-::
+Intro - XML Travelgate Developers
+===========
 
-    import math
-    print 'import done'
-    
-    fgn
-    
+Overview
+--------
