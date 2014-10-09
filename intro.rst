@@ -1,5 +1,8 @@
-Intro - XML Travelgate Developers
-===========
+This is a simple example:
+::
 
-Overview
---------
+    import math
+    print 'import done'
+    
+    fgn
+    
