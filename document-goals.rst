@@ -1,5 +1,6 @@
+##############
 Document Goals
---------------
+##############
 
 | This document aims to explain all aspects of **XML Travelgate**'s
 Hotel API specification. In the next pages you can find detailed

@@ -1,5 +1,6 @@
+#################
 Service Endpoints
------------------
+#################
 
 Service Endpoints, WSDLs and XML schemas describing the request and
 response XML structures can be found in:
