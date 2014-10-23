@@ -24,9 +24,8 @@ Welcome to XML Travelgate API Docs's documentation!
   SOAP Examples <soap-examples.rst>
   
    
-
   Index and tables
-==================
+  ================
 
 * :ref:`genindex` 
 * :ref:`modindex`
