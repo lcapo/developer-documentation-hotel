@@ -1,5 +1,6 @@
 Common Elements
 ===============
+
 This node will be in every request and response objects. 
 
 The request objects contains the provider's configuration, urls and credentials.
