@@ -78,6 +78,6 @@ the specific objects related to the operation
 .. include:: ./hotel/RoomList.rst
 .. include:: ./hotel/CategoryList.rst
 .. include:: ./hotel/StaticConfiguration.rst
-.. include:: ./hotel/RuntimeConfiguration.rst
+.. include:: ./hotel/RunTimeConfiguration.rst
 .. include:: ./hotel/ModifyValuation.rst
 .. include:: ./hotel/ModifyReservation.rst
