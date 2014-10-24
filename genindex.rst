@@ -3,9 +3,9 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-####################################################
-Welcome to XML Traveelgate API Docs's documentation!
-####################################################
+###################################################
+Welcome to XML Travelgate API Docs's documentation!
+###################################################
 
 **Contents:**
 
@@ -24,9 +24,4 @@ Welcome to XML Traveelgate API Docs's documentation!
   SOAP Examples <soap-examples.rst>
   
 
-Indices and tables
-==================
 
-* :ref:`genindex` 
-* :ref:`modindex`
-* :ref:`search`
