@@ -1,3 +1,7 @@
+.. highlight:: xml
+
+.. code-block:: xml
+
 #############
 SOAP Examples
 #############
