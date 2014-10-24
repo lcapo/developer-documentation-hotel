@@ -3,26 +3,30 @@ GeographicDestinationTree
 
 **Method Goals**
 
-| 
-| This method returns the provider's geographic tree where each node
+|
+
+This method returns the provider's geographic tree where each node
 indicates whether the call is accessible from availability.
 
 |
 
 **Request Format**
 
-| 
-| The request not requires any element, it is empty.
+|
+
+The request not requires any element, it is empty.
 
 |
 
 **Response Format**
 
-| 
-| The result returns a list of *DestinationTree* with corresponding
+|
+
+The result returns a list of *DestinationTree* with corresponding
 sub-destinations.
 
-| 
+|
+
 *GeographicDestinationTreeRQ* Example
 -------------------------------------
 
@@ -31,7 +35,8 @@ sub-destinations.
     <GeographicDestinationTreeRQ>
     </GeographicDestinationTreeRQ>
 
-| 
+|
+
 *GeographicDestinationTreeRQ* Description
 -----------------------------------------
 
@@ -42,6 +47,7 @@ sub-destinations.
 +----------------------------+----------+----------+---------------------------------------------------------------------------------------------+
 
 |
+
 *GeographicDestinationTreeRS* Example
 -------------------------------------
 
@@ -71,7 +77,8 @@ sub-destinations.
         . . .
     </GeographicDestinationTreeRS>
 
-| 
+|
+
 *GeographicDestinationTreeRS* Description
 -----------------------------------------
 
