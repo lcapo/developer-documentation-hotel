@@ -23,5 +23,9 @@ Welcome to XML Travelgate API Docs's documentation!
   General Structure<general-structure.rst>
   SOAP Examples <soap-examples.rst>
   
+  
+  Indices
+  =======
+  
 
 
