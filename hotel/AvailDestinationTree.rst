@@ -3,26 +3,30 @@ AvailDestinationTree
 
 **Method Goals**
 
-| 
-| This method returns the tree of destinations accessible from the call
+|
+
+This method returns the tree of destinations accessible from the call
 *Avail* .
 
 |
 
 **Request Format**
 
-| 
-| The request does not require any elements empty request.
+|
+
+The request does not require any elements empty request.
 
 |
 
 **Response Format**
 
-| 
-| The result returns a list of *DestinationTree* with their
+|
+
+The result returns a list of *DestinationTree* with their
 corresponding sub-destinations.
 
-| 
+|
+
 *AvailDestinationTreeRQ* Example
 --------------------------------
 
@@ -31,7 +35,8 @@ corresponding sub-destinations.
     <AvailDestinationTreeRQ>
     </AvailDestinationTreeRQ>
 
-| 
+|
+
 *AvailDestinationTreeRQ* Description
 ------------------------------------
 
@@ -42,6 +47,7 @@ corresponding sub-destinations.
 +------------------------+----------+----------+---------------------------------------------------------------------------------------------+
 
 |
+
 *AvailDestinationTreeRS* Example
 --------------------------------
 
@@ -70,7 +76,8 @@ corresponding sub-destinations.
         . . .
     </AvailDestinationTreeRS>
 
-| 
+|
+
 *AvailDestinationTreeRS* Description
 ------------------------------------
 
