@@ -1,14 +1,17 @@
+.. highlight:: xml
 
+.. code-block:: xml
 
 #############
 SOAP Examples
 #############
 
-.. code-block:: html
-        
+
+
+
 ::
 
-	<soapenv:Envelope
+    <soapenv:Envelope
 		xmlns:soapenv = "http://schemas.xmlsoap.org/soap/envelope/"
 		xmlns:ns = "http://schemas.xmltravelgate.com/hub/2012/06"
 		xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
