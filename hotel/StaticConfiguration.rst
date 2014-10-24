@@ -4,6 +4,7 @@ StaticConfiguration
 **Method Goals**
 
 |
+
 This message provides information about the static configuration of
 the provider, to see and configure the provider in the best way.
 
