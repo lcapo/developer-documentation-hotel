@@ -15,10 +15,12 @@ will always return all results returned by the provider.
 **Request Format**
 
 |
+
 The availability request is very straight forward. It only requires
 the destination, the traveling dates and the paxes of the rooms.
 
 |
+
 **Response Format**
 
 | 
@@ -26,18 +28,24 @@ the destination, the traveling dates and the paxes of the rooms.
 
 -  *Hotel* :
 
-| A list with all the hotels, including the name and code hotel,
+|
+
+A list with all the hotels, including the name and code hotel,
 *mealplans* list, etc returned by the provider.
 
 -  *Mealplans* :
 
-| A list of all MealPlans returned by the provider, every *mealplan*
+|
+
+A list of all MealPlans returned by the provider, every *mealplan*
 including the mealplan's code. Every *mealplan* also contains a list of
 the *options* for this availability.
 
 -  *Options* :
 
-| A list with all the *options* returned for each mealplan, every
+|
+
+A list with all the *options* returned for each mealplan, every
 *option* includes the total price, conditions and description each room.
 | The price returned should be "all inclusive". All fares, taxes and
 discounts are already included in the total price.
