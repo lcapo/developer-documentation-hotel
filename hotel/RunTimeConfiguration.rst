@@ -3,25 +3,29 @@ RuntimeConfiguration
 
 **Method Goals**
 
-| 
-| This message lets you know the provider configuration template.
+|
+
+This message lets you know the provider configuration template.
 
 |
 
 **Request Format**
 
-| 
-| The request does not require any elements empty request.
+|
+
+The request does not require any elements empty request.
 
 |
 
 **Response Format**
 
-| 
-| The returned XML contains a template of all fields used by the
+|
+
+The returned XML contains a template of all fields used by the
 provider.
 
-| 
+|
+
 RuntimeConfigurationRQ Example
 ------------------------------
 
@@ -30,7 +34,8 @@ RuntimeConfigurationRQ Example
     <RuntimeConfigurationRQ>
     </RuntimeConfigurationRQ>
 
-| 
+|
+
 *RuntimeConfigurationRQ* Description
 ------------------------------------
 
@@ -42,6 +47,7 @@ RuntimeConfigurationRQ Example
 
 
 |
+
 *RuntimeConfigurationRS* Example
 --------------------------------
 
@@ -58,7 +64,8 @@ RuntimeConfigurationRQ Example
         </Configuration>
     </RuntimeConfigurationRS>
 
-| 
+|
+
 *ConfiguracionRunTimeRS* Description
 ------------------------------------
 
