@@ -5,7 +5,6 @@ SOAP Examples
 #############
 
 .. code-block:: html
-    :linenos:
         
 ::
 
