@@ -3,26 +3,30 @@ DescriptiveInfo
 
 **Method Goals**
 
-| 
-| This method returns the details of a hotel (pictures, descriptions
+|
+
+This method returns the details of a hotel (pictures, descriptions
 ...) for a given language.
 
 |
 
 **Request Format**
 
-| 
-| The request just requires the hotel code and language code (ISO-639-1)
+|
+
+The request just requires the hotel code and language code (ISO-639-1)
 ( this is specified within the source-->languageCode).
 
 |
 
 **Response Format**
 
-| 
-| The result returns the details of that hotel.
+|
 
-| 
+The result returns the details of that hotel.
+
+|
+
 *DescriptiveInfoRQ* Example
 ---------------------------
 
@@ -34,7 +38,8 @@ DescriptiveInfo
         </Hotel>
     </DescriptiveInfoRQ>
 
-| 
+|
+
 *DescriptiveInfoRQ* Description
 -------------------------------
 
@@ -50,7 +55,8 @@ DescriptiveInfo
 | /Hotel/Code         | 1        | String   | Code.                                                                                       |
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
 
-| 
+|
+
 *DescriptiveInfoRS* Example
 ---------------------------
 
@@ -98,7 +104,8 @@ DescriptiveInfo
         </Hotel>
     </DescriptiveInfoRS>
 
-| 
+|
+
 *DescriptiveInfoRS* Description
 -------------------------------
 
