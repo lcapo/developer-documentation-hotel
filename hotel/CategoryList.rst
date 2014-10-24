@@ -17,6 +17,7 @@ will be used in the list of hotels response.
 The request does not require any elements empty request.
 
 |
+
 **Response Format**
 
 |
