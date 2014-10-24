@@ -24,8 +24,8 @@ Welcome to XML Travelgate API Docs's documentation!
   SOAP Examples <soap-examples.rst>
   
   
-  Indices
-  =======
+Indices
+=======
   
 
 
