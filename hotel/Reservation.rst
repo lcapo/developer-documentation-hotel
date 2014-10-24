@@ -10,21 +10,27 @@ Reservation
 
 **Request Format**
 
-| 
-| The request format works the same way as the *Valuation* request but
+|
+
+The request format works the same way as the *Valuation* request but
 with the list of passengers.
 
 |
 
 **Response Format**
 
-| 
-| The result returns the booking locator (booking code). It can be the
+|
+
+The result returns the booking locator (booking code). It can be the
 provider's or the one sent in the request.
-| It also returns all the charges associated to the booking and the
+
+|
+
+It also returns all the charges associated to the booking and the
 state of booking.
 
-| 
+|
+
 *ReservationRQ* Example
 -----------------------
 
@@ -66,7 +72,8 @@ state of booking.
         </RoomCandidates>
     </ReservationRQ>
 
-| 
+|
+
 *ReservationRQ* Description
 ---------------------------
 
@@ -142,7 +149,8 @@ state of booking.
 | *@id*                                    | 1        | Integer   | Passenger id (starting at 1).                                                                                                                            |
 +------------------------------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-| 
+|
+
 *ReservationRS* Example
 -----------------------
 
@@ -154,7 +162,8 @@ state of booking.
         <Price currency = "EUR" amount = "36.20" binding = "false" commission = "-1"/>
     </ReservationRS>
 
-| 
+|
+
 *ReservationRS* Description
 ---------------------------
 
