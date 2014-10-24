@@ -7,12 +7,14 @@ Valuation
 | This method aims to return the total price and cancel policies of the selected *Option*. This *Option* **must** be selected in the previous step (*Avail*).
 
 |
+
 **Request Format**
 
 | 
 | The *Valuation* request is same that availabilityRQ and add rooms and Mealplan code.
 
 |
+
 **Response Format**
 
 | 
@@ -45,7 +47,8 @@ Valuation
         </RoomCandidates>
     </ValuationRQ>
 
-|
+
+
 *ValuationRQ* Description
 -------------------------
 
@@ -99,7 +102,8 @@ Valuation
 | *@value*                                 | 1        | String    | Contains the value of the parameter                                     |
 +------------------------------------------+----------+-----------+-------------------------------------------------------------------------+
 
-| 
+|
+
 *ValuationRS* Example
 ---------------------
 
@@ -119,7 +123,8 @@ Valuation
         <Remarks/>
     </ValuationRS>
 
-| 
+|
+
 *ValuationRS* Description
 -------------------------
 
