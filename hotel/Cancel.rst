@@ -3,15 +3,17 @@ Cancel
 
 **Method Goals**
 
-| 
-| This method aims to cancel a booking
+|
+
+This method aims to cancel a booking
 
 |
 
 **Request Format**
 
-| 
-| The request requires one of the following data depending on provider:
+|
+
+The request requires one of the following data depending on provider:
 
 -  *Locators*: booking codes (this element contains two elements
    *Client* (client's booking code) and *Provider* (provider's booking
@@ -24,11 +26,13 @@ Cancel
 
 **Response Format**
 
-| 
-| The result returns a response with the state of booking, the
+|
+
+The result returns a response with the state of booking, the
 cancellation's identification and the fee for that cancellation.
 
 |
+
 *CancelRQ* Example
 ------------------
 
@@ -43,7 +47,8 @@ cancellation's identification and the fee for that cancellation.
         <EndDate>20/10/2015</EndDate>
     </CancelRQ>
 
-| 
+|
+
 *CancelRQ* Description
 ----------------------
 
@@ -65,7 +70,8 @@ cancellation's identification and the fee for that cancellation.
 | EndDate             | 1        | String   | End date of booking.                                                                        |
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
 
-| 
+|
+
 *CancelRS* Example
 ------------------
 
@@ -82,7 +88,8 @@ cancellation's identification and the fee for that cancellation.
          <Price  currency="EUR" amount="120.5" binding="false" commission="-1"/>
     </CancelRS>
 
-| 
+|
+
 *CancelRS* Description
 ----------------------
 
