@@ -187,6 +187,7 @@ discounts are already included in the total price.
 
 
 |
+
 *AvailRS* Description
 ---------------------
 
