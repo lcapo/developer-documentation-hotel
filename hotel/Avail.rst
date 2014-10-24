@@ -4,16 +4,18 @@ Avail
 **Method Goals**
 
 
-| 
-| This method aims to return all the available options for a given date
+|
+
+This method aims to return all the available options for a given date
 and itinerary. It does not filter different classes, times or fares. It
 will always return all results returned by the provider.
 
 |
+
 **Request Format**
 
-| 
-| The availability request is very straight forward. It only requires
+|
+The availability request is very straight forward. It only requires
 the destination, the traveling dates and the paxes of the rooms.
 
 |
@@ -41,6 +43,7 @@ the *options* for this availability.
 discounts are already included in the total price.
 
 |
+
 **Remarks**
 
 | 
@@ -59,6 +62,7 @@ discounts are already included in the total price.
    this price is mandatory depends if binding price is true /false).
 
 |
+
 *AvailRQ* Example
 -----------------
 
@@ -83,6 +87,7 @@ discounts are already included in the total price.
     </AvailRQ>
 
 |
+
 *AvailRQ* Description
 ---------------------
 
@@ -118,6 +123,7 @@ discounts are already included in the total price.
 
 
 |
+
 *AvailRS* Example
 -----------------
 
