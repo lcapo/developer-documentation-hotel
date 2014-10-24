@@ -3,14 +3,17 @@ ReservationRead
 
 **Method Goals**
 
-| 
-| This method aims to retrieve a booking with its full details.
+|
+
+This method aims to retrieve a booking with its full details.
 
 |
+
 **Request Format**
 
-| 
-| The request requires one of the following data depending on provider:
+|
+
+The request requires one of the following data depending on provider:
 
 -  *Locators*: booking codes (this element contains two elements
    *Client* (client's booking code) and *Provider* (provider's booking
@@ -24,12 +27,14 @@ ReservationRead
 
 **Response Format**
 
-| 
-| The result returns the full details of a booking. It is very similar
+|
+
+The result returns the full details of a booking. It is very similar
 to the *Option* in the Availability Response, the cancel policies and
 holder of booking.
 
 |
+
 *ReservationReadRQ* Example
 ---------------------------
 
@@ -46,7 +51,8 @@ holder of booking.
         <CreationDate>17/01/2014</CreationDate>
     </ReservationReadRQ>
 
-| 
+|
+
 *ReservationReadRQ* Description
 -------------------------------
 
@@ -70,7 +76,8 @@ holder of booking.
 | CreationDate        | 1        | String   | Creation date of booking.                                                                   |
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
 
-| 
+|
+
 *ReservationReadRS* Example
 ---------------------------
 
