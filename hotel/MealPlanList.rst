@@ -3,35 +3,40 @@ MealPlanList
 
 **Method Goals**
 
-| 
-| This method aims to return a list of the available Mealplans, which
+|
+
+This method aims to return a list of the available Mealplans, which
 will be used in the availability response.
 
 |
 
 **Request Format**
 
-| 
-| The request does not require any elements empty request.
+|
+
+The request does not require any elements empty request.
 
 |
 
 **Response Format**
 
-| 
-| The result returns a list of *MealPlan*.
+|
+
+The result returns a list of *MealPlan*.
 
 |
 
 **Remarks**
 
-| 
-| If the provider has more than 100 mealplan codes, or more than 20
+|
+
+If the provider has more than 100 mealplan codes, or more than 20
 codes for one single mealplan, this code will be mapped to XML
 Travelgate's code. `Link to List of
 Codes <#Link%20to%20List%20of%20Codes>`__
 
 |
+
 *MealPlanRQ* Example
 --------------------
 
@@ -40,7 +45,8 @@ Codes <#Link%20to%20List%20of%20Codes>`__
     <MealPlanListRQ>
     </MealPlanListRQ>
 
-| 
+|
+
 *MealPlanListRQ* Description
 ----------------------------
 
@@ -51,6 +57,7 @@ Codes <#Link%20to%20List%20of%20Codes>`__
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
 
 |
+
 *MealPlanListRS* Example
 ------------------------
 
@@ -71,7 +78,8 @@ Codes <#Link%20to%20List%20of%20Codes>`__
         </MealPlans>
     </MealPlanListRS>
 
-| 
+|
+
 *MealPlanListRS* Description
 ----------------------------
 
