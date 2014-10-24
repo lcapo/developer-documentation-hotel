@@ -9,7 +9,7 @@ The response object contains the operation status and errors if any.
 
 |
 
-*Common Element*s RQ Example
+*Common Elements* RQ Example
 ----------------------------
 
 ::
