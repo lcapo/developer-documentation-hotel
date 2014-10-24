@@ -3,24 +3,28 @@ ModifyReservation
 
 **Method Goals**
 
-| 
-| This message confirm a modification
+|
+
+This message confirm a modification
 
 |
 
 **Request Format**
 
-| 
-| The request require the valuation returned for ModifyValuationRS
+|
+
+The request require the valuation returned for ModifyValuationRS
 
 |
 
 **Response Format**
 
-| 
-| The XML returned contains a confirmation booking
+|
 
-| 
+The XML returned contains a confirmation booking
+
+|
+
 *ModifyReservationRQ* Example
 -----------------------------
 
@@ -80,7 +84,8 @@ ModifyReservation
         </Parameters>
     </ModifyReservationRQ>
 
-| 
+|
+
 *ModifyReservationRQ* Description
 ---------------------------------
 
@@ -198,7 +203,8 @@ ModifyReservation
 | *@value*                                                                    | 1        | String    | Contains the value of the parameter.                                                                                                                     |
 +-----------------------------------------------------------------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-| 
+|
+
 *ModifyReservationRS* Example
 -----------------------------
 
@@ -210,7 +216,8 @@ ModifyReservation
         <ResStatus>OK</ResStatus>
     </ModifyReservationRS>
 
-| 
+|
+
 *ModifyReservationRS* Description
 ---------------------------------
 
