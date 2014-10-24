@@ -3,29 +3,32 @@ StaticConfiguration
 
 **Method Goals**
 
-| 
-| This message provides information about the static configuration of
+|
+This message provides information about the static configuration of
 the provider, to see and configure the provider in the best way.
 
 |
 
 **Request Format**
 
-| 
-| The request does not require any elements empty request.
+|
+
+The request does not require any elements empty request.
 
 |
 
 **Response Format**
 
-| 
-| The XML returned contains more elements on the configuration (number
+|
+
+The XML returned contains more elements on the configuration (number
 of hotels, the number of cities and the number of areas of availability,
 if the provider returns the cancellation policies, maximum number of
 distributions, maximum number of paxes in a distribution, release days,
 stay minimum, list of languages that allows ....).
 
-| 
+|
+
 *StaticConfigurationRQ* Example
 -------------------------------
 
@@ -34,7 +37,8 @@ stay minimum, list of languages that allows ....).
     <StaticConfigurationRQ>
     </StaticConfigurationRQ>
 
-| 
+|
+
 *StaticConfigurationRQ* Description
 -----------------------------------
 
@@ -45,6 +49,7 @@ stay minimum, list of languages that allows ....).
 +----------------------+----------+----------+---------------------------------------------------------------------------------------------+
 
 |
+
 *StaticConfigurationRS* Example
 -------------------------------
 
@@ -114,7 +119,8 @@ stay minimum, list of languages that allows ....).
         </ModifyTransactions>
     </StaticConfigurationRS>
 
-| 
+|
+
 *StaticConfigurationRS* Description
 -----------------------------------
 
