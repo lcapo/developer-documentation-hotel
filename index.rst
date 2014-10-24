@@ -22,11 +22,3 @@ Welcome to XML Travelgate API Docs's documentation!
   Anatomy of a request<anatomy-request.rst>
   General Structure<general-structure.rst>
   SOAP Examples <soap-examples.rst>
-  
-   
-  Index and tables
-  ================
-
-* :ref:`genindex` 
-* :ref:`modindex`
-* :ref:`search`
