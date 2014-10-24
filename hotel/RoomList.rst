@@ -3,34 +3,39 @@ RoomList
 
 **Method Goals**
 
-| 
-| This method aims to return a list of the available rooms code, which
+|
+
+This method aims to return a list of the available rooms code, which
 will be used in the availability response.
 
 |
 
 **Request Format**
 
-| 
-| The request does not require any elements empty request.
+|
+
+The request does not require any elements empty request.
 
 |
 
 **Response Format**
 
-| 
-| The result returns a list of *RoomInfo*.
+|
+
+The result returns a list of *RoomInfo*.
 
 |
 
 **Remarks**
 
-| 
-| This message must be implemented solely in case it can not be provided
+|
+
+This message must be implemented solely in case it can not be provided
 the description is room in the hotel availability. ( It is indicated in
 *StaticConfiguration* )
 
 |
+
 *RoomListRQ* Example
 --------------------
 
@@ -39,7 +44,8 @@ the description is room in the hotel availability. ( It is indicated in
     <RoomListRQ>
     </RoomListRQ>
 
-| 
+|
+
 *RoomListRQ* Description
 ------------------------
 
@@ -50,6 +56,7 @@ the description is room in the hotel availability. ( It is indicated in
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
 
 |
+
 *RoomListRS* Example
 --------------------
 
@@ -70,7 +77,8 @@ the description is room in the hotel availability. ( It is indicated in
         </RoomsInfo>
     </RoomListRS>
 
-| 
+|
+
 *RoomListRS* Description
 ------------------------
 
