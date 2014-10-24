@@ -113,7 +113,8 @@ holder of booking.
                 </TransactionStatus>
     </ReservationReadRS>
 
-| 
+|
+
 *ReservationReadRS* Description
 -------------------------------
 
