@@ -3,14 +3,16 @@ ReservationList
 
 **Method Goals**
 
-| 
-| This method aims to return a list of bookings for a given time period
+|
+
+This method aims to return a list of bookings for a given time period
 being that either booking date or the traveling date.
 
 **Request Format**
 
-| 
-| The request requires one of the following data depending on provider:
+|
+
+The request requires one of the following data depending on provider:
 
 -  *DateType*: indicates the date type: either booking creation date or
    booking start date
@@ -21,11 +23,12 @@ being that either booking date or the traveling date.
 
 **Response Format**
 
-| 
-| The result returns a list of bookings details, with the same format as
-*ReservationReadRS*.
+|
+
+The result returns a list of bookings details, with the same format as *ReservationReadRS*.
 
 |
+
 *ReservationListRQ* Example
 ---------------------------
 
@@ -56,7 +59,8 @@ being that either booking date or the traveling date.
 | Currency            | 1        | String   | Currency code.                                          |
 +---------------------+----------+----------+---------------------------------------------------------+
 
-| 
+|
+
 *ReservationListRS* Example
 ---------------------------
 
@@ -136,7 +140,8 @@ being that either booking date or the traveling date.
         </Reservations>
     </ReservationListRS>
 
-| 
+
+
 *ReservationListRS* Description
 -------------------------------
 
