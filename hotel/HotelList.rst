@@ -3,33 +3,38 @@ HotelList
 
 **Method Goals**
 
-| 
-| This method returns a list of hotels, where every hotel contains basic
+|
+
+This method returns a list of hotels, where every hotel contains basic
 information ( code, name, address, phone...)
 
 |
 
 **Request Format**
 
-| 
-| The request does not require any elements. Empty request.
+|
+
+The request does not require any elements. Empty request.
 
 |
 
 **Response Format**
 
-| 
-| The result returns a list of *Hotel* (hotels).
+|
+
+The result returns a list of *Hotel* (hotels).
 
 |
 
 **Remarks**
 
-| 
-| This method may be preloaded in **XML Travelgate**'s system if it
+|
+
+This method may be preloaded in **XML Travelgate**'s system if it
 takes more than 5 minutes to download.
 
 |
+
 *HotelListRQ* Example
 ---------------------
 
@@ -38,7 +43,8 @@ takes more than 5 minutes to download.
     <HotelListRQ>
     </HotelListRQ>
 
-| 
+|
+
 *HotelListRQ* Description
 -------------------------
 
@@ -50,6 +56,7 @@ takes more than 5 minutes to download.
 
 
 |
+
 *HotelListRS* Example
 ---------------------
 
@@ -97,7 +104,8 @@ takes more than 5 minutes to download.
         </Hotels>
     </HotelListRS>
 
-| 
+|
+
 *HotelListRS* Description
 -------------------------
 
