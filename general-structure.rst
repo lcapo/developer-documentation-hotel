@@ -1,8 +1,5 @@
 .. highlight:: xml
 
-.. code-block:: xml
-
-
 #################
 General Structure
 #################
