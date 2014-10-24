@@ -3,23 +3,28 @@ CategoryList
 
 **Method Goals**
 
-| 
-| This method aims to return a list of the available categories, which
+|
+
+This method aims to return a list of the available categories, which
 will be used in the list of hotels response.
 
 |
+
 **Request Format**
 
-| 
-| The request does not require any elements empty request.
+|
+
+The request does not require any elements empty request.
 
 |
 **Response Format**
 
-| 
-| The result returns a list of *Category* .
+|
 
-| 
+The result returns a list of *Category* .
+
+|
+
 *CategoryListRQ* Example
 ------------------------
 
@@ -28,7 +33,8 @@ will be used in the list of hotels response.
     <CategoryListRQ>
     </CategoryListRQ>
 
-| 
+|
+
 *CategoryListRQ* Description
 ----------------------------
 
@@ -39,6 +45,7 @@ will be used in the list of hotels response.
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
 
 |
+
 *CategoryListRS* Example
 ------------------------
 
@@ -59,7 +66,8 @@ will be used in the list of hotels response.
         </Categories>
     </CategoryListRS>
 
-| 
+|
+
 *CategoryListRS* Description
 ----------------------------
 
