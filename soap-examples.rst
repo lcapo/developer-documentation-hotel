@@ -1,11 +1,12 @@
-.. highlight:: xml
 
-.. code-block:: xml
 
 #############
 SOAP Examples
 #############
 
+.. code-block:: html
+    :linenos:
+        
 ::
 
 	<soapenv:Envelope
