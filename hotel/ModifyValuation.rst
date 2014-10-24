@@ -3,16 +3,18 @@ ModifyValuation
 
 **Method Goals**
 
-| 
-| This message lets you know if it is possible a modify, and new price
+|
+
+This message lets you know if it is possible a modify, and new price
 of that.
 
 |
 
 **Request Format**
 
-| 
-| The request require the reservation and all modifications will be
+|
+
+The request require the reservation and all modifications will be
 apply ( these will depend on what is specified in the
 *StaticConfiguration* )
 
@@ -20,10 +22,12 @@ apply ( these will depend on what is specified in the
 
 **Response Format**
 
-| 
-| The XML returned contains a simulation of the new booking.
+|
 
-| 
+The XML returned contains a simulation of the new booking.
+
+|
+
 *ModifyValuationRQ* Example
 ---------------------------
 
@@ -76,7 +80,8 @@ apply ( these will depend on what is specified in the
         </Modifications>
     </ModifyValuationRQ>
 
-| 
+|
+
 *ModifyValuationRQ* Description
 -------------------------------
 
@@ -165,7 +170,8 @@ apply ( these will depend on what is specified in the
 | *@commission*                                                               | 1        | Decimal   | Commission ( -1 = not specified (will come indicated with the provider contract ), 0 = net price, X = % of the commission that applies to the amount).   |
 +-----------------------------------------------------------------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-| 
+|
+
 *ModifyValuationRS* Example
 ---------------------------
 
@@ -181,7 +187,8 @@ apply ( these will depend on what is specified in the
         </Parameters>
     </ModifyValuationRS>
 
-| 
+|
+
 *ModifyValuationRS* Description
 -------------------------------
 
