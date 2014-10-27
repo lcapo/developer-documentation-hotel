@@ -40,7 +40,7 @@ Standard codes
 +-----------+------------------------------------------------------+
 | Code      | Description                                          |
 +===========+======================================================+
-| 101       | Excpetion of the System (Exception not controlled or |
+| 101       | Exception of the System (Exception not controlled or |
 |           | tipified as generic exceptions )                     |
 +-----------+------------------------------------------------------+
 | 102       | Error controlled by the provider ( Errors controlled |
