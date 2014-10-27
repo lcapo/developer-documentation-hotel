@@ -11,7 +11,7 @@ Frequently asked questions!
 #. **What is a static download and why do we use it?**
 
     There are times when you want to do a call of your information online, 
-    but this call can take more that 5 minutes, so, how can we do this quicker?, 
-    We will download all of your necessary information to our server,
+    but this call can take more that 5 minutes, so, how can we do this quicker?
+    We will download all of your information necessary to our server,
     so when this happens, and we can send you the static information
     that we have loaded in our system.
