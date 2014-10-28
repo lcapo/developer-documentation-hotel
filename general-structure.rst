@@ -60,22 +60,9 @@ the specific objects related to the operation
 
 |
 
-.. include:: ./hotel/Common-Elements.rst
-.. include:: ./hotel/Avail.rst
-.. include:: ./hotel/Valuation.rst
-.. include:: ./hotel/Reservation.rst
-.. include:: ./hotel/ReservationRead.rst
-.. include:: ./hotel/ReservationList.rst
-.. include:: ./hotel/Cancel.rst
-.. include:: ./hotel/HotelList.rst
-.. include:: ./hotel/DescriptiveInfo.rst
-.. include:: ./hotel/AvailDestinationTree.rst
-.. include:: ./hotel/GeographicDestinationTree.rst
-.. include:: ./hotel/MealPlanList.rst
-.. include:: ./hotel/RoomList.rst
-.. include:: ./hotel/CategoryList.rst
-.. include:: ./hotel/StaticConfiguration.rst
-.. include:: ./hotel/RunTimeConfiguration.rst
-.. include:: ./hotel/ModifyValuation.rst
-.. include:: ./hotel/ModifyReservation.rst
-.. include:: ./hotel/MasterData.rst
+.. toctree::
+  :maxdepth: 3
+  :numbered:
+
+  common elements<./hotel/Common-Elements.rst>
+ 
