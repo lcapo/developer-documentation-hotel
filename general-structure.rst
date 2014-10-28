@@ -51,9 +51,8 @@ Each request sent to the **service url** requires a node called
 
 |
 
-**************
 Data Structure
-**************
+==============
 
 The data structure will always have common elements in all objects and
 the specific objects related to the operation
