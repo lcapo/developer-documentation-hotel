@@ -128,7 +128,8 @@ SOAP Examples
 	              <PaymentType>MerchantPay</PaymentType>
 	              <OptionType>Hotel</OptionType>
 	              <Rooms>
-	                <Room id = "91" roomCandidateRefId = "1" code = "91" description = "Standard Room"/>
+	                <Room id = "91" roomCandidateRefId = "1" code = "91" 
+	                description = "Standard Room"/>
 	              </Rooms>
 	              <RoomCandidates>
 	                <RoomCandidate id = "1">
