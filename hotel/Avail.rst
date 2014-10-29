@@ -320,3 +320,27 @@ discounts are already included in the total price.
 +---------------------------------------------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 |
+
+PaymentOptions
+==============
+
+|
+
+**MerchantPay:** The costumer pays the client and the client will pay de provider.
+
+|
+
+**LaterPay:** The costumer will have to use a credit-card as a guaranty for the hotel and the 
+payment will be done by the costumer at checking.
+
+|
+
+**CardBookingPay:** The client will create a virtual credit-card with the exact amount of the 
+option so he can pay the provider/hotel. The provider will charge the payment on the reservation day.
+
+|
+
+**CardChekingPay:** The client will create a virtual credit-card with the exact amount of the 
+option so he can pay the provider/hotel. The provider will charge the payment on the checking day.
+
+|
