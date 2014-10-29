@@ -322,7 +322,7 @@ discounts are already included in the total price.
 |
 
 PaymentOptions
-==============
+--------------
 
 |
 
