@@ -8,4 +8,4 @@ Service Endpoints and WSDLs:
 
 Hotel XSD Schemas describing the request and response XML structures:
 
-- `Hotel XSDs <./hotel/XSD/hotel.xsd>`__
+- :download:`Hotel XSDs <./hotel/XSD/hotel.xsd>`
