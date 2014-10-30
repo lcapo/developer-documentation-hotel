@@ -257,10 +257,3 @@ texinfo_documents = [
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
 
-# Activate the theme.
-sys.path.append(os.path.abspath('_themes'))
-html_theme_path = ['_themes']
-html_theme = 'bootstrap'
-
-# Optional. Use a shorter name to conserve nav. bar space.
-html_short_title = 'Demo'
