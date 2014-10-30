@@ -12,7 +12,7 @@ Welcome to XML Travelgate API Docs's documentation!
   Intro<intro.rst>
   Audience<audience.rst>
   Document Goals<document-goals.rst>
-  Service Endpoints<end-points.rst>
+  Service Definitions<end-points.rst>
   Hotel FAQ <FAQ.rst>
   Anatomy of a request<anatomy-request.rst>
   General Structure<general-structure.rst>
