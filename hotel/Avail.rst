@@ -99,35 +99,35 @@ discounts are already included in the total price.
 *AvailRQ* Description
 ---------------------
 
-+------------------------------------------+----------+-----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-| Element                                  | Number   | Type      | Description                                                                                                                                         |
-+==========================================+==========+===========+=====================================================================================================================================================+
-| AvailRQ                                  | 1        |           | Root node.                                                                                                                                          |
-+------------------------------------------+----------+-----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-| CancellationPolicies                     | 1        | Boolean   | Indicates if you want to receive the cancellation policies in AvailRS, as long as the provider returns it in this call (see StaticConfiguration).   |
-+------------------------------------------+----------+-----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-| AvailDestinations/Destination            | 0..n     |           | Contains the list of destinations filters ( hotels or cities or zones or geocodes).                                                                 |
-+------------------------------------------+----------+-----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-| *@type*                                  | 1        | String    | Destination type ( HOT, CTY, ZON, GEO).                                                                                                             |
-+------------------------------------------+----------+-----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-| *@code*                                  | 1        | String    | Native destination code as returned by provider in *HotelList* or *AvailDestinationTree*.                                                           |
-+------------------------------------------+----------+-----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-| StartDate                                | 1        | String    | Start date to search rates.                                                                                                                         |
-+------------------------------------------+----------+-----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-| EndDate                                  | 1        | String    | End date to search rates.                                                                                                                           |
-+------------------------------------------+----------+-----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-| Currency                                 | 1        | String    | Currency value.                                                                                                                                     |
-+------------------------------------------+----------+-----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-| RoomCandidates/RoomCandidate             | 1..n     |           | Room required.                                                                                                                                      |
-+------------------------------------------+----------+-----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-| *@id*                                    | 1        | Integer   | Id of the requested room (starting at 1).                                                                                                           |
-+------------------------------------------+----------+-----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-| RoomCandidates/RoomCandidate/Paxes/Pax   | 1..n     |           | Pax required.                                                                                                                                       |
-+------------------------------------------+----------+-----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-| *@age*                                   | 1        | Integer   | Passenger age.                                                                                                                                      |
-+------------------------------------------+----------+-----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-| *@id*                                    | 1        | Integer   | Passenger id (starting at 1).                                                                                                                       |
-+------------------------------------------+----------+-----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------+----------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+| Element                                  | Number   | Type        | Description                                                                                                                                         |
++==========================================+==========+=============+=====================================================================================================================================================+
+| AvailRQ                                  | 1        |             | Root node.                                                                                                                                          |
++------------------------------------------+----------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+| CancellationPolicies                     | 1        | Boolean     | Indicates if you want to receive the cancellation policies in AvailRS, as long as the provider returns it in this call (see StaticConfiguration).   |
++------------------------------------------+----------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+| AvailDestinations/Destination            | 0..n     |             | Contains the list of destinations filters ( hotels or cities or zones or geocodes).                                                                 |
++------------------------------------------+----------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+| *@type*                                  | 1        | String      | Destination type ( HOT, CTY, ZON, GEO).                                                                                                             |
++------------------------------------------+----------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+| *@code*                                  | 1        | String      | Native destination code as returned by provider in *HotelList* or *AvailDestinationTree*.                                                           |
++------------------------------------------+----------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+| StartDate                                | 1        | String      | Start date to search rates.                                                                                                                         |
++------------------------------------------+----------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+| EndDate                                  | 1        | String      | End date to search rates.                                                                                                                           |
++------------------------------------------+----------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+| Currency                                 | 1        | String      | Currency value.                                                                                                                                     |
++------------------------------------------+----------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+| RoomCandidates/RoomCandidate             | 1..n     |             | Room required.                                                                                                                                      |
++------------------------------------------+----------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+| *@id*                                    | 1        | Integer     | Id of the requested room (starting at 1).                                                                                                           |
++------------------------------------------+----------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+| RoomCandidates/RoomCandidate/Paxes/Pax   | 1..n     |             | Pax required.                                                                                                                                       |
++------------------------------------------+----------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+| *@age*                                   | 1        | Integer     | Passenger age.                                                                                                                                      |
++------------------------------------------+----------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+| *@id*                                    | 1        | Integer     | Passenger id (starting at 1).                                                                                                                       |
++------------------------------------------+----------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 |
@@ -137,67 +137,82 @@ discounts are already included in the total price.
 
 ::
 
-    <AvailRS xmlns:xsd = "http://www.w3.org/2001/XMLSchema" xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance">
-        <Hotels>
-            <Hotel code = "10" name = "LEO">
-                <MealPlans>
-                    <MealPlan code = "D">
-                        <Options>
-                            <Option type = "Hotel" paymentType = "MerchantPay" status = "OK">
-                                <Rooms>
-                                    <Room id = "4582" roomCandidateRefId = "1" code = "506" description = "Doble Standard..">
-                                        <Price currency = "EUR" amount = "36.20" binding = "false" commission = "-1"/>
-                                    </Room>
-                                </Rooms>
-                                <Price currency = "EUR" amount = "36.20" binding = "false" commission = "-1" />
-                            </Option>
-                        </Options>
-                    </MealPlan>
-                    <MealPlan code = "M">
-                        <Options>
-                            <Option type = "Hotel" paymentType = "MerchantPay" status = "OK">
-                                <Rooms>
-                                    <Room id = "4582" roomCandidateRefId = "1" code = "506" description = "Doble Standard..">
-                                        <Price currency = "EUR" amount = "42.90" binding = "false" commission = "-1"/>
-                                    </Room>
-                                </Rooms>
-                                <Price currency = "EUR" amount = "42.90" binding = "false" commission = "-1"/>
-                            </Option>
-                        </Options>
-                           ...
-                    </MealPlan>
-                    <MealPlan code = "MP">
-                        <Options>
-                            <Option type = "HotelSkiPass" paymentType = "MerchantPay" status = "OK">
-                                <Rooms>
-                                    <Room id = "4145" roomCandidateRefId = "1" code = "DBL#STAND" description = "Doble Standard">
-                                        <Price currency = "EUR" amount = "636.80" binding = "false" commission = "-1"/>
-                                    </Room>
-                                </Rooms>
-                                <Detail>
-                                    <POIs>
-                                        <POI code = "8A" Description = "Andorra">
-                                            <Services>
-                                                <Service type = "SkiPass" code = "F1" description = "Forfait" durationType = "Range" quantity = "0" unit = "Day">
-                                                    <RangeDates startDate = "28/01/2014" endDate = "29/01/2014"/>
-                                                </Service>
-                                            </Services>
-                                        </POI>
-                                    </POIs>
-                                </Detail>
-                                <Price currency = "EUR" amount = "636.80" binding = "false" commission = "-1"/>
-                                <Parameters>
-                                    <Parameter key = "sesion" value = "888de014"/>
-                                </Parameters>
-                            </Option>
-                        </Options>
-                    </MealPlan>
-                    ...
-                </MealPlans>
-            </Hotel>
-            ...
-        </Hotels>
-    </AvailRS>
+   <AvailRS xmlns:xsd = 
+   "http://www.w3.org/2001/XMLSchema" xmlns:xsi = 
+   "http://www.w3.org/2001/XMLSchema-instance">
+     <Hotels>
+       <Hotel code = "10" name = "LEO">
+         <MealPlans>
+           <MealPlan code = "D">
+             <Options>
+               <Option type = "Hotel" 
+               paymentType = "MerchantPay" status = "OK">
+                 <Rooms>
+                   <Room id = "4582" roomCandidateRefId = "1" 
+                   code = "506" description = "Doble Standard..">
+                     <Price currency = "EUR" amount = "36.20"
+                     binding = "false" commission = "-1"/>
+                   </Room>
+                 </Rooms>
+                 <Price currency = "EUR" amount = "36.20" 
+                 binding = "false" commission = "-1"/>
+               </Option>
+             </Options>
+           </MealPlan>
+           <MealPlan code = "M">
+             <Options>
+               <Option type = "Hotel" paymentType = "MerchantPay" status = "OK">
+                 <Rooms>
+                   <Room id = "4582" roomCandidateRefId = "1" 
+                   code = "506" description = "Doble Standard..">
+                     <Price currency = "EUR" amount = "42.90" 
+                     binding = "false" commission = "-1"/>
+                   </Room>
+                 </Rooms>
+                 <Price currency = "EUR" amount = "42.90" binding = "false" commission = "-1"/>
+               </Option>
+             </Options>
+             ...
+           </MealPlan>
+           <MealPlan code = "MP">
+             <Options>
+               <Option type = "HotelSkiPass" paymentType = "MerchantPay" status = "OK">
+                 <Rooms>
+                   <Room id = "4145" roomCandidateRefId = "1" 
+                   code = "DBL#STAND" description = "Doble Standard">
+                     <Price currency = "EUR" amount = "636.80" 
+                     binding = "false" commission = "-1"/>
+                   </Room>
+                 </Rooms>
+                 <Detail>
+                   <POIs>
+                     <POI code = "8A" Description = "Andorra">
+                       <Services>
+                         <Service type = "SkiPass" code = "F1" 
+                         description = "Forfait" durationType = "Range" 
+                         quantity = "0" unit = "Day">
+                           <RangeDates startDate = "28/01/2014" 
+                           endDate = "29/01/2014"/>
+                         </Service>
+                       </Services>
+                     </POI>
+                   </POIs>
+                 </Detail>
+                 <Price currency = "EUR" amount = "636.80" 
+                 binding = "false" commission = "-1"/>
+                 <Parameters>
+                   <Parameter key = "sesion" value = "888de014"/>
+                 </Parameters>
+               </Option>
+             </Options>
+           </MealPlan>
+           ...
+         </MealPlans>
+       </Hotel>
+       ...
+     </Hotels>
+   </AvailRS>
+
 
 
 |
