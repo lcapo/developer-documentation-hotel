@@ -1,11 +1,16 @@
-#################
-Service Endpoints
-#################
+###################
+Service Definitions
+###################
 
 |
 
-Service Endpoints, WSDLs and XML schemas describing the request and response XML structures can be found in:
-Service Definitions: http://www.xmltravelgate.com/Docs/API-Specification/Hub.html#Service%20Endpoints
+Service Endpoints and WSDLs can be found in:
+* Service Endpoints: http://www.xmltravelgate.com/Docs/API-Specification/Hub.html#Service%20Endpoints
+Hotel XSD Schemas describing the Request and response XML structures can be found in:
+* 
+
+
+
 
 |
 
