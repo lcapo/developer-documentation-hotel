@@ -42,6 +42,7 @@ The XML returned contains a confirmation booking
             <CreationDate>17/01/2014</CreationDate>
         </Reservation>
         <Modifications>
+            <ModifyMealPlan></ModifyMealPlan>
             <ModifyStartDateAddDays>
                 <StartDate>29/01/2014</StartDate>
             </ModifyStartDateAddDays>
