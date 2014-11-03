@@ -340,26 +340,54 @@ discounts are already included in the total price.
 
 |
 
-PaymentOptions
---------------
+Detailled description 
+---------------------
 
 |
 
-**MerchantPay:** The costumer pays the client and the client will pay de provider.
+**PaymentOptions:**
+
+
+* **MerchantPay:** The costumer pays the client and the client will pay de provider.
 
 |
 
-**LaterPay:** The costumer will have to use a credit-card as a guaranty for the hotel and the 
+* **LaterPay:** The costumer will have to use a credit-card as a guaranty for the hotel and the 
 payment will be done by the costumer at checking.
 
 |
 
-**CardBookingPay:** The client will create a virtual credit-card with the exact amount of the 
+* **CardBookingPay:** The client will create a virtual credit-card with the exact amount of the 
 option so he can pay the provider/hotel. The provider will charge the payment on the reservation day.
 
 |
 
-**CardChekingPay:** The client will create a virtual credit-card with the exact amount of the 
+* **CardChekingPay:** The client will create a virtual credit-card with the exact amount of the 
 option so he can pay the provider/hotel. The provider will charge the payment on the checking day.
 
 |
+
+
+**Rate conditions:**
+
+* The extra fee for a **nonRefundable** cancellation is a 100% since the moment of the creation of the reservation.
+
+* If the solicited distribution is with a pax older than 55 years old, and there is no pax older than **55 years**, then it can't do a confirmation of the options where it would return the condition of the rate. In any case, the provider doesn't return these options.
+ 
+* In the case of pax older of **60 years** and **65 years** you will find the same process like with 55 years old.
+ 
+* The rate **package** means that the product can't be sold by it self
+ 
+* The rate **CanaryResident** is a rate that is applied for the resident in the Canary islands
+ 
+* The rate **BalearicResident** is like CanaryResdient but applied with the Balearic island.
+ 
+ |
+ 
+**Room quantity:**
+ 
+<RoomCandidate "cantidad=“1” id=“1">
+  
+The quantity ( or "cantidad" ) as to be one. This quantity is obsolete.
+  
+  |
