@@ -382,7 +382,7 @@ option so he can pay the provider/hotel. The provider will charge the payment on
  
 * The rate **BalearicResident** is like CanaryResdient but applied with the Balearic island.
  
- |
+|
  
 **Room quantity:**
  
@@ -390,4 +390,4 @@ option so he can pay the provider/hotel. The provider will charge the payment on
   
 The quantity ( or "cantidad" ) as to be one. This quantity is obsolete.
   
-  |
+|
