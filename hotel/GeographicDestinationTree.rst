@@ -89,3 +89,41 @@ sub-destinations.
 +----------------------------+----------+----------+---------------------------------------------------------------------------------------------+
 
 |
+
+Detailled description
+---------------------
+
+**Location type:**
+
+::
+
+    <DestinationTree code = "ES" name = "Spain" avail = "false">
+        <DestinationLeaf code = "BAL"/>
+    </DestinationTree>
+    <DestinationTree code = "BAL" name = "Balearic" avail = "true">
+        <DestinationLeaf code = "PMI"/>
+        <DestinationLeaf code = "ALC"/>
+        <DestinationLeaf code = "CON"/>
+    </DestinationTree>
+    <DestinationTree code = "PMI" name = "Palma" avail = "true"/>
+    <DestinationTree code = "ALC" name = "Alcudia" avail = "true"/>
+    <DestinationTree code = "CON" name = "Consell" avail = "true"/>
+
+|
+
+This example starts with "<DestinationTree code = "ES" name = "Spain" avail = "false">" where it is indicating that Spain hasn't
+got availability because it is false. It also has one child node called <DestinationLeaf code = "BAL"/>. 
+
+This child "BAL" has avail = true, meaning it is possible to do an availability. This node "BAL" also has three other 
+children called PMI, ALC, CON. Ergo, If DestinationTree code as avail = "true" and also, at the same time, has one or more
+children then this will indicate that this node is a Zone. In this case, if you want to do an avail with this code you will
+need to indicate it as a zone type(ZON). 
+
+These three children PMI, ALC, CON also are available because they are true, but the have no DestinationLeaf (or children). 
+This indicates that these nodes are cities. In this case, if you want to do an avail with these codes you will need to indicate
+them as city types (CTY)  
+
+In conclusion, if the DestinationTree code has avail true and children, means it is a **ZONE**. If the DestinationTree code has
+avail true, but no children this will indicate a **CITY**.   
+
+|
