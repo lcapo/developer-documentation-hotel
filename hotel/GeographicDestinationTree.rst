@@ -176,6 +176,8 @@ avail true, but no children then this will indicate a **CITY**.
         . . .
     </GeographicDestinationTreeRS>
     
+|
+    
 There is also another possible case where the city isn't the lowest child or DestinationLeaf code and has children of their own. 
 Meaning the cities will have DestinationLeaf code (children) that will represent neighborhoods. Like in this example 
 "Son Sardina" and "Indioteria" represent neighborhoods of the city Palma of Mallorca. Even though "Son Sardina" and "Indioteria"
