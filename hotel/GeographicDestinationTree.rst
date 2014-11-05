@@ -183,3 +183,5 @@ are the lowest DestinationLeaf ( child ) these codes can't represent as cities c
 Avail, because their Avail is false.
 
 So even if PAL0 has DestinationLeafs he will be the city code because his DestinationLeafs have false avail.
+
+|
