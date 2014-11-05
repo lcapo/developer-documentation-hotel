@@ -106,6 +106,8 @@ Detailled description
         . . .
     </AvailDestinationTreeRS>
     
+|
+
 In availDestinationTree you will always receive zones and cities with an attackable availability ( avail = true ). 
 
 *Distinction Zone & City:*
@@ -122,3 +124,4 @@ with these codes you will need to indicate them as city types (CTY)
 In conclusion, if the DestinationTree code has children, then it is a **ZONE**. If the DestinationTree code 
 has no children then this will indicate a **CITY**.
 
+|
