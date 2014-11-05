@@ -95,6 +95,8 @@ Detailled description
 
 **Location type:**
 
+**Standard case:**
+
 ::
 
     <DestinationTree code = "ES" name = "Spain" avail = "false">
@@ -127,3 +129,31 @@ In conclusion, if the DestinationTree code has avail true and children, means it
 avail true, but no children this will indicate a **CITY**.   
 
 |
+
+**Specific case:**
+
+::
+
+    <DestinationTree code = "ES" name = "Spain" avail = "false">
+        <DestinationLeaf code = "BAL"/>
+    </DestinationTree>
+    <DestinationTree code = "BAL" name = "Balearic" avail = "true">
+        <DestinationLeaf code = "PMI"/>
+        <DestinationLeaf code = "ALC"/>
+        <DestinationLeaf code = "CON"/>
+    </DestinationTree>
+    <DestinationTree code = "ALC" name = "Alcudia" avail = "true"/>
+    <DestinationTree code = "CON" name = "Consell" avail = "true"/>
+    <DestinationTree code = "PMI" name = "Palma" avail = "true"/>
+        <DestinationLeaf code = "SAR"/>
+        <DestinationLeaf code = "IND"/>
+    <DestinationTree code = "SAR" name = "Son Sardina" avail = "false"/>
+    <DestinationTree code = "IND" name = "Indioteria" avail = "false"/>
+    
+There is also another possible case where the city isn't the lowest child or DestinationLeaf code and has children of their own. 
+Meaning the cities will have DestinationLeaf code (children) that will represent neighborhoods. Like in this example 
+"Son Sardina" and "Indioteria" represent neighborhoods of the city Palma of Mallorca. Even though "Son Sardina" and "Indioteria"
+are the lowest DestinationLeaf ( child ) these codes can't represent as cities codes, because they haven't got attackable 
+Avail, because their Avail is false.
+
+So even if PMI has DestinationLeafs he will be the city code because his DestinationLeafs have false avail.
