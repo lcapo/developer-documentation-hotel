@@ -14,7 +14,7 @@ The response object contains the operation status and errors if any.
 
 ::
 
-    :rubric:<HotelBaseRQ>
+    <HotelBaseRQ>
         <echoToken>TEST</echoToken>
         <timeoutMilliseconds>20000</timeoutMilliseconds>
         <source>
