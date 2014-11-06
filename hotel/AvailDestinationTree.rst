@@ -108,7 +108,10 @@ Detailled description
     
 |
 
-In availDestinationTree you will always receive zones and cities with an attackable availability ( avail = true ). 
+In availDestinationTree you will always receive zones and cities with an attackable availability ( the
+difference between availDestinationTree and GeographicDestinationTree is that in GeographicDestinationTree
+there is a parameter indicating the avail with true or false )
+
 
 *Distinction Zone & City:*
 
