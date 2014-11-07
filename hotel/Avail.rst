@@ -391,3 +391,10 @@ option so he can pay the provider/hotel. The provider will charge the payment on
 The quantity ( or "cantidad" ) as to be one. This quantity is obsolete.
   
 |
+
+**Note:** 
+
+When you use parameters in the RQ of valuation i.e. when the client chooses the options 
+that it wishes in the RQ of valuation, then the parameters must appear in said option.
+
+|
