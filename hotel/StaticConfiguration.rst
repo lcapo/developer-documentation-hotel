@@ -134,7 +134,7 @@ stay minimum, list of languages that allows ....).
 
 |
 
-*Detailled description*
+*Detailled* Description
 -----------------------
 
 
