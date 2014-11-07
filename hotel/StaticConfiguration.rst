@@ -164,7 +164,7 @@ stay minimum, list of languages that allows ....).
 	
 *  <RequiredRoomList>false</RequiredRoomList>:
   
--The provider has implemented a list of rooms since it doesn't inform it in the avail description.
+-The provider has implemented a list of rooms, siempre y cuando el proveedor devuelva la descripcion de habitacion en disponiblidiad, esta llamada no sera obligatoria.
 
 |
 	
@@ -176,49 +176,50 @@ stay minimum, list of languages that allows ....).
 	
 *  <InformBindingPriceValuation>false</InformBindingPriceValuation>:
 
--Uses binding prices but doesn't inform it in the policies.
+-informa si el precio de la opcion en la respuesta de valoracion es vinculante o no .
 
 |
 	
 *  <InformBindingPrice>false</InformBindingPrice>:
 
--Provider returns binding PVPs.
+-Provider returns binding PVPs in availability.
 
 |
 	
 *  <InformNRFValuation>true</InformNRFValuation>:
   
--The provider has destination where it informs the non-refundable policies.
+-The provider can inform in valuation if the rate is non-refundable.
 
 |
 	
 *  <InformNRFRate>true</InformNRFRate>:
 
--The provider informs of the non-refundable rates in availability.
+-The provider can inform in availability if the rate is non-refundable.
 
 |
 	
 *  <Inform55Rate>false</Inform55Rate>:
   
--The provider informs of the 55 or over rates in availability.
+-The provider informs the options with rates of pax of 55 years old or over in availability.
 
 |
 	
 *  <InformPackageRate>false</InformPackageRate>:
 
--The provider informs of the package rates in availability.
+-The provider informs the options with package rates in availability. These options cant be sold by seperate, need to add a service (like a plane ticket) 
+
 
 |
 	
 *  <InformExtraActivity>false</InformExtraActivity>:
 
--The provider informs of the option type Hotel+entrance.
+-The provider informs of the possible option type Hotel+entrance.
 
 |
 	
 *  <InformForfait>false</InformForfait>:
 
--The provider informs of the option type Hotel+Forfait.
+-The provider informs of the possible option type Hotel+Forfait.
 
 |
 	
@@ -230,25 +231,25 @@ stay minimum, list of languages that allows ....).
 	
 *  <MaxNumberRoomCandidates>3</MaxNumberRoomCandidates>:
 
-- Maximum number of candidates that can be requested.
+- Maximum number of room candidates that can be requested in the same avail request.
 
 |
 	
 *  <MaxPaxInRoomCandidates>3</MaxPaxInRoomCandidates>:
 
--Maximum number of pax in a candidate.
+-Maximum number paxs in same room that can be requested in the same avail request.
 
 |
 	
 *  <Release>0</Release>:
 
--Minimum days that is required in between booking date and checking date ( days in advance ).
+-Minimum days that is required in between booking date and checking date ( days in advance ). If the value is cero there is no limitation.
 
 |
 	
 *  <MinimumStay>0</MinimumStay>:
 
--Minimum number of days that need to be booked.
+-Minimum number of days that need to be booked. If the value is cero there is no limitation.
 
 |
 	
@@ -266,7 +267,7 @@ stay minimum, list of languages that allows ....).
 	
 *  <ImplementsClientLocatorReservationRead>false</ImplementsClientLocatorReservationRead>:
 
--The provider implements the consult transaction with the **provider** localizator.
+-The provider implements the consult transaction with the **client** localizator.
 
 |
 	
@@ -317,11 +318,6 @@ stay minimum, list of languages that allows ....).
 
 |
   
-*  <DescriptiveInfoParallelism>2</DescriptiveInfoParallelism>:
-
--Capacity of petitions concurrent by the provider to obtain info hotels.
-
-|
   
 *  <InformCancelPoliciesReservationRead>false</InformCancelPoliciesReservationRead>
  
@@ -343,19 +339,19 @@ stay minimum, list of languages that allows ....).
   
 *  <InformChangesPolicies>false</InformChangesPolicies>:
 
--the provider informs if there is an extra fee for any booking modification.
+-The provider informs if there is an extra fee for any booking modification.
 
 |
   
 *  <ImplementsDeltaPrice>false</ImplementsDeltaPrice>:
 
--If implemented a margin stipulated by the client for booking with a higher price (delta). 
+-Implemented a margin stipulated by the client for booking with a higher price (delta). 
 
 |
   
 *  <RequiredAllPassengers>true</RequiredAllPassengers>:
 
--Needs all of the data of all the pax in booking. 
+-Needs all of the data (names and surnames) of all the pax in booking. 
 
 |
    
