@@ -157,3 +157,20 @@ takes more than 5 minutes to download.
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
 
 |
+
+*Detailled* Description
+-----------------------
+
+**Hotel types:**
+
+H (Hotel)
+A (apartament)
+AH (apartament Hotel)
+C (Club)
+AT (agritourism)
+HS (hostel)
+CA (House) | V (Town)
+B (Bungalows)
+D (Disco club)
+
+
