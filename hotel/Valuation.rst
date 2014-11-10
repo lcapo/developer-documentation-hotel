@@ -236,3 +236,5 @@ CardInfo
 Keep the parameters in the avail response to include them in the request valuation process.
 
 Keep the parameters in the valuation response to include them in the request reservation process.
+
+|
