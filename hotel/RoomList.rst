@@ -30,6 +30,9 @@ The result returns a list of *RoomInfo*.
 
 |
 
+The maximum time, that is permited in our system, before the connection is closed,  is of **240000** miliseconds.
+
+
 This message must be implemented solely in case it can not be provided
 the description is room in the hotel availability. ( It is indicated in
 *StaticConfiguration* )
