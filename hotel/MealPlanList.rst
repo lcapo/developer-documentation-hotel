@@ -30,6 +30,10 @@ The result returns a list of *MealPlan*.
 
 |
 
+
+The maximum time, that is permited in our system, before the connection is closed,  is of **240000** miliseconds.
+
+
 If the provider has more than 100 mealplan codes, or more than 20
 codes for one single mealplan, this code will be mapped to XML
 Travelgate's code. `Link to List of
