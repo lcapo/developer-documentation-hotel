@@ -26,6 +26,13 @@ The result returns a list of *Category* .
 
 |
 
+**Remarks**
+
+The maximum time, that is permited in our system, before the connection is closed,  is of **240000** miliseconds.
+
+|
+
+
 *CategoryListRQ* Example
 ------------------------
 
