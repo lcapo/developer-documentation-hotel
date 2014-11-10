@@ -29,6 +29,12 @@ The result returns a list of bookings details, with the same format as *Reservat
 
 |
 
+**Remarks**
+
+The maximum time, that is permited in our system, before the connection is closed,  is of **240000** miliseconds.
+
+|
+
 *ReservationListRQ* Example
 ---------------------------
 
