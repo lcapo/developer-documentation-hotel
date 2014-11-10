@@ -2,7 +2,7 @@
 Frequently asked questions! 
 ###########################
 
-#. **How does the prices work? and how should I interpret the value in the field "commission"?**
+#. **How does the price work? and how should I interpret the value in the field "commission"?**
 
     You can find the answer to this question in the Hotel API in the "Avail" section under the paragraph "remarks":
     
