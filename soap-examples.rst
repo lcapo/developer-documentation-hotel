@@ -4,6 +4,8 @@
 SOAP Examples
 #############
 
+**Avail:**
+
 ::
 
 	<soapenv:Envelope xmlns:soapenv = 
@@ -74,7 +76,7 @@ SOAP Examples
 	</soapenv:Envelope>
 
 
-**Valoration**
+**Valuation:**
 
 ::
 
