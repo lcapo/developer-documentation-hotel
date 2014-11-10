@@ -30,8 +30,12 @@ The result returns a list of *Hotel* (hotels).
 
 |
 
+
+The maximum time, that is permited in our system, before the connection is closed,  is of **240000** miliseconds.
+
+
 This method may be preloaded in **XML Travelgate**'s system if it
-takes more than 5 minutes to download.
+takes more than 4 minutes to download.
 
 |
 
