@@ -406,7 +406,7 @@ The quantity ( or "cantidad" ) as to be one. This quantity is obsolete.
 
 **Note:** 
 
-Keep the parameters in the avail response to include them in the request valuation process. 
+Keep the parameters in the avail response to include them in the valuation request. 
 
 ::
 
