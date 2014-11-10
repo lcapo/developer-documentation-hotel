@@ -406,7 +406,13 @@ The quantity ( or "cantidad" ) as to be one. This quantity is obsolete.
 
 **Note:** 
 
-When you use parameters in the RQ of valuation i.e. when the client chooses the options 
-that it wishes in the RQ of valuation, then the parameters must appear in said option.
+Keep the parameters in the avail response to include them in the request valuation process. 
+
+::
+
+   <Parameters>
+      <Parameter key = "sesion" value = "888de014"/>
+   </Parameters>
+
 
 |
