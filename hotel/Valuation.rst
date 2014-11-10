@@ -22,6 +22,12 @@ Valuation
 
 |
 
+**Remarks**
+
+The maximum time, that is permited in our system, before the connection is closed,  is of **180000** miliseconds.
+
+|
+
 *ValuationRQ* Example
 ---------------------
 
