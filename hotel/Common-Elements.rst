@@ -58,7 +58,7 @@ The response object contains the operation status and errors if any.
 +----------------------------------------+----------+-----------+----------------------------------------------------------------------+
 | source/agencyCode                      | 0..1     | String    | Agency code that requests the operation.                             |
 +----------------------------------------+----------+-----------+----------------------------------------------------------------------+
-| source/languageCode                    | 1        | String    | Language code (ISO 3166-1 alpha-2) format.                           |
+| source/languageCode                    | 1        | String    | Language code (ISO 3166-1 alpha-2) format lowercase.                 |
 +----------------------------------------+----------+-----------+----------------------------------------------------------------------+
 | filterAuditData                        | 1        |           | Enables or disables information returned in audit data.              |
 +----------------------------------------+----------+-----------+----------------------------------------------------------------------+
