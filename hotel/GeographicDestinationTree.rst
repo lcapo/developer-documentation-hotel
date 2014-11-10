@@ -27,6 +27,12 @@ sub-destinations.
 
 |
 
+**Remarks**
+
+The maximum time, that is permited in our system, before the connection is closed,  is of **240000** miliseconds.
+
+|
+
 *GeographicDestinationTreeRQ* Example
 -------------------------------------
 
