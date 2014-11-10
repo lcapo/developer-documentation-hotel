@@ -176,7 +176,7 @@ stay minimum, list of languages that allows ....).
 	
 *  <InformBindingPriceValuation>false</InformBindingPriceValuation>:
 
--informa si el precio de la opcion en la respuesta de valoracion es vinculante o no .
+-Informs if the price of the option in the response of valuation is binding.
 
 |
 	
@@ -231,7 +231,7 @@ stay minimum, list of languages that allows ....).
 	
 *  <MaxNumberRoomCandidates>3</MaxNumberRoomCandidates>:
 
-- Maximum number of room candidates that can be requested in the same avail request.
+-Maximum number of room candidates that can be requested in the same avail request.
 
 |
 	
