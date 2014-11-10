@@ -54,9 +54,17 @@ discounts are already included in the total price.
 
 **Remarks**
 
-| 
-| This method **must** be called **before** the *Valuation* method.
-| **Price, binding price and commission**:
+|
+
+This method **must** be called **before** the *Valuation* method.
+
+|
+
+The maximum time, that is permited in our system, before the connection is closed,  is of **25000** miliseconds.
+
+|
+
+**Price, binding price and commission**:
 
 -  If commission = 0. The price returned is a net price, and the
    provider is informing that the commission **must** be 0.
@@ -68,6 +76,10 @@ discounts are already included in the total price.
 -  When commission is greater than 0, for example: commission = 12, it
    is a sale price, and this commission is informed for the provider (
    this price is mandatory depends if binding price is true /false).
+   
+|
+
+
 
 |
 
@@ -75,7 +87,7 @@ discounts are already included in the total price.
 -----------------
 
 ::
-
+   
     <AvailRQ>
         <CancellationPolicies>false</CancellationPolicies>
         <AvailDestinations>
