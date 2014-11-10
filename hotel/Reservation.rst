@@ -196,3 +196,7 @@ The maximum time, that is permited in our system, before the connection is close
 +-------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 |
+
+**Note:**
+
+Keep the parameters in the valuation response to include them in the reservation request.
