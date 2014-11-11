@@ -69,45 +69,107 @@ The maximum time, that is permited in our system, before the connection is close
 ::
 
     <DescriptiveInfoRS>
-        <Hotel>
-            <Code>70</Code>
-            <Name>ILLA</Name>
-            <GiataFormatCode>70ES</GiataFormatCode>
-            <Address>AVDA. ILLA S/N</Address>
-            <Town>HUELVA</Town>
-            <ZipCode>21449</ZipCode>
-            <CountryISOCode>ES</CountryISOCode>
-            <AvailDestination code = "2" name = "HUELVA"/>
-            <GeographicDestination code = "2" name = "HUELVA" avail = "true"/>
-            <Contact>
-                <Email>emailhotel@xxx.com</Email>
-                <Telephone>91547892</Telephone>
-                <Fax></Fax>
-            </Contact>
-            <BookingContact>
-                <Email>bookinghotel@xxx.com</Email>
-                <Telephone>91547880</Telephone>
-                <Fax>910200200</Fax>
-            </BookingContact>
-            <CategoryCode>4 Estrellas</CategoryCode>
-            <Type>H</Type>
-            <ShortDescription>the hotel.....</ShortDescription>
-            <LongDescription>the hotel....</LongDescription>
-            <HowToGet></HowToGet>
-            <RoomDescription>....</RoomDescription>
-            <SituationDescription>....</SituationDescription>
-            <Images>
-                <Picture>
-                    <URL>http://www.images.net/infor/work/imagen/hotel_07/mapa.jpg</URL>
-                    <Classification>GRAL</Classification>
-                </Picture>
-                <Picture>
-                    <URL>http://www.images.net/infor/work/imagen/hotel_02/M.jpg</URL>
-                    <Classification>GRAL</Classification>
-                </Picture>
-            </Images>
-            <LocationType>City</LocationType>
-        </Hotel>
+    <Hotel>
+        <Code>70</Code>
+        <Name>ILLA</Name>
+        <GiataFormatCode>70ES</GiataFormatCode>
+        <Address>AVDA. ILLA S/N</Address>
+        <Town>HUELVA</Town>
+        <ZipCode>21449</ZipCode>
+        <CountryISOCode>ES</CountryISOCode>
+        <AvailDestination code = "2" name = "HUELVA"/>
+        <GeographicDestination code = "2" name = "HUELVA" avail = "true"/>
+        <Contact>
+            <Email>emailhotel@xxx.com</Email>
+            <Telephone>91547892</Telephone>
+            <Fax></Fax>
+        </Contact>
+        <BookingContact>
+            <Email>bookinghotel@xxx.com</Email>
+            <Telephone>91547880</Telephone>
+            <Fax>910200200</Fax>
+        </BookingContact>
+        <CategoryCode>4 Estrellas</CategoryCode>
+        <Type>H</Type>
+        <ShortDescription>the hotel.....</ShortDescription>
+        <LongDescription>the hotel....</LongDescription>
+        <HowToGet></HowToGet>
+        <RoomDescription>....</RoomDescription>
+        <SituationDescription>....</SituationDescription>
+        <Attributes>
+            <Attribute>
+                <Code>10</Code>
+                <Classification>GRAL</Classification>
+                <Description>Centro ciudad: 3000</Description>
+            </Attribute>
+            <Attribute>
+                <Code>21</Code>
+                <Classification>GRAL</Classification>
+                <Description>Parada de bus/metro más cercana: 70000</Description>
+            </Attribute>
+            <Attribute>
+                <Code>32</Code>
+                <Classification>HAB</Classification>
+                <Description>Baño</Description>
+            </Attribute>
+            <Attribute>
+                <Code>43</Code>
+                <Classification>HAB</Classification>
+                <Description>Minibar</Description>
+            </Attribute>
+            <Attribute>
+                <Code>54</Code>
+                <Classification>HAB</Classification>
+                <Description>Bañera</Description>
+            </Attribute>
+            <Attribute>
+                <Code>65</Code>
+                <Classification>HAB</Classification>
+                <Description>Radio</Description>
+            </Attribute>
+            <Attribute>
+                <Code>76</Code>
+                <Classification>HAB</Classification>
+                <Description>Caja fuerte</Description>
+            </Attribute>
+            <Attribute>
+                <Code>87</Code>
+                <Classification>HOT</Classification>
+                <Description>Area de juegos</Description>
+            </Attribute>
+            <Attribute>
+                <Code>98</Code>
+                <Classification>SER</Classification>
+                <Description>Internet</Description>
+            </Attribute>
+            <Attribute>
+                <Code>90</Code>
+                <Classification>GRAL</Classification>
+                <Description>Restaurante</Description>
+            </Attribute>
+            <Attribute>
+                <Code>01</Code>
+                <Classification>HAB</Classification>
+                <Description>Televisión</Description>
+            </Attribute>
+            <Attribute>
+                <Code>31</Code>
+                <Classification>HOT</Classification>
+                <Description>Piscina</Description>
+            </Attribute>
+        </Attributes>
+        <Images>
+            <Picture>
+                <URL>http://www.images.net/infor/work/imagen/hotel_07/mapa.jpg</URL>
+                <Classification>GRAL</Classification>
+            </Picture>
+            <Picture>
+                <URL>http://www.images.net/infor/work/imagen/hotel_02/M.jpg</URL>
+                <Classification>GRAL</Classification>
+            </Picture>
+        </Images>
+        <LocationType>City</LocationType>
+    </Hotel>
     </DescriptiveInfoRS>
 
 |
