@@ -360,11 +360,11 @@ Detailled description
 **PaymentOptions:**
 
 
-* **MerchantPay:** The costumer pays the client and the client will pay de provider.
+* **MerchantPay:** The customer pays the client and the client will pay de provider.
 
 |
 
-* **LaterPay:** The costumer will have to use a credit-card as a guaranty for the hotel and the 
+* **LaterPay:** The customer will have to use a credit-card as a guaranty for the hotel and the 
 payment will be done by the costumer at checking.
 
 |
