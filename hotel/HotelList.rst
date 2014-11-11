@@ -168,13 +168,23 @@ takes more than 4 minutes to download.
 **Hotel types:**
 
 H (Hotel)
+
 A (apartament)
+
 AH (apartament Hotel)
+
 C (Club)
+
 AT (agritourism)
+
 HS (hostel)
+
 CA (House) | V (Town)
+
 B (Bungalows)
+
 D (Disco club)
+
+|
 
 
