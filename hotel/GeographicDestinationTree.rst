@@ -6,7 +6,12 @@ GeographicDestinationTree
 |
 
 This method returns the provider's geographic tree where each node
-indicates whether the call is accessible from availability.
+indicates whether the call is accessible from availability
+which is indicate with a parameter with values of true and false. 
+The main difference between the methods GeographicalTree and
+DestinationTree is that GeographicalTree has this boolean 
+parameter.
+
 
 |
 
