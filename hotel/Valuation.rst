@@ -3,22 +3,19 @@ Valuation
 
 **Method Goals**
 
-| 
-| This method aims to return the total price and cancel policies of the selected *Option*. This *Option* **must** be selected in the previous step (*Avail*).
+This method aims to return the total price and cancel policies of the selected *Option*. This *Option* **must** be selected in the previous step (*Avail*).
 
 |
 
 **Request Format**
 
-| 
-| The *Valuation* request is same that availabilityRQ and add rooms and Mealplan code.
+The *Valuation* request is same that availabilityRQ and add rooms and Mealplan code.
 
 |
 
 **Response Format**
 
-| 
-| The returned XML contains the total price and list of cancel policies. Sometimes this method will fail since the selected option at *Avail* time will not be available in this stage. In this case the integration returns an error code 301.
+The returned XML contains the total price and list of cancel policies. Sometimes this method will fail since the selected option at *Avail* time will not be available in this stage. In this case the integration returns an error code 301.
 
 |
 
@@ -228,6 +225,19 @@ CardInfo
 +-------+--------------------------+
 | O     | others                   |
 +-------+--------------------------+
+
+|
+
+**CancelPenalty:**
+
+The penalty in cancelling a booking depends on which situation you do the cancellation. 
+The factors that affects the cancel penalization goes as follows:
+ 
+* Hours Before: Number of hours prior to arrival day in which this Cancellation policy applies.
+
+* Type: there are three values that can be inside types, nights which will indicate the number of nights which will be penalized, the percentage which is require to pay of the exact amount of the booking and import, that indicates the exact amount that it is necessary to pay.
+
+* Currency: Money currency of the import.
 
 |
 
