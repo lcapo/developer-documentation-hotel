@@ -1,11 +1,14 @@
+
+.. highlight:: xml
+
 Avail
 =====
+
+|
 
 Method Goals
 ------------
 
-
-|
 
 This method aims to return all the available options for a given date
 and itinerary. It does not filter different classes, times or fares. It
@@ -16,8 +19,6 @@ will always return all results returned by the provider.
 Request Format
 --------------
 
-|
-
 The availability request is very straight forward. It only requires
 the destination, the travelling dates and the paxes of the rooms.
 
@@ -26,32 +27,34 @@ the destination, the travelling dates and the paxes of the rooms.
 Response Format
 ---------------
 
-| 
-
 Results are organized in this hierarchy:
 
--  *Hotel* :
-
 |
+
+-  *Hotel* :
 
 A list with all the hotels, including the name and code hotel,
 *mealplans* list, etc. returned by the provider.
 
+|
+
 -  *Mealplans* :
 
-|
 
 A list of all MealPlans returned by the provider, every *mealplan*
 including the mealplan's code. Every *mealplan* also contains a list of
 the *options* for this availability.
 
--  *Options* :
-
 |
+
+-  *Options* :
 
 A list with all the *options* returned for each mealplan, every
 *option* includes the total price, conditions and description each room.
-| The price returned should be "all inclusive". All fares, taxes and
+
+|
+
+The price returned should be "all inclusive". All fares, taxes and
 discounts are already included in the total price.
 
 |
@@ -59,15 +62,11 @@ discounts are already included in the total price.
 Remarks
 -------
 
-|
-
 This method **must** be called **before** the *Valuation* method.
 
-|
 
 The maximum time, that is permitted in our system, before the connection is closed,  is of **25000** milliseconds.
 
-|
 
 **Price, binding price and commission**:
 
@@ -81,8 +80,6 @@ The maximum time, that is permitted in our system, before the connection is clos
 -  When commission is greater than 0, for example: commission = 12, it
    is a sale price, and this commission is informed for the provider (
    this price is mandatory depends if binding price is true /false).
-   
-|
 
 
 
@@ -383,7 +380,6 @@ The maximum time, that is permitted in our system, before the connection is clos
 Detailled description 
 ---------------------
 
-|
 
 **PaymentOptions:**
 
