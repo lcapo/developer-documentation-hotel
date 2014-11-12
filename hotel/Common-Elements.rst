@@ -1,5 +1,9 @@
+.. highlight:: xml
+
 Common Elements
 ===============
+
+|
 
 This node will be in every request and response objects. 
 
@@ -9,8 +13,8 @@ The response object contains the operation status and errors if any.
 
 |
 
-*Common Elements* RQ Example
-----------------------------
+Common Elements RQ Example
+--------------------------
 
 ::
 
@@ -40,8 +44,8 @@ The response object contains the operation status and errors if any.
 
 | 
 
-*Common Elements* RQ Description
---------------------------------
+Common Elements RQ Description
+------------------------------
 
 
 
@@ -89,8 +93,8 @@ The response object contains the operation status and errors if any.
 
 | 
 
-*Common Elements RS* Example
-----------------------------
+Common Elements RS Example
+--------------------------
 
 ::
 
@@ -118,8 +122,8 @@ The response object contains the operation status and errors if any.
 
 | 
 
-*Common Elements RS Description*
---------------------------------
+Common Elements RS Description
+------------------------------
 
 
 
