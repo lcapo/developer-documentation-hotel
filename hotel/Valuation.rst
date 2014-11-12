@@ -235,7 +235,7 @@ The factors that affects the cancel penalization goes as follows:
  
 * Hours Before: Number of hours prior to arrival day in which this Cancellation policy applies.
 
-* Type: there are three values that can be inside types, nights which will indicate the number of nights which will be penalized, the percentage which is require to pay of the exact amount of the booking and import, that indicates the exact amount that it is necessary to pay.
+* Type: there are three values that can be inside types, nights which will indicate the number of nights which will be penalized, the percentage which indicates the amount to pay based on the booking price and import, that indicates the exact amount that it is necessary to pay.
 
 * Currency: Money currency of the import.
 
