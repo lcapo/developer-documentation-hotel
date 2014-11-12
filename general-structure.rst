@@ -60,22 +60,26 @@ the specific objects related to the operation
 
 |
 
-.. include:: ./hotel/Common-Elements.rst
-.. include:: ./hotel/Avail.rst
-.. include:: ./hotel/Valuation.rst
-.. include:: ./hotel/Reservation.rst
-.. include:: ./hotel/ReservationRead.rst
-.. include:: ./hotel/ReservationList.rst
-.. include:: ./hotel/Cancel.rst
-.. include:: ./hotel/HotelList.rst
-.. include:: ./hotel/DescriptiveInfo.rst
-.. include:: ./hotel/AvailDestinationTree.rst
-.. include:: ./hotel/GeographicDestinationTree.rst
-.. include:: ./hotel/MealPlanList.rst
-.. include:: ./hotel/RoomList.rst
-.. include:: ./hotel/CategoryList.rst
-.. include:: ./hotel/StaticConfiguration.rst
-.. include:: ./hotel/RunTimeConfiguration.rst
-.. include:: ./hotel/ModifyValuation.rst
-.. include:: ./hotel/ModifyReservation.rst
-.. include:: ./hotel/MasterData.rst
+.. toctree::
+  :maxdepth: 3
+  :numbered:
+  
+  Common-Elements<./hotel/Common-Elements.rst>
+  Avail<./hotel/Avail.rst>
+  Valuation<./hotel/Valuation.rst>
+  Reservation<./hotel/Reservation.rst>
+  ReservationRead<./hotel/ReservationRead.rst>
+  ReservationList<./hotel/ReservationList.rst>
+  Cancel<./hotel/Cancel.rst>
+  HotelList<./hotel/HotelList.rst>
+  DescriptiveInfo<./hotel/DescriptiveInfo.rst>
+  DestinationTree<./hotel/AvailDestinationTree.rst>
+  GeographicalTree<./hotel/GeographicDestinationTree.rst>
+  MealPlanList<./hotel/MealPlanList.rst>
+  RoomList<./hotel/RoomList.rst>
+  Category<./hotel/CategoryList.rst>
+  StaticConfiguration<./hotel/StaticConfiguration.rst>
+  RunTimeConfiguration<./hotel/RunTimeConfiguration.rst>
+  ModifyValuation<./hotel/ModifyValuation.rst>
+  ModifyReservation<./hotel/ModifyReservation.rst>
+  MasterData<./hotel/MasterData.rst>
