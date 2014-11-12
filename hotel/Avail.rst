@@ -392,12 +392,12 @@ payment will be done by the costumer at checking.
 
 |
 
-* **CardBookingPay:** The client will create a virtual credit-card with the exact amount of the 
+* **CardBookingPay:** The client will use a credit-card with the exact amount of the 
 option so he can pay the provider/hotel. The provider will charge the payment on the reservation day.
 
 |
 
-* **CardChekingPay:** The client will create a virtual credit-card with the exact amount of the 
+* **CardChekingPay:** The client will use a credit-card with the exact amount of the 
 option so he can pay the provider/hotel. The provider will charge the payment on the checking day.
 
 |
