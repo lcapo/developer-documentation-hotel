@@ -1,7 +1,8 @@
 Avail
 =====
 
-**Method Goals**
+Method Goals
+------------
 
 
 |
@@ -12,26 +13,29 @@ will always return all results returned by the provider.
 
 |
 
-**Request Format**
+Request Format
+--------------
 
 |
 
 The availability request is very straight forward. It only requires
-the destination, the traveling dates and the paxes of the rooms.
+the destination, the travelling dates and the paxes of the rooms.
 
 |
 
-**Response Format**
+Response Format
+---------------
 
 | 
-| Results are organized in this hierarchy:
+
+Results are organized in this hierarchy:
 
 -  *Hotel* :
 
 |
 
 A list with all the hotels, including the name and code hotel,
-*mealplans* list, etc returned by the provider.
+*mealplans* list, etc. returned by the provider.
 
 -  *Mealplans* :
 
@@ -52,7 +56,8 @@ discounts are already included in the total price.
 
 |
 
-**Remarks**
+Remarks
+-------
 
 |
 
@@ -60,7 +65,7 @@ This method **must** be called **before** the *Valuation* method.
 
 |
 
-The maximum time, that is permited in our system, before the connection is closed,  is of **25000** miliseconds.
+The maximum time, that is permitted in our system, before the connection is closed,  is of **25000** milliseconds.
 
 |
 
