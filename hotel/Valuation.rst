@@ -237,11 +237,11 @@ The factors that affects the cancel penalization goes as follows:
 
 * **Type:** There are three values that can be inside types: 
 
-	* *Noches:* Which will indicate the number of nights which will be penalized.
+ * *Noches:* Which will indicate the number of nights which will be penalized.
 	
-	* *Porcentaje:* Which indicates the percentage to pay based on the option price.
+ * *Porcentaje:* Which indicates the percentage to pay based on the option price.
 	
-	* *Importe:* That indicates the exact amount that it is necessary to pay.
+ * *Importe:* That indicates the exact amount that it is necessary to pay.
 
 * **Currency:** Money currency of the import.
 
