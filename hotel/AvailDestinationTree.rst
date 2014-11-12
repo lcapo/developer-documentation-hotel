@@ -1,40 +1,40 @@
 AvailDestinationTree
 ====================
 
-**Method Goals**
-
 |
+
+Method Goals
+------------
 
 This method returns the tree of destinations accessible from the call
 *Avail* .
 
 |
 
-**Request Format**
-
-|
+Request Format
+--------------
 
 The request does not require any elements empty request.
 
 |
 
-**Response Format**
-
-|
+Response Format
+---------------
 
 The result returns a list of *DestinationTree* with their
 corresponding sub-destinations.
 
 |
 
-**Remarks**
+Remarks
+-------
 
-The maximum time, that is permited in our system, before the connection is closed,  is of **240000** miliseconds.
+The maximum time, that is permitted in our system, before the connection is closed,  is of **240000** milliseconds.
 
 |
 
-*AvailDestinationTreeRQ* Example
---------------------------------
+AvailDestinationTreeRQ Example
+------------------------------
 
 ::
 
@@ -43,8 +43,8 @@ The maximum time, that is permited in our system, before the connection is close
 
 |
 
-*AvailDestinationTreeRQ* Description
-------------------------------------
+AvailDestinationTreeRQ Description
+----------------------------------
 
 +------------------------+----------+----------+---------------------------------------------------------------------------------------------+
 | Element                | Number   | Type     | Description                                                                                 |
@@ -54,8 +54,8 @@ The maximum time, that is permited in our system, before the connection is close
 
 |
 
-*AvailDestinationTreeRS* Example
---------------------------------
+AvailDestinationTreeRS Example
+------------------------------
 
 ::
 
@@ -84,8 +84,8 @@ The maximum time, that is permited in our system, before the connection is close
 
 |
 
-*AvailDestinationTreeRS* Description
-------------------------------------
+AvailDestinationTreeRS Description
+----------------------------------
 
 +------------------------+----------+----------+---------------------------------------------------------------------------------------------+
 | Element                | Number   | Type     | Description                                                                                 |
@@ -95,8 +95,8 @@ The maximum time, that is permited in our system, before the connection is close
 
 |
 
-Detailled description
----------------------
+Detailed description
+--------------------
 
 ::
 
@@ -108,7 +108,7 @@ Detailled description
         <DestinationTree code = "AST" name = "Asturias"/>
         <DestinationTree code = "AND" name = "Andalucia"/>
         <DestinationTree code = "PAL0" name = "Palma de Mallorca"/>
-        <DestinationTree codigo = "ALC0" name = "Alcudia"/>
+        <DestinationTree code = "ALC0" name = "Alcudia"/>
         . . .
     </AvailDestinationTreeRS>
     

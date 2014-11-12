@@ -29,14 +29,12 @@ Response Format
 
 Results are organized in this hierarchy:
 
-|
 
 -  *Hotel* :
 
 A list with all the hotels, including the name and code hotel,
 *mealplans* list, etc. returned by the provider.
 
-|
 
 -  *Mealplans* :
 
@@ -44,8 +42,6 @@ A list with all the hotels, including the name and code hotel,
 A list of all MealPlans returned by the provider, every *mealplan*
 including the mealplan's code. Every *mealplan* also contains a list of
 the *options* for this availability.
-
-|
 
 -  *Options* :
 
@@ -85,8 +81,8 @@ The maximum time, that is permitted in our system, before the connection is clos
 
 |
 
-*AvailRQ* Example
------------------
+AvailRQ Example
+---------------
 
 ::
    
@@ -110,8 +106,8 @@ The maximum time, that is permitted in our system, before the connection is clos
 
 |
 
-*AvailRQ* Description
----------------------
+AvailRQ Description
+-------------------
 
 +-------------------------------------+----------+-----------+--------------------------------------------------------------------+
 | Element                             | Number   | Type      | Description                                                        |
@@ -150,8 +146,8 @@ The maximum time, that is permitted in our system, before the connection is clos
 
 |
 
-*AvailRS* Example
------------------
+AvailRS Example
+---------------
 
 ::
 
@@ -246,8 +242,8 @@ The maximum time, that is permitted in our system, before the connection is clos
 
 |
 
-*AvailRS* Description
----------------------
+AvailRS Description
+-------------------
 
 +---------------------------------------------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Element                                                                         | Number   | Type      | Description                                                                                                                                                                                                       |
@@ -377,7 +373,7 @@ The maximum time, that is permitted in our system, before the connection is clos
 
 |
 
-Detailled description 
+Detailed description 
 ---------------------
 
 
