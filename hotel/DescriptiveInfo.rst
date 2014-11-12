@@ -260,7 +260,7 @@ The maximum time, that is permited in our system, before the connection is close
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
 |Attributes           | 0..1     |          | Attributes.                                                                                 |
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
-|Attributes/Attribute | 1..n     |          | Attribute.                                                                                  |
+|Attributes/Attribute | 1..n     |          | Specific Atributes of the Hotel, like for example the service of having wi-fi.              |
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
 |Attributes/Attribute |          |          |                                                                                             |
 |/Code                | 1        | String   | Code.                                                                                       |
