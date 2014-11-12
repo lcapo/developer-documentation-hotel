@@ -422,16 +422,17 @@ The quantity ( or "cantidad" ) as to be one. This quantity is obsolete.
   
 |
 
-**CancelPenalty:**
+* **HoursBefore:** Number of hours which are in between the reservation date and the checking date. 
 
-The penalty in cancelling a booking depends on which situation you do the cancellation. 
-The factors that affects the cancel penalization goes as follows:
- 
-* Hours Before: Number of hours prior to arrival day in which this Cancellation policy applies.
+* **Type:** There are three values that can be inside types: 
 
-* Type: there are three values that can be inside types, nights which will indicate the number of nights which will be penalized, the percentage which indicates the amount to pay based on the booking price and import, that indicates the exact amount that it is necessary to pay.
+ * *Noches:* Which will indicate the number of nights which will be penalized.
+	
+ * *Porcentaje:* Which indicates the percentage to pay based on the option price.
+	
+ * *Importe:* That indicates the exact amount that it is necessary to pay.
 
-* Currency: Money currency of the import.
+* **Currency:** Money currency of the import.
 
 |
 
