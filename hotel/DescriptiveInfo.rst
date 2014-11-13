@@ -1,40 +1,42 @@
+.. highlight:: xml
+
 DescriptiveInfo
 ===============
 
-**Method Goals**
-
 |
+
+Method Goals
+------------
 
 This method returns the details of a hotel (pictures, descriptions
 ...) for a given language.
 
 |
 
-**Request Format**
-
-|
+Request Format
+--------------
 
 The request just requires the hotel code and language code (ISO-639-1)
 ( this is specified within the source-->languageCode).
 
 |
 
-**Response Format**
-
-|
+Response Format
+---------------
 
 The result returns the details of that hotel.
 
 |
 
-**Remarks**
+Remarks
+-------
 
-The maximum time, that is permited in our system, before the connection is closed,  is of **180000** miliseconds.
+The maximum time, that is permitted in our system, before the connection is closed,  is of **180000** milliseconds.
 
 |
 
-*DescriptiveInfoRQ* Example
----------------------------
+DescriptiveInfoRQ Example
+-------------------------
 
 ::
 
@@ -46,8 +48,8 @@ The maximum time, that is permited in our system, before the connection is close
 
 |
 
-*DescriptiveInfoRQ* Description
--------------------------------
+DescriptiveInfoRQ Description
+-----------------------------
 
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
 | Element             | Number   | Type     | Description                                                                                 |
@@ -63,8 +65,8 @@ The maximum time, that is permited in our system, before the connection is close
 
 |
 
-*DescriptiveInfoRS* Example
----------------------------
+DescriptiveInfoRS Example
+-------------------------
 
 ::
 
@@ -174,8 +176,8 @@ The maximum time, that is permited in our system, before the connection is close
 
 |
 
-*DescriptiveInfoRS* Description
--------------------------------
+DescriptiveInfoRS Description
+-----------------------------
 
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
 | Element             | Number   | Type     | Description                                                                                 |
@@ -235,7 +237,7 @@ The maximum time, that is permited in our system, before the connection is close
 |Type                 | 0..1     | String   | Hotel type: H (hotel) A (apartment) AH (aparthotel) C (club) AT (agritourism) HS (hostel)   |
 |                     |          |          | CA (house) V (Ville) B (Bungalows).                                                         |
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
-|Chaincode            | 0..1     | String   | Chain code.                                                                                 |
+| Chaincode           | 0..1     | String   | Chain code.                                                                                 |
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
 |ShortDescription     | 0..1     | String   | Short Description.                                                                          |
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
@@ -260,7 +262,7 @@ The maximum time, that is permited in our system, before the connection is close
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
 |Attributes           | 0..1     |          | Attributes.                                                                                 |
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
-|Attributes/Attribute | 1..n     |          | Specific Atributes of the Hotel, like for example the service of having wi-fi.              |
+|Attributes/Attribute | 1..n     |          | Specific Attributes of the Hotel, like for example the service of having wi-fi.             |
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
 |Attributes/Attribute |          |          |                                                                                             |
 |/Code                | 1        | String   | Code.                                                                                       |
