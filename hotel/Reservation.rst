@@ -1,25 +1,27 @@
+.. highlight:: xml
+
 Reservation
 ===========
 
-**Method Goals**
+|
 
-| 
-| This method aims to book an option.
+Method Goals
+------------
+
+This method aims to book an option.
 
 |
 
-**Request Format**
-
-|
+Request Format
+--------------
 
 The request format works the same way as the *Valuation* request but
 with the list of passengers.
 
 |
 
-**Response Format**
-
-|
+Response Format
+---------------
 
 The result returns the booking locator (booking code). It can be the
 provider's or the one sent in the request.
@@ -31,14 +33,15 @@ state of booking.
 
 |
 
-**Remarks**
+Remarks
+-------
 
-The maximum time, that is permited in our system, before the connection is closed,  is of **180000** miliseconds.
+The maximum time, that is permitted in our system, before the connection is closed,  is of **180000** milliseconds.
 
 |
 
-*ReservationRQ* Example
------------------------
+ReservationRQ Example
+---------------------
 
 ::
 
@@ -80,8 +83,8 @@ The maximum time, that is permited in our system, before the connection is close
 
 |
 
-*ReservationRQ* Description
----------------------------
+ReservationRQ Description
+-------------------------
 
 +------------------------------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Element                                  | Number   | Type      | Description                                                                                                                                              |
@@ -157,8 +160,8 @@ The maximum time, that is permited in our system, before the connection is close
 
 |
 
-*ReservationRS* Example
------------------------
+ReservationRS Example
+---------------------
 
 ::
 
@@ -170,8 +173,8 @@ The maximum time, that is permited in our system, before the connection is close
 
 |
 
-*ReservationRS* Description
----------------------------
+ReservationRS Description
+-------------------------
 
 +-------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Element           | Number   | Type      | Description                                                                                                                                              |
@@ -200,3 +203,5 @@ The maximum time, that is permited in our system, before the connection is close
 **Note:**
 
 Keep the parameters in the valuation response to include them in the reservation request.
+
+|

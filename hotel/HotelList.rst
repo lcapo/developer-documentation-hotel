@@ -1,37 +1,36 @@
+.. highlight:: xml
+
 HotelList
 =========
 
-**Method Goals**
-
 |
+
+Method Goals
+------------
 
 This method returns a list of hotels, where every hotel contains basic
 information ( code, name, address, phone...)
 
 |
 
-**Request Format**
-
-|
+Request Format
+--------------
 
 The request does not require any elements. Empty request.
 
 |
 
-**Response Format**
-
-|
+Response Format
+---------------
 
 The result returns a list of *Hotel* (hotels).
 
 |
 
-**Remarks**
+Remarks
+-------
 
-|
-
-
-The maximum time, that is permited in our system, before the connection is closed,  is of **240000** miliseconds.
+The maximum time, that is permitted in our system, before the connection is closed,  is of **240000** milliseconds.
 
 
 This method may be preloaded in **XML Travelgate**'s system if it
@@ -39,8 +38,8 @@ takes more than 4 minutes to download.
 
 |
 
-*HotelListRQ* Example
----------------------
+HotelListRQ Example
+-------------------
 
 ::
 
@@ -49,8 +48,8 @@ takes more than 4 minutes to download.
 
 |
 
-*HotelListRQ* Description
--------------------------
+HotelListRQ Description
+-----------------------
 
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
 | Element             | Number   | Type     | Description                                                                                 |
@@ -61,8 +60,8 @@ takes more than 4 minutes to download.
 
 |
 
-*HotelListRS* Example
----------------------
+HotelListRS Example
+-------------------
 
 ::
 
@@ -110,8 +109,8 @@ takes more than 4 minutes to download.
 
 |
 
-*HotelListRS* Description
--------------------------
+HotelListRS Description
+-----------------------
 
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
 | Element             | Number   | Type     | Description                                                                                 |
@@ -162,16 +161,16 @@ takes more than 4 minutes to download.
 
 |
 
-*Detailled* Description
------------------------
+Detailed Description
+--------------------
 
 **Hotel types:**
 
 H (Hotel)
 
-A (apartament)
+A (apartment)
 
-AH (apartament Hotel)
+AH (apartment Hotel)
 
 C (Club)
 

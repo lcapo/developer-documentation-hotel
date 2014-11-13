@@ -1,16 +1,20 @@
+.. highlight:: xml
+
 ReservationList
 ===============
 
-**Method Goals**
-
 |
+
+Method Goals
+------------
 
 This method aims to return a list of bookings for a given time period
-being that either booking date or the traveling date.
-
-**Request Format**
+being that either booking date or the travelling date.
 
 |
+
+Request Format
+--------------
 
 The request requires one of the following data depending on provider:
 
@@ -21,22 +25,22 @@ The request requires one of the following data depending on provider:
 
 | 
 
-**Response Format**
-
-|
+Response Format
+---------------
 
 The result returns a list of bookings details, with the same format as *ReservationReadRS*.
 
 |
 
-**Remarks**
+Remarks
+-------
 
-The maximum time, that is permited in our system, before the connection is closed,  is of **240000** miliseconds.
+The maximum time, that is permitted in our system, before the connection is closed,  is of **240000** milliseconds.
 
 |
 
-*ReservationListRQ* Example
----------------------------
+ReservationListRQ Example
+-------------------------
 
 ::
 
@@ -48,8 +52,8 @@ The maximum time, that is permited in our system, before the connection is close
 
 | 
 
-*ReservationListRQ* Description
--------------------------------
+ReservationListRQ Description
+-----------------------------
 
 +---------------------+----------+----------+---------------------------------------------------------+
 | Element             | Number   | Type     | Description                                             |
@@ -67,8 +71,8 @@ The maximum time, that is permited in our system, before the connection is close
 
 |
 
-*ReservationListRS* Example
----------------------------
+ReservationListRS Example
+-------------------------
 
 ::
 
@@ -148,8 +152,8 @@ The maximum time, that is permited in our system, before the connection is close
 
 
 
-*ReservationListRS* Description
--------------------------------
+ReservationListRS Description
+-----------------------------
 
 +----------------------------------------------+----------+--------+----------------------------------------+
 | Element                                      | Number   | Type   | Description                            |
@@ -160,3 +164,5 @@ The maximum time, that is permited in our system, before the connection is close
 +----------------------------------------------+----------+--------+----------------------------------------+
 | ReservationListRS/Reservations/Reservation   | 1        |        | Same structure as ReservationReadRS.   |
 +----------------------------------------------+----------+--------+----------------------------------------+
+
+|

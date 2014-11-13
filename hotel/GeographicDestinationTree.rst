@@ -1,9 +1,12 @@
+.. highlight:: xml
+
 GeographicDestinationTree
 =========================
 
-**Method Goals**
-
 |
+
+Method Goals
+------------
 
 This method returns the provider's geographic tree where each node
 indicates whether the call is accessible from availability
@@ -15,31 +18,30 @@ parameter.
 
 |
 
-**Request Format**
-
-|
+Request Format
+--------------
 
 The request not requires any element, it is empty.
 
 |
 
-**Response Format**
-
-|
+Response Format
+---------------
 
 The result returns a list of *DestinationTree* with corresponding
 sub-destinations.
 
 |
 
-**Remarks**
+Remarks
+-------
 
-The maximum time, that is permited in our system, before the connection is closed,  is of **240000** miliseconds.
+The maximum time, that is permitted in our system, before the connection is closed,  is of **240000** milliseconds.
 
 |
 
-*GeographicDestinationTreeRQ* Example
--------------------------------------
+GeographicDestinationTreeRQ Example
+-----------------------------------
 
 ::
 
@@ -48,8 +50,8 @@ The maximum time, that is permited in our system, before the connection is close
 
 |
 
-*GeographicDestinationTreeRQ* Description
------------------------------------------
+GeographicDestinationTreeRQ Description
+---------------------------------------
 
 +----------------------------+----------+----------+---------------------------------------------------------------------------------------------+
 | Element                    | Number   | Type     | Description                                                                                 |
@@ -59,8 +61,8 @@ The maximum time, that is permited in our system, before the connection is close
 
 |
 
-*GeographicDestinationTreeRS* Example
--------------------------------------
+GeographicDestinationTreeRS Example
+-----------------------------------
 
 ::
 
@@ -90,8 +92,8 @@ The maximum time, that is permited in our system, before the connection is close
 
 |
 
-*GeographicDestinationTreeRS* Description
------------------------------------------
+GeographicDestinationTreeRS Description
+---------------------------------------
 
 +----------------------------+----------+----------+---------------------------------------------------------------------------------------------+
 | Element                    | Number   | Type     | Description                                                                                 |
@@ -101,8 +103,8 @@ The maximum time, that is permited in our system, before the connection is close
 
 |
 
-Detailled description
----------------------
+Detailed description
+--------------------
 
 **Location type:**
 
@@ -190,8 +192,8 @@ avail true, but no children then this will indicate a **CITY**.
 |
     
 There is also another possible case where the city isn't the lowest child or DestinationLeaf code and has children of their own. 
-Meaning the cities will have DestinationLeaf code (children) that will represent neighborhoods. Like in this example 
-"Son Sardina" and "Indioteria" represent neighborhoods of the city Palma of Mallorca. Even though "Son Sardina" and "Indioteria"
+Meaning the cities will have DestinationLeaf code (children) that will represent neighbourhoods. Like in this example 
+"Son Sardina" and "Indioteria" represent neighbourhoods of the city Palma of Mallorca. Even though "Son Sardina" and "Indioteria"
 are the lowest DestinationLeaf ( child ) these codes can't represent as cities codes, because they haven't got attackable 
 Avail, because their Avail is false.
 

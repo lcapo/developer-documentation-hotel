@@ -1,26 +1,27 @@
+.. highlight:: xml
+
 StaticConfiguration
 ===================
 
-**Method Goals**
-
 |
+
+Method Goals
+------------
 
 This message provides information about the static configuration of
 the provider, to see and configure the provider in the best way.
 
 |
 
-**Request Format**
-
-|
+Request Format
+--------------
 
 The request does not require any elements empty request.
 
 |
 
-**Response Format**
-
-|
+Response Format
+---------------
 
 The XML returned contains more elements on the configuration (number
 of hotels, the number of cities and the number of areas of availability,
@@ -30,8 +31,8 @@ stay minimum, list of languages that allows ....).
 
 |
 
-*StaticConfigurationRQ* Example
--------------------------------
+StaticConfigurationRQ Example
+-----------------------------
 
 ::
 
@@ -40,8 +41,8 @@ stay minimum, list of languages that allows ....).
 
 |
 
-*StaticConfigurationRQ* Description
------------------------------------
+StaticConfigurationRQ Description
+---------------------------------
 
 +----------------------+----------+----------+---------------------------------------------------------------------------------------------+
 | Element              | Number   | Type     | Description                                                                                 |
@@ -51,8 +52,8 @@ stay minimum, list of languages that allows ....).
 
 |
 
-*StaticConfigurationRS* Example
--------------------------------
+StaticConfigurationRS Example
+-----------------------------
 
 ::
 
@@ -122,9 +123,8 @@ stay minimum, list of languages that allows ....).
 
 |
 
-*StaticConfigurationRS* Description
------------------------------------
-
+StaticConfigurationRS Description
+---------------------------------
 
 +----------------------+----------+----------+---------------------------------------------------------------------------------------------+
 | Element              | Number   | Type     | Description                                                                                 |

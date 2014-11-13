@@ -7,10 +7,8 @@ Standard codes
 
 |
 
-*Language Codes*
-----------------
-
-|
+Language Codes
+--------------
 
 +-----------------------+-----------------------+
 | Language              | Code                  |
@@ -32,10 +30,8 @@ Standard codes
 
 |
 
-*Error codes*
--------------
-
-|
+Error codes
+-----------
 
 +-----------+------------------------------------------------------+
 | Code      | Description                                          |

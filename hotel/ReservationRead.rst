@@ -1,17 +1,19 @@
+.. highlight:: xml
+
 ReservationRead
 ===============
 
-**Method Goals**
-
 |
+
+Method Goals
+------------
 
 This method aims to retrieve a booking with its full details.
 
 |
 
-**Request Format**
-
-|
+Request Format
+--------------
 
 The request requires one of the following data depending on provider:
 
@@ -25,9 +27,8 @@ The request requires one of the following data depending on provider:
 
 | 
 
-**Response Format**
-
-|
+Response Format
+---------------
 
 The result returns the full details of a booking. It is very similar
 to the *Option* in the Availability Response, the cancel policies and
@@ -35,14 +36,15 @@ holder of booking.
 
 |
 
-**Remarks**
+Remarks
+-------
 
-The maximum time, that is permited in our system, before the connection is closed,  is of **180000** miliseconds.
+The maximum time, that is permitted in our system, before the connection is closed,  is of **180000** millisecond.
 
 |
 
-*ReservationReadRQ* Example
----------------------------
+ReservationReadRQ Example
+-------------------------
 
 ::
 
@@ -59,8 +61,8 @@ The maximum time, that is permited in our system, before the connection is close
 
 |
 
-*ReservationReadRQ* Description
--------------------------------
+ReservationReadRQ Description
+-----------------------------
 
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
 | Element             | Number   | Type     | Description                                                                                 |
@@ -84,8 +86,8 @@ The maximum time, that is permited in our system, before the connection is close
 
 |
 
-*ReservationReadRS* Example
----------------------------
+ReservationReadRS Example
+-------------------------
 
 ::
 
@@ -121,8 +123,8 @@ The maximum time, that is permited in our system, before the connection is close
 
 |
 
-*ReservationReadRS* Description
--------------------------------
+ReservationReadRS Description
+-----------------------------
 
 +---------------------+---------+----------+---------------------------------------------------------------------------------------------+
 | Element             | Number  | Type     | Description                                                                                 |
@@ -229,9 +231,9 @@ The maximum time, that is permited in our system, before the connection is close
 | /ComunicationStatus |         |          |                                                                                             |
 +---------------------+---------+----------+---------------------------------------------------------------------------------------------+
 | TransactionStatus   | 1       | String   | Status response (Status response (DESCONOCIDO (Unknown), EXISTE (Exists),                   |
-| /RSStatus           |         |          | EXISTECANCELADA (Canceled), NO_EXISTE (Does not exist)).                                    |
+| /RSStatus           |         |          | EXISTECANCELADA (Cancelled), NO_EXISTE (Does not exist)).                                   |
 +---------------------+---------+----------+---------------------------------------------------------------------------------------------+
-| TransactionStatus   | 1       | String   | Status booking (OK = confirmed, RQ = on request, CN = canceled, UN = unknown).              |
+| TransactionStatus   | 1       | String   | Status booking (OK = confirmed, RQ = on request, CN = cancelled, UN = unknown).             |
 | /ResStatus          |         |          |                                                                                             |
 +---------------------+---------+----------+---------------------------------------------------------------------------------------------+
 

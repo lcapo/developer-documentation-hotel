@@ -1,18 +1,20 @@
+.. highlight:: xml
+
 ModifyValuation
 ===============
 
-**Method Goals**
-
 |
+
+Method Goals
+------------
 
 This message lets you know if it is possible a modify, and new price
 of that.
 
 |
 
-**Request Format**
-
-|
+Request Format
+--------------
 
 The request require the reservation and all modifications will be
 apply ( these will depend on what is specified in the
@@ -20,22 +22,22 @@ apply ( these will depend on what is specified in the
 
 |
 
-**Response Format**
-
-|
+Response Format
+---------------
 
 The XML returned contains a simulation of the new booking.
 
 |
 
-**Remarks**
+Remarks
+-------
 
-The maximum time, that is permited in our system, before the connection is closed,  is of **180000** miliseconds.
+The maximum time, that is permitted in our system, before the connection is closed,  is of **180000** milliseconds.
 
 |
 
-*ModifyValuationRQ* Example
----------------------------
+ModifyValuationRQ Example
+-------------------------
 
 ::
 
@@ -89,8 +91,8 @@ The maximum time, that is permited in our system, before the connection is close
 
 |
 
-*ModifyValuationRQ* Description
--------------------------------
+ModifyValuationRQ Description
+-----------------------------
 
 
 +-----------------------------------------------------------------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -98,7 +100,7 @@ The maximum time, that is permited in our system, before the connection is close
 +=============================================================================+==========+===========+==========================================================================================================================================================+
 | ModifyValuationRQ                                                           | 1        |           | Root node.                                                                                                                                               |
 +-----------------------------------------------------------------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Reservation                                                                 | 1        |           | Reservaton data.                                                                                                                                         |
+| Reservation                                                                 | 1        |           | Reservation data.                                                                                                                                        |
 +-----------------------------------------------------------------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Reservation/Locators                                                        | 1        |           | Information of the locators (it is mandatory indicate one of two, or client or provider).                                                                |
 +-----------------------------------------------------------------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -120,15 +122,15 @@ The maximum time, that is permited in our system, before the connection is close
 +-----------------------------------------------------------------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Modifications/ModifyStartDateAddDays/StartDate                              | 1        | String    | New check-in.                                                                                                                                            |
 +-----------------------------------------------------------------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Modifications/ModifyStartDateSubtractDays                                   | 0..1     |           | Substract days of check-in.                                                                                                                              |
+| Modifications/ModifyStartDateSubtractDays                                   | 0..1     |           | Subtract days of check-in.                                                                                                                               |
 +-----------------------------------------------------------------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Modifications/ModifyStartDateSubtractDays/StartDate                         | 1        | String    | New chekc-in.                                                                                                                                            |
+| Modifications/ModifyStartDateSubtractDays/StartDate                         | 1        | String    | New check-in.                                                                                                                                            |
 +-----------------------------------------------------------------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Modifications/ModifyEndDateAddDays                                          | 0..1     |           | Add days of check-out.                                                                                                                                   |
 +-----------------------------------------------------------------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Modifications/ModifyEndDateAddDays/EndDate                                  | 1        | String    | New check-out.                                                                                                                                           |
 +-----------------------------------------------------------------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Modifications/ModifyEndtDateSubtractDays                                    | 0..1     |           | Substract days of check-out.                                                                                                                             |
+| Modifications/ModifyEndtDateSubtractDays                                    | 0..1     |           | Subtract days of check-out.                                                                                                                              |
 +-----------------------------------------------------------------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Modifications/ModifyEndtDateSubtractDays/EndDate                            | 1        | String    | New check-out.                                                                                                                                           |
 +-----------------------------------------------------------------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -179,8 +181,8 @@ The maximum time, that is permited in our system, before the connection is close
 
 |
 
-*ModifyValuationRS* Example
----------------------------
+ModifyValuationRS Example
+-------------------------
 
 ::
 
@@ -196,8 +198,8 @@ The maximum time, that is permited in our system, before the connection is close
 
 |
 
-*ModifyValuationRS* Description
--------------------------------
+ModifyValuationRS Description
+-----------------------------
 
 +--------------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Element                  | Number   | Type      | Description                                                                                                                                              |

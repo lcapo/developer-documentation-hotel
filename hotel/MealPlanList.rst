@@ -1,37 +1,36 @@
+.. highlight:: xml
+
 MealPlanList
 ============
 
-**Method Goals**
-
 |
 
-This method aims to return a list of the available Mealplans, which
+Method Goals
+------------
+
+This method aims to return a list of the available MealPlans, which
 will be used in the availability response.
 
 |
 
-**Request Format**
-
-|
+Request Format
+--------------
 
 The request does not require any elements empty request.
 
 |
 
-**Response Format**
-
-|
+Response Format
+---------------
 
 The result returns a list of *MealPlan*.
 
 |
 
-**Remarks**
+Remarks
+-------
 
-|
-
-
-The maximum time, that is permited in our system, before the connection is closed,  is of **240000** miliseconds.
+The maximum time, that is permitted in our system, before the connection is closed,  is of **240000** milliseconds.
 
 
 If the provider has more than 100 mealplan codes, or more than 20
@@ -41,8 +40,8 @@ Codes <#Link%20to%20List%20of%20Codes>`__
 
 |
 
-*MealPlanRQ* Example
---------------------
+MealPlanRQ Example
+------------------
 
 ::
 
@@ -51,8 +50,8 @@ Codes <#Link%20to%20List%20of%20Codes>`__
 
 |
 
-*MealPlanListRQ* Description
-----------------------------
+MealPlanListRQ Description
+--------------------------
 
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
 | Element             | Number   | Type     | Description                                                                                 |
@@ -62,8 +61,8 @@ Codes <#Link%20to%20List%20of%20Codes>`__
 
 |
 
-*MealPlanListRS* Example
-------------------------
+MealPlanListRS Example
+----------------------
 
 ::
 
@@ -84,8 +83,8 @@ Codes <#Link%20to%20List%20of%20Codes>`__
 
 |
 
-*MealPlanListRS* Description
-----------------------------
+MealPlanListRS Description
+--------------------------
 
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
 | Element             | Number   | Type     | Description                                                                                 |

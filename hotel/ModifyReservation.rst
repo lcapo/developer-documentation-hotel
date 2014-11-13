@@ -1,38 +1,40 @@
+.. highlight:: xml
+
 ModifyReservation
 =================
 
-**Method Goals**
+|
+
+Method Goals
+------------
+
+This message confirms a modification
 
 |
 
-This message confirm a modification
+Request Format
+--------------
+
+The request requires the valuation returned for ModifyValuationRS
 
 |
 
-**Request Format**
+Response Format
+---------------
+
+The XML returned contains a booking confirmation 
 
 |
 
-The request require the valuation returned for ModifyValuationRS
+Remarks
+-------
+
+The maximum time, that is permitted in our system, before the connection is closed,  is of **180000** milliseconds.
 
 |
 
-**Response Format**
-
-|
-
-The XML returned contains a confirmation booking
-
-|
-
-**Remarks**
-
-The maximum time, that is permited in our system, before the connection is closed,  is of **180000** miliseconds.
-
-|
-
-*ModifyReservationRQ* Example
------------------------------
+ModifyReservationRQ Example
+---------------------------
 
 ::
 
@@ -93,8 +95,8 @@ The maximum time, that is permited in our system, before the connection is close
 
 |
 
-*ModifyReservationRQ* Description
----------------------------------
+ModifyReservationRQ Description
+-------------------------------
 
 +-----------------------------------------------------------------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Element                                                                     | Number   | Type      | Description                                                                                                                                              |
@@ -212,8 +214,8 @@ The maximum time, that is permited in our system, before the connection is close
 
 |
 
-*ModifyReservationRS* Example
------------------------------
+ModifyReservationRS Example
+---------------------------
 
 ::
 
@@ -225,8 +227,8 @@ The maximum time, that is permited in our system, before the connection is close
 
 |
 
-*ModifyReservationRS* Description
----------------------------------
+ModifyReservationRS Description
+-------------------------------
 
 +---------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Element             | Number   | Type      | Description                                                                                                                                              |
@@ -235,7 +237,7 @@ The maximum time, that is permited in our system, before the connection is close
 +---------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 | ProviderLocator     | 1        | String    | Provider locator.                                                                                                                                        |
 +---------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-| ResStatus           | 1        | String    | Status of book (OK = confirmed, RQ = on request, CN = canceled, UN = unknown ).                                                                          |
+| ResStatus           | 1        | String    | Status of book (OK = confirmed, RQ = on request, CN = cancelled, UN = unknown ).                                                                         |
 +---------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Price               | 0..1     |           | Total price of this book.                                                                                                                                |
 +---------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+

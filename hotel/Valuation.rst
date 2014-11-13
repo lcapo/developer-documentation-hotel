@@ -1,32 +1,45 @@
+.. highlight:: xml
+
 Valuation
 =========
 
-**Method Goals**
+|
 
-This method aims to return the total price and cancel policies of the selected *Option*. This *Option* **must** be selected in the previous step (*Avail*).
+Method Goals
+------------
+
+This method aims to return the total price and cancel policies of 
+the selected *Option*. This *Option* **must** be selected in the 
+previous step (*Avail*).
 
 |
 
-**Request Format**
+Request Format
+--------------
 
 The *Valuation* request is same that availabilityRQ and add rooms and Mealplan code.
 
 |
 
-**Response Format**
+Response Format
+---------------
 
-The returned XML contains the total price and list of cancel policies. Sometimes this method will fail since the selected option at *Avail* time will not be available in this stage. In this case the integration returns an error code 301.
-
-|
-
-**Remarks**
-
-The maximum time, that is permited in our system, before the connection is closed,  is of **180000** miliseconds.
+The returned XML contains the total price and list of cancel policies. 
+Sometimes this method will fail since the selected option at *Avail* 
+time will not be available in this stage. In this case the integration 
+returns an error code 301.
 
 |
 
-*ValuationRQ* Example
----------------------
+Remarks
+-------
+
+The maximum time, that is permitted in our system, before the connection is closed,  is of **180000** milliseconds.
+
+|
+
+ValuationRQ Example
+-------------------
 
 ::
 
@@ -52,8 +65,8 @@ The maximum time, that is permited in our system, before the connection is close
 
 
 
-*ValuationRQ* Description
--------------------------
+ValuationRQ Description
+-----------------------
 
 +------------------------------------------+----------+-----------+-------------------------------------------------------------------------+
 | Element                                  | Number   | Type      | Description                                                             |
@@ -107,8 +120,8 @@ The maximum time, that is permited in our system, before the connection is close
 
 |
 
-*ValuationRS* Example
----------------------
+ValuationRS Example
+-------------------
 
 ::
 
@@ -128,8 +141,8 @@ The maximum time, that is permited in our system, before the connection is close
 
 |
 
-*ValuationRS* Description
--------------------------
+ValuationRS Description
+-----------------------
 
 +---------------------------------------------+----------+-----------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Element                                     | Number   | Type      | Description                                                                                                                                             |
@@ -173,8 +186,11 @@ The maximum time, that is permited in our system, before the connection is close
 
 |
 
-CardInfo
---------
+Detailed Description
+--------------------
+
+**CardInfo:**
+
 
 +-------+--------------------------+
 | Codes | Names                    |
