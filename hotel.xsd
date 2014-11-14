@@ -381,6 +381,17 @@
       <xs:enumeration value="HotelSkiPassEquipmentMeals" />
     </xs:restriction>
   </xs:simpleType>
+   <xs:complexType name="Offers">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Offer" type="Offer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Offer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="code" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="name" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
     <xs:element name="ValuationRQ" nillable="true" type="ValuationRQ" />
     <xs:complexType name="ValuationRQ">
       <xs:complexContent mixed="false">
@@ -412,6 +423,7 @@
             <xs:element minOccurs="0" maxOccurs="1" name="Fees" type="Fees" />
             <xs:element minOccurs="0" maxOccurs="1" name="CancelPenalties" type="CancelPenalties" />
             <xs:element minOccurs="0" maxOccurs="1" name="Remarks" type="xs:string" />
+		    <xs:element minOccurs="0" maxOccurs="1" name="Offers" type="Offers" />
             <xs:element minOccurs="0" maxOccurs="1" name="PaymentOptions" type="PaymentOptions" />
             <xs:element minOccurs="0" maxOccurs="1" name="Option" type="Option" />
           </xs:sequence>
@@ -1189,6 +1201,7 @@
           <xs:element minOccurs="1" maxOccurs="1" name="InformCancelPoliciesAvail" type="xs:boolean" />
           <xs:element minOccurs="1" maxOccurs="1" name="InformChangesPolicies" type="xs:boolean" />
           <xs:element minOccurs="1" maxOccurs="1" name="ImplementsDeltaPrice" type="xs:boolean" />
+		  <xs:element minOccurs="1" maxOccurs="1" name="RequiredAllPassengers" type="xs:boolean" />
           <xs:element minOccurs="0" maxOccurs="1" name="ModifyTransactions" type="ModifyTransactions" />
         </xs:sequence>
       </xs:extension>
