@@ -18,7 +18,7 @@ The integration will have the following methods:
 +--------------------------------------------------------------+-------------------------------+-------------------------------+------------+----------------------------------------------+
 | `HotelList <#hotellist>`__                                   | HotelListRQ                   | HotelListRS                   | Yes        | Returns a list of available hotels           |
 +--------------------------------------------------------------+-------------------------------+-------------------------------+------------+----------------------------------------------+
-| `DescriptiveInfo <#descriptiveinfo>`__                       | DescriptiveInfoRQ             | DescriptiveInfoRS             | Yes        | Returns DSF information per DSF          |
+| `DescriptiveInfo <#descriptiveinfo>`__                       | DescriptiveInfoRQ             | DescriptiveInfoRS             | Yes        | Returns hotel information per hotel          |
 +--------------------------------------------------------------+-------------------------------+-------------------------------+------------+----------------------------------------------+
 | `RoomList <#roomlist>`__                                     | RoomListRQ                    | RoomListRS                    | No         | Returns available room types                 |
 +--------------------------------------------------------------+-------------------------------+-------------------------------+------------+----------------------------------------------+
