@@ -62,6 +62,8 @@ the specific objects related to the operation
   :maxdepth: 3
   :numbered:
   
+**Data structure content:**  
+  
   Common-Elements<./DSF/Common-Elements.rst>
   Avail<./DSF/Avail.rst>
   Valuation<./DSF/Valuation.rst>
