@@ -1,8 +1,9 @@
 .. highlight:: xml
 
-#################
-General Structure
-#################
+##############
+Data Structure
+##############
+
 The structure of the API specification follows a standard. This document intends to explain every aspect of this structure and their fields.
 The integration will have the following methods:
 
@@ -17,7 +18,7 @@ The integration will have the following methods:
 +--------------------------------------------------------------+-------------------------------+-------------------------------+------------+----------------------------------------------+
 | `HotelList <#hotellist>`__                                   | HotelListRQ                   | HotelListRS                   | Yes        | Returns a list of available hotels           |
 +--------------------------------------------------------------+-------------------------------+-------------------------------+------------+----------------------------------------------+
-| `DescriptiveInfo <#descriptiveinfo>`__                       | DescriptiveInfoRQ             | DescriptiveInfoRS             | Yes        | Returns hotel information per hotel          |
+| `DescriptiveInfo <#descriptiveinfo>`__                       | DescriptiveInfoRQ             | DescriptiveInfoRS             | Yes        | Returns DSF information per DSF          |
 +--------------------------------------------------------------+-------------------------------+-------------------------------+------------+----------------------------------------------+
 | `RoomList <#roomlist>`__                                     | RoomListRQ                    | RoomListRS                    | No         | Returns available room types                 |
 +--------------------------------------------------------------+-------------------------------+-------------------------------+------------+----------------------------------------------+
@@ -51,9 +52,6 @@ Each request sent to the **service url** requires a node called
 
 |
 
-**************
-Data Structure
-**************
 
 The data structure will always have common elements in all objects and
 the specific objects related to the operation
@@ -64,22 +62,22 @@ the specific objects related to the operation
   :maxdepth: 3
   :numbered:
   
-  Common-Elements<./hotel/Common-Elements.rst>
-  Avail<./hotel/Avail.rst>
-  Valuation<./hotel/Valuation.rst>
-  Reservation<./hotel/Reservation.rst>
-  ReservationRead<./hotel/ReservationRead.rst>
-  ReservationList<./hotel/ReservationList.rst>
-  Cancel<./hotel/Cancel.rst>
-  HotelList<./hotel/HotelList.rst>
-  DescriptiveInfo<./hotel/DescriptiveInfo.rst>
-  DestinationTree<./hotel/AvailDestinationTree.rst>
-  GeographicalTree<./hotel/GeographicDestinationTree.rst>
-  MealPlanList<./hotel/MealPlanList.rst>
-  RoomList<./hotel/RoomList.rst>
-  Category<./hotel/CategoryList.rst>
-  StaticConfiguration<./hotel/StaticConfiguration.rst>
-  RunTimeConfiguration<./hotel/RunTimeConfiguration.rst>
-  ModifyValuation<./hotel/ModifyValuation.rst>
-  ModifyReservation<./hotel/ModifyReservation.rst>
-  MasterData<./hotel/MasterData.rst>
+  Common-Elements<./DSF/Common-Elements.rst>
+  Avail<./DSF/Avail.rst>
+  Valuation<./DSF/Valuation.rst>
+  Reservation<./DSF/Reservation.rst>
+  ReservationRead<./DSF/ReservationRead.rst>
+  ReservationList<./DSF/ReservationList.rst>
+  Cancel<./DSF/Cancel.rst>
+  HotelList<./DSF/HotelList.rst>
+  DescriptiveInfo<./DSF/DescriptiveInfo.rst>
+  DestinationTree<./DSF/AvailDestinationTree.rst>
+  GeographicalTree<./DSF/GeographicDestinationTree.rst>
+  MealPlanList<./DSF/MealPlanList.rst>
+  RoomList<./DSF/RoomList.rst>
+  Category<./DSF/CategoryList.rst>
+  StaticConfiguration<./DSF/StaticConfiguration.rst>
+  RunTimeConfiguration<./DSF/RunTimeConfiguration.rst>
+  ModifyValuation<./DSF/ModifyValuation.rst>
+  ModifyReservation<./DSF/ModifyReservation.rst>
+  MasterData<./DSF/MasterData.rst>

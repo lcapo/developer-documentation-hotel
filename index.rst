@@ -15,5 +15,5 @@ Welcome to XML Travelgate API Docs's documentation!
   Service Definitions<end-points.rst>
   Hotel FAQ <FAQ.rst>
   Anatomy of a request<anatomy-request.rst>
-  General Structure<general-structure.rst>
+  Data Structure<Data-structure.rst>
   SOAP Examples <soap-examples.rst>
