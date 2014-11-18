@@ -15,5 +15,5 @@ Hotel API Docs's documentation!
   Service Definitions<end-points.rst>
   Hotel FAQ <FAQ.rst>
   Anatomy of a request<anatomy-request.rst>
-  Data Structure <data-structure.rst>
+  Data Structure <general-structure.rst>
   SOAP Examples <soap-examples.rst>
