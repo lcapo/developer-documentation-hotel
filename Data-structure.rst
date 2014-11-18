@@ -58,11 +58,13 @@ the specific objects related to the operation
 
 |
 
+**Data structure content:**  
+
 .. toctree::
   :maxdepth: 3
   :numbered:
   
-**Data structure content:**  
+
   
   Common-Elements<./DSF/Common-Elements.rst>
   Avail<./DSF/Avail.rst>
