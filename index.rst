@@ -8,12 +8,12 @@ Hotel API Docs's documentation!
   :maxdepth: 3
   :numbered:
 
-  Change Log<change-log.rst>
-  Intro<intro.rst>
-  Audience<audience.rst>
-  Document Goals<document-goals.rst>
-  Service Definitions<end-points.rst>
-  Hotel FAQ <FAQ.rst>
-  Anatomy of a request<anatomy-request.rst>
-  Data Structure <general-structure.rst>
-  SOAP Examples <soap-examples.rst>
+  Change Log<./change-log.rst>
+  Intro<./intro.rst>
+  Audience<./audience.rst>
+  Document Goals<./document-goals.rst>
+  Service Definitions<./end-points.rst>
+  Hotel FAQ <./FAQ.rst>
+  Anatomy of a request<./anatomy-request.rst>
+  Data Structure <./data-structure.rst>
+  SOAP Examples <./soap-examples.rst>
