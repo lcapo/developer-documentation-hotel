@@ -200,17 +200,91 @@ AvailRS Example
                  </Rooms>
                  <Detail>
                    <POIs>
+                      <POI code = "8A" Description = "Andorra">
+                      <Services>
+                      <Service type = "SkiPass" code = "F1"
+                      description = "Forfait" durationType = "Range"
+                      quantity = "0" unit = "Day">
+                        <RangeDates startDate = "28/01/2014"
+                        endDate = "29/01/2014"/>
+                      </Service>
+                    </Services>
+                  </POI>
+                </POIs>
+                 </Detail>
+                 <Price currency = "EUR" amount = "636.80" 
+                 binding = "false" commission = "-1"/>
+                 <Parameters>
+                   <Parameter key = "sesion" value = "888de014"/>
+                 </Parameters>
+                 <CancelPenalties nonRefundable = "false">
+                     <CancelPenalty>
+                         <HoursBefore>17653824</HoursBefore>
+                         <Penalty type = "Importe" currency = "EUR">0</Penalty>
+                     </CancelPenalty>
+                 </CancelPenalties>
+                 <RateRules>
+                     <Rules>
+                         <Rule type = "NonRefundable"/>
+                     </Rules>
+                 </RateRules>
+               </Option>
+			   <Option type = "HotelSkiPass" paymentType = "MerchantPay" status = "OK">
+                 <Rooms>
+                   <Room id = "4145" roomCandidateRefId = "1" 
+                   code = "DBL#STAND" description = "Doble Standard">
+                     <Price currency = "EUR" amount = "636.80" 
+                     binding = "false" commission = "-1"/>
+                   </Room>
+                 </Rooms>
+                 <Detail>
+                   <POIs>
                      <POI code = "8A" Description = "Andorra">
-                       <Services>
-                         <Service type = "SkiPass" code = "F1" 
-                         description = "Forfait" durationType = "Range" 
-                         quantity = "0" unit = "Day">
-                           <RangeDates startDate = "28/01/2014" 
-                           endDate = "29/01/2014"/>
-                         </Service>
-                       </Services>
-                     </POI>
-                   </POIs>
+                      <Services>
+                      <Service type = "SkiPass" code = "F1"
+                      description = "Forfait" durationType = "libre"
+                      quantity = "5" unit = "Hour">
+                      </Service>
+                    </Services>
+                  </POI>
+                </POIs>
+                 </Detail>
+                 <Price currency = "EUR" amount = "636.80" 
+                 binding = "false" commission = "-1"/>
+                 <Parameters>
+                   <Parameter key = "sesion" value = "888de014"/>
+                 </Parameters>
+                 <CancelPenalties nonRefundable = "false">
+                     <CancelPenalty>
+                         <HoursBefore>17653824</HoursBefore>
+                         <Penalty type = "Importe" currency = "EUR">0</Penalty>
+                     </CancelPenalty>
+                 </CancelPenalties>
+                 <RateRules>
+                     <Rules>
+                         <Rule type = "NonRefundable"/>
+                     </Rules>
+                 </RateRules>
+               </Option>
+			   <Option type = "HotelSkiPass" paymentType = "MerchantPay" status = "OK">
+                 <Rooms>
+                   <Room id = "4145" roomCandidateRefId = "1" 
+                   code = "DBL#STAND" description = "Doble Standard">
+                     <Price currency = "EUR" amount = "636.80" 
+                     binding = "false" commission = "-1"/>
+                   </Room>
+                 </Rooms>
+                 <Detail>
+                   <POIs>
+                     <POI code = "8A" Description = "Andorra">
+                    <Services>
+                      <Service type = "SkiPass" code = "F1"
+                      description = "Forfait" durationType = "libre"
+                      quantity = "2" unit = "Day">
+                      </Service>
+                    </Services>
+                  </POI>
+                </POIs>
                  </Detail>
                  <Price currency = "EUR" amount = "636.80" 
                  binding = "false" commission = "-1"/>
@@ -433,6 +507,71 @@ The quantity ( or "cantidad" ) as to be one. This quantity is obsolete.
  * *Importe:* That indicates the exact amount that it is necessary to pay.
 
 * **Currency:** Money currency of the import.
+
+|
+
+**POI cases explanation:**
+
+Case 1:
+
+::
+
+	<POIs>
+	  <POI code = "8A" Description = "Andorra">
+		<Services>
+		  <Service type = "SkiPass" code = "F1"
+		  description = "Forfait" durationType = "Range"
+		  quantity = "0" unit = "Day">
+			<RangeDates startDate = "28/01/2014"
+			endDate = "29/01/2014"/>
+		  </Service>
+		</Services>
+	  </POI>
+	</POIs>
+
+
+Specifying the quantity makes no difference and it won't send 
+anything because it already specifies the start and end dates. 	
+
+|
+
+Case 2:
+
+::
+	<POIs>
+	  <POI code = "8A" Description = "Andorra">
+		<Services>
+		  <Service type = "SkiPass" code = "F1"
+		  description = "Forfait" durationType = "libre"
+		  quantity = "5" unit = "Hour">
+		  </Service>
+		</Services>
+	  </POI>
+	</POIs>
+
+In this case, quantity is applicable in all the stay, i.e., 
+the client can enjoy until 5 hours of forfait in any day of the stay. 
+
+|
+
+Case 3:
+
+::
+	<POIs>
+	  <POI code = "8A" Description = "Andorra">
+		<Services>
+		  <Service type = "SkiPass" code = "F1"
+		  description = "Forfait" durationType = "libre"
+		  quantity = "2" unit = "Day">
+		  </Service>
+		</Services>
+	  </POI>
+	</POIs>
+
+In this case, quantity is applicable in all the stay, i.e., 
+the client can enjoy until 2 days of forfait in between the check in 
+and the check out of the stay of the reservation/option.
+
 
 |
 
