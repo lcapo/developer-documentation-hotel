@@ -151,140 +151,140 @@ AvailRS Example
 
 ::
 
-<AvailRS xmlns:xsd = "http://www.w3.org/2001/XMLSchema" xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance">
-  <Hotels>
-    <Hotel code = "10" name = "LEO">
-      <MealPlans>
-        <MealPlan code = "D">
-          <Options>
-            <Option type = "Hotel" paymentType = "MerchantPay" status = "OK">
-              <Rooms>
-                <Room id = "4582" roomCandidateRefId = "1" code = "506" description = "Doble Standard..">
-                  <Price currency = "EUR" amount = "36.20" binding = "false" commission = "-1"/>
-                </Room>
-              </Rooms>
-              <Price currency = "EUR" amount = "36.20" binding = "false" commission = "-1"/>
-            </Option>
-          </Options>
-        </MealPlan>
-        <MealPlan code = "M">
-          <Options>
-            <Option type = "Hotel" paymentType = "MerchantPay" status = "OK">
-              <Rooms>
-                <Room id = "4582" roomCandidateRefId = "1" code = "506" description = "Doble Standard..">
-                  <Price currency = "EUR" amount = "42.90" binding = "false" commission = "-1"/>
-                </Room>
-              </Rooms>
-              <Price currency = "EUR" amount = "42.90" binding = "false" commission = "-1"/>
-            </Option>
-          </Options>
-          ...
-        </MealPlan>
-        <MealPlan code = "MP">
-          <Options>
-            <Option type = "HotelSkiPass" paymentType = "MerchantPay" status = "OK">
-              <Rooms>
-                <Room id = "4145" roomCandidateRefId = "1" code = "DBL#STAND" description = "Doble Standard">
-                  <Price currency = "EUR" amount = "636.80" binding = "false" commission = "-1"/>
-                </Room>
-              </Rooms>
-              <Detail>
-                <POIs>
-                  <POI code = "8A" Description = "Andorra">
-                    <Services>
-                      <Service type = "SkiPass" code = "F1" description = "Forfait" durationType = "Range" quantity = "0" unit = "Day">
-                        <RangeDates startDate = "28/01/2014" endDate = "29/01/2014"/>
-                      </Service>
-                    </Services>
-                  </POI>
-                </POIs>
-              </Detail>
-              <Price currency = "EUR" amount = "636.80" binding = "false" commission = "-1"/>
-              <Parameters>
-                <Parameter key = "sesion" value = "888de014"/>
-              </Parameters>
-              <CancelPenalties nonRefundable = "false">
-                <CancelPenalty>
-                  <HoursBefore>17653824</HoursBefore>
-                  <Penalty type = "Importe" currency = "EUR">0</Penalty>
-                </CancelPenalty>
-              </CancelPenalties>
-              <RateRules>
-                <Rules>
-                  <Rule type = "NonRefundable"/>
-                </Rules>
-              </RateRules>
-            </Option>
-            <Option type = "HotelSkiPass" paymentType = "MerchantPay" status = "OK">
-              <Rooms>
-                <Room id = "4145" roomCandidateRefId = "1" code = "DBL#STAND" description = "Doble Standard">
-                  <Price currency = "EUR" amount = "636.80" binding = "false" commission = "-1"/>
-                </Room>
-              </Rooms>
-              <Detail>
-                <POIs>
-                  <POI code = "8A" Description = "Andorra">
-                    <Services>
-                      <Service type = "SkiPass" code = "F1" description = "Forfait" durationType = "libre" quantity = "5" unit = "Hour"></Service>
-                    </Services>
-                  </POI>
-                </POIs>
-              </Detail>
-              <Price currency = "EUR" amount = "636.80" binding = "false" commission = "-1"/>
-              <Parameters>
-                <Parameter key = "sesion" value = "888de014"/>
-              </Parameters>
-              <CancelPenalties nonRefundable = "false">
-                <CancelPenalty>
-                  <HoursBefore>17653824</HoursBefore>
-                  <Penalty type = "Importe" currency = "EUR">0</Penalty>
-                </CancelPenalty>
-              </CancelPenalties>
-              <RateRules>
-                <Rules>
-                  <Rule type = "NonRefundable"/>
-                </Rules>
-              </RateRules>
-            </Option>
-            <Option type = "HotelSkiPass" paymentType = "MerchantPay" status = "OK">
-              <Rooms>
-                <Room id = "4145" roomCandidateRefId = "1" code = "DBL#STAND" description = "Doble Standard">
-                  <Price currency = "EUR" amount = "636.80" binding = "false" commission = "-1"/>
-                </Room>
-              </Rooms>
-              <Detail>
-                <POIs>
-                  <POI code = "8A" Description = "Andorra">
-                    <Services>
-                      <Service type = "SkiPass" code = "F1" description = "Forfait" durationType = "libre" quantity = "2" unit = "Day"></Service>
-                    </Services>
-                  </POI>
-                </POIs>
-              </Detail>
-              <Price currency = "EUR" amount = "636.80" binding = "false" commission = "-1"/>
-              <Parameters>
-                <Parameter key = "sesion" value = "888de014"/>
-              </Parameters>
-              <CancelPenalties nonRefundable = "false">
-                <CancelPenalty>
-                  <HoursBefore>17653824</HoursBefore>
-                  <Penalty type = "Importe" currency = "EUR">0</Penalty>
-                </CancelPenalty>
-              </CancelPenalties>
-              <RateRules>
-                <Rules>
-                  <Rule type = "NonRefundable"/>
-                </Rules>
-              </RateRules>
-            </Option>
-          </Options>
-        </MealPlan>
-        ...
-      </MealPlans>
-    </Hotel>
-    ...
-  </Hotels>
-</AvailRS>
+	<AvailRS xmlns:xsd = "http://www.w3.org/2001/XMLSchema" xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance">
+	  <Hotels>
+		<Hotel code = "10" name = "LEO">
+		  <MealPlans>
+			<MealPlan code = "D">
+			  <Options>
+				<Option type = "Hotel" paymentType = "MerchantPay" status = "OK">
+				  <Rooms>
+					<Room id = "4582" roomCandidateRefId = "1" code = "506" description = "Doble Standard..">
+					  <Price currency = "EUR" amount = "36.20" binding = "false" commission = "-1"/>
+					</Room>
+				  </Rooms>
+				  <Price currency = "EUR" amount = "36.20" binding = "false" commission = "-1"/>
+				</Option>
+			  </Options>
+			</MealPlan>
+			<MealPlan code = "M">
+			  <Options>
+				<Option type = "Hotel" paymentType = "MerchantPay" status = "OK">
+				  <Rooms>
+					<Room id = "4582" roomCandidateRefId = "1" code = "506" description = "Doble Standard..">
+					  <Price currency = "EUR" amount = "42.90" binding = "false" commission = "-1"/>
+					</Room>
+				  </Rooms>
+				  <Price currency = "EUR" amount = "42.90" binding = "false" commission = "-1"/>
+				</Option>
+			  </Options>
+			  ...
+			</MealPlan>
+			<MealPlan code = "MP">
+			  <Options>
+				<Option type = "HotelSkiPass" paymentType = "MerchantPay" status = "OK">
+				  <Rooms>
+					<Room id = "4145" roomCandidateRefId = "1" code = "DBL#STAND" description = "Doble Standard">
+					  <Price currency = "EUR" amount = "636.80" binding = "false" commission = "-1"/>
+					</Room>
+				  </Rooms>
+				  <Detail>
+					<POIs>
+					  <POI code = "8A" Description = "Andorra">
+						<Services>
+						  <Service type = "SkiPass" code = "F1" description = "Forfait" durationType = "Range" quantity = "0" unit = "Day">
+							<RangeDates startDate = "28/01/2014" endDate = "29/01/2014"/>
+						  </Service>
+						</Services>
+					  </POI>
+					</POIs>
+				  </Detail>
+				  <Price currency = "EUR" amount = "636.80" binding = "false" commission = "-1"/>
+				  <Parameters>
+					<Parameter key = "sesion" value = "888de014"/>
+				  </Parameters>
+				  <CancelPenalties nonRefundable = "false">
+					<CancelPenalty>
+					  <HoursBefore>17653824</HoursBefore>
+					  <Penalty type = "Importe" currency = "EUR">0</Penalty>
+					</CancelPenalty>
+				  </CancelPenalties>
+				  <RateRules>
+					<Rules>
+					  <Rule type = "NonRefundable"/>
+					</Rules>
+				  </RateRules>
+				</Option>
+				<Option type = "HotelSkiPass" paymentType = "MerchantPay" status = "OK">
+				  <Rooms>
+					<Room id = "4145" roomCandidateRefId = "1" code = "DBL#STAND" description = "Doble Standard">
+					  <Price currency = "EUR" amount = "636.80" binding = "false" commission = "-1"/>
+					</Room>
+				  </Rooms>
+				  <Detail>
+					<POIs>
+					  <POI code = "8A" Description = "Andorra">
+						<Services>
+						  <Service type = "SkiPass" code = "F1" description = "Forfait" durationType = "libre" quantity = "5" unit = "Hour"></Service>
+						</Services>
+					  </POI>
+					</POIs>
+				  </Detail>
+				  <Price currency = "EUR" amount = "636.80" binding = "false" commission = "-1"/>
+				  <Parameters>
+					<Parameter key = "sesion" value = "888de014"/>
+				  </Parameters>
+				  <CancelPenalties nonRefundable = "false">
+					<CancelPenalty>
+					  <HoursBefore>17653824</HoursBefore>
+					  <Penalty type = "Importe" currency = "EUR">0</Penalty>
+					</CancelPenalty>
+				  </CancelPenalties>
+				  <RateRules>
+					<Rules>
+					  <Rule type = "NonRefundable"/>
+					</Rules>
+				  </RateRules>
+				</Option>
+				<Option type = "HotelSkiPass" paymentType = "MerchantPay" status = "OK">
+				  <Rooms>
+					<Room id = "4145" roomCandidateRefId = "1" code = "DBL#STAND" description = "Doble Standard">
+					  <Price currency = "EUR" amount = "636.80" binding = "false" commission = "-1"/>
+					</Room>
+				  </Rooms>
+				  <Detail>
+					<POIs>
+					  <POI code = "8A" Description = "Andorra">
+						<Services>
+						  <Service type = "SkiPass" code = "F1" description = "Forfait" durationType = "libre" quantity = "2" unit = "Day"></Service>
+						</Services>
+					  </POI>
+					</POIs>
+				  </Detail>
+				  <Price currency = "EUR" amount = "636.80" binding = "false" commission = "-1"/>
+				  <Parameters>
+					<Parameter key = "sesion" value = "888de014"/>
+				  </Parameters>
+				  <CancelPenalties nonRefundable = "false">
+					<CancelPenalty>
+					  <HoursBefore>17653824</HoursBefore>
+					  <Penalty type = "Importe" currency = "EUR">0</Penalty>
+					</CancelPenalty>
+				  </CancelPenalties>
+				  <RateRules>
+					<Rules>
+					  <Rule type = "NonRefundable"/>
+					</Rules>
+				  </RateRules>
+				</Option>
+			  </Options>
+			</MealPlan>
+			...
+		  </MealPlans>
+		</Hotel>
+		...
+	  </Hotels>
+	</AvailRS>
 
 
 
