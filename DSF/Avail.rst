@@ -450,15 +450,15 @@ option so he can pay the provider/hotel. The provider will charge the payment on
 
 * The extra fee for a **nonRefundable** cancellation is a 100% since the moment of the creation of the reservation.
 
-* If the solicited distribution is with a pax older than 55 years old, and there is no pax older than **55 years**, then it can't do a confirmation of the options where it would return the condition of the rate. In any case, the provider doesn't return these options.
+* The provider can return options for pax. older that 55 years old, i.e. they are options that can only be sold to people older than 55 years old. In this case, on out part, we will return the condition, rate 55 years old.   
  
 * In the case of pax older of **60 years** and **65 years** you will find the same process like with 55 years old.
  
-* The rate **package** means that the product can't be sold by it self
+* The rate **package** means that the product can't be sold by it self, with an extra service like for example a plane ticket. 
  
-* The rate **CanaryResident** is a rate that is applied for the resident in the Canary islands
+* The rate **CanaryResident** is a rate that is applied for the resident in the Canary islands. I.e. there are options that can only be sold to people that live in the Canary islands.
  
-* The rate **BalearicResident** is like CanaryResdient but applied with the Balearic island.
+* The rate **BalearicResident** is like CanaryResdient but applied with the Balearic island. I.e. there are options that can only be sold to people that live in the Balearic islands.
  
 |
  
