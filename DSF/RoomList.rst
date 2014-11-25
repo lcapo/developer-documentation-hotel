@@ -34,7 +34,7 @@ The maximum time, that is permitted in our system, before the connection is clos
 
 
 This message must be implemented solely in case it can not be provided
-the description is room in the hotel availability. ( It is indicated in
+the description is room in the hotel availability. ( It is indicated in the
 *StaticConfiguration* )
 
 |
@@ -44,8 +44,20 @@ RoomListRQ Example
 
 ::
 
-    <RoomListRQ>
-    </RoomListRQ>
+
+	<RoomListRQ>
+	<timeoutMilliseconds>240000</timeoutMilliseconds>
+	<source>
+	<languageCode>en</languageCode>
+	</source>
+	<filterAuditData>
+	<registerTransactions>false</registerTransactions>
+	</filterAuditData>
+	<Configuration>
+	<Configuration>
+	Configuration given by the provider or XML TragelGate team 
+	</Configuration>
+	</RoomListRQ>
 
 |
 

@@ -34,9 +34,7 @@ The maximum time, that is permitted in our system, before the connection is clos
 
 
 If the provider has more than 100 mealplan codes, or more than 20
-codes for one single mealplan, this code will be mapped to XML
-Travelgate's code. `Link to List of
-Codes <#Link%20to%20List%20of%20Codes>`__
+codes for one single mealplan, this code will be mapped depending on the provider.
 
 |
 
@@ -45,8 +43,19 @@ MealPlanRQ Example
 
 ::
 
-    <MealPlanListRQ>
-    </MealPlanListRQ>
+
+	<MealPlanListRQ>
+	<timeoutMilliseconds>240000</timeoutMilliseconds>
+	<source>
+	<languageCode>en</languageCode>
+	</source>
+	<filterAuditData>
+	<registerTransactions>true</registerTransactions>
+	</filterAuditData>
+	<Configuration>
+	Configuration given by the provider or XML TragelGate team 
+	</Configuration>
+	</MealPlanListRQ>
 
 |
 
