@@ -46,7 +46,7 @@ RoomListRQ Example
 
 
 	<RoomListRQ>
-	<timeoutMilliseconds>240000</timeoutMilliseconds>
+	<timeoutMilliseconds>99999</timeoutMilliseconds>
 	<source>
 	<languageCode>en</languageCode>
 	</source>
