@@ -293,7 +293,6 @@ GeographicalDestinationTree
 		</soapenv:Header>
 	   <soapenv:Body>
 		  <ns:GeographicDestinationTree>
-			 <!--Optional:-->
 			 <ns:geographicDestinationTreeRQ>
 				<ns:timeoutMilliseconds>240000</ns:timeoutMilliseconds>
 				<ns:version>1</ns:version>
@@ -328,3 +327,456 @@ GeographicalDestinationTree
 		  </ns:GeographicDestinationTree>
 	   </soapenv:Body>
 	</soapenv:Envelope>
+	
+|
+
+Hotel List
+----------
+
+::
+
+	<soapenv:Envelope
+		xmlns:soapenv = "http://schemas.xmlsoap.org/soap/envelope/"
+		xmlns:ns = "http://schemas.xmltravelgate.com/hub/2012/06"
+		xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+		<soapenv:Header>
+			<wsse:Security>
+				<wsse:UsernameToken>
+					  <wsse:Username>XXXXXX</wsse:Username>
+					  <wsse:Password>XXXXXX</wsse:Password>
+				</wsse:UsernameToken>
+			</wsse:Security>
+		</soapenv:Header>
+	   <soapenv:Body>
+		  <ns:HotelList>
+			 <ns:hotelListRQ>
+				<ns:timeoutMilliseconds>300000</ns:timeoutMilliseconds>
+				<ns:version>1</ns:version>
+				<ns:providerRQ>
+				   <ns:code>XXX</ns:code>
+				   <ns:id>1</ns:id>
+				   <ns:rqXML>
+	<HotelListRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	  <timeoutMilliseconds>270000</timeoutMilliseconds>
+	  <source>
+		<languageCode>en</languageCode>
+	  </source>
+	  <filterAuditData>
+		<registerTransactions>false</registerTransactions>
+	  </filterAuditData>
+		<Configuration>
+			<User></User>
+			<Password></Password>
+			<UrlGeneric>http://test.Service</UrlGeneric>
+			<Parameter key = "UrlListHoteles" 
+				 value = "http://www.test.net/scr/searchxml/location.php?"></Parameter>
+			  <Parameter key = "UrlConsulta" 
+				 value = "https://www.test.net/scr/xml/travelgate.php?"></Parameter>
+			  <Parameter key = "office" value = "55555"></Parameter>
+			  <Parameter key = "password" value = "XXXXXX"></Parameter>
+			</Parameters>
+		</Configuration>
+	</HotelListRQ>
+				   </ns:rqXML>
+				</ns:providerRQ>
+			 </ns:hotelListRQ>
+		  </ns:HotelList>
+	   </soapenv:Body>
+	</soapenv:Envelope>
+
+|
+
+DescriptiveInfo
+---------------
+
+::
+
+	<soapenv:Envelope
+		xmlns:soapenv = "http://schemas.xmlsoap.org/soap/envelope/"
+		xmlns:ns = "http://schemas.xmltravelgate.com/hub/2012/06"
+		xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+		<soapenv:Header>
+			<wsse:Security>
+				<wsse:UsernameToken>
+					  <wsse:Username>XXXXXX</wsse:Username>
+					  <wsse:Password>XXXXXX</wsse:Password>
+				</wsse:UsernameToken>
+			</wsse:Security>
+		</soapenv:Header>
+	   <soapenv:Body>
+		  <ns:DescriptiveInfo>
+			 <ns:descriptiveInfoRQ>
+				 <ns:timeoutMilliseconds>180000</ns:timeoutMilliseconds>
+				<ns:version>1</ns:version>
+				<ns:providerRQ>
+				   <ns:code>XXX</ns:code>
+				   <ns:id>1</ns:id>
+				   <ns:rqXML>
+	<DescriptiveInfoRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	  <timeoutMilliseconds>999999</timeoutMilliseconds>
+	  <source>
+		<languageCode>en</languageCode>
+	  </source>
+	  <filterAuditData>
+		<registerTransactions>false</registerTransactions>
+	  </filterAuditData>
+	  <Configuration>
+			<User></User>
+			<Password></Password>
+			<UrlGeneric>http://test.Service</UrlGeneric>
+			<Parameter key = "UrlListHoteles" 
+				 value = "http://www.test.net/scr/searchxml/location.php?"></Parameter>
+			  <Parameter key = "UrlConsulta" 
+				 value = "https://www.test.net/scr/xml/travelgate.php?"></Parameter>
+			  <Parameter key = "office" value = "55555"></Parameter>
+			  <Parameter key = "password" value = "XXXXXX"></Parameter>
+			</Parameters>
+	  </Configuration>
+	  <Hotel>
+		<Code>XXXX</Code>
+	  </Hotel>
+	</DescriptiveInfoRQ>
+				   </ns:rqXML>
+				</ns:providerRQ>
+			 </ns:descriptiveInfoRQ>
+		  </ns:DescriptiveInfo>
+	   </soapenv:Body>
+	</soapenv:Envelope>
+
+|
+
+AvailDestinationTree
+--------------------
+
+::
+
+	<soapenv:Envelope
+		xmlns:soapenv = "http://schemas.xmlsoap.org/soap/envelope/"
+		xmlns:ns = "http://schemas.xmltravelgate.com/hub/2012/06"
+		xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+		<soapenv:Header>
+			<wsse:Security>
+				<wsse:UsernameToken>
+					  <wsse:Username>XXXXXX</wsse:Username>
+					  <wsse:Password>XXXXXX</wsse:Password>
+				</wsse:UsernameToken>
+			</wsse:Security>
+		</soapenv:Header>
+	   <soapenv:Body>
+		  <ns:AvailDestinationTree>
+			 <ns:descriptiveInfoRQ>
+				 <ns:timeoutMilliseconds>240000</ns:timeoutMilliseconds>
+				<ns:version>1</ns:version>
+				<ns:providerRQ>
+				   <ns:code>XXX</ns:code>
+				   <ns:id>1</ns:id>
+				   <ns:rqXML>
+					 <AvailDestinationTreeRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	  <timeoutMilliseconds>999999</timeoutMilliseconds>
+	  <source>
+		<languageCode>en</languageCode>
+	  </source>
+	  <filterAuditData>
+		<registerTransactions>false</registerTransactions>
+	  </filterAuditData>
+	  <Configuration>
+			<User></User>
+			<Password></Password>
+			<UrlGeneric>http://test.Service</UrlGeneric>
+			<Parameter key = "UrlListHoteles" 
+				 value = "http://www.test.net/scr/searchxml/location.php?"></Parameter>
+			  <Parameter key = "UrlConsulta" 
+				 value = "https://www.test.net/scr/xml/travelgate.php?"></Parameter>
+			  <Parameter key = "office" value = "55555"></Parameter>
+			  <Parameter key = "password" value = "XXXXXX"></Parameter>
+			</Parameters>
+	  </Configuration>
+	</AvailDestinationTreeRQ>
+				   </ns:rqXML>
+				</ns:providerRQ>
+			 </ns:availDestinationTreeRQ>
+		  </ns:AvailDestinationTree>
+	   </soapenv:Body>
+	</soapenv:Envelope>
+
+|
+
+Room List
+---------
+
+::
+
+	<soapenv:Envelope
+		xmlns:soapenv = "http://schemas.xmlsoap.org/soap/envelope/"
+		xmlns:ns = "http://schemas.xmltravelgate.com/hub/2012/06"
+		xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+		<soapenv:Header>
+			<wsse:Security>
+				<wsse:UsernameToken>
+					  <wsse:Username>XXXXXX</wsse:Username>
+					  <wsse:Password>XXXXXX</wsse:Password>>
+				</wsse:UsernameToken>
+			</wsse:Security>
+		</soapenv:Header>
+	   <soapenv:Body>
+		  <ns:RoomList>
+			 <ns:roomListRQ>
+				<ns:timeoutMilliseconds>240000</ns:timeoutMilliseconds>
+				<ns:version>1</ns:version>
+				<ns:providerRQ>
+				   <ns:code>XXX</ns:code>
+				   <ns:id>1</ns:id>
+				   <ns:rqXML>
+					<RoomListRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+					  <timeoutMilliseconds>999999</timeoutMilliseconds>
+					  <source>
+						<languageCode>en</languageCode>
+					  </source>
+					  <filterAuditData>
+						<registerTransactions>false</registerTransactions>
+					  </filterAuditData>
+						<User></User>
+						<Password></Password>
+						<UrlGeneric>http://test.Service</UrlGeneric>
+						<Parameter key = "UrlListHoteles" 
+							 value = "http://www.test.net/scr/searchxml/location.php?"></Parameter>
+						  <Parameter key = "UrlConsulta" 
+							 value = "https://www.test.net/scr/xml/travelgate.php?"></Parameter>
+						  <Parameter key = "office" value = "55555"></Parameter>
+						  <Parameter key = "password" value = "XXXXXX"></Parameter>
+						</Parameters>
+					</RoomListRQ>
+				   </ns:rqXML>
+				</ns:providerRQ>
+			 </ns:roomListRQ>
+		  </ns:RoomList>
+	   </soapenv:Body>
+	</soapenv:Envelope>
+
+|
+
+MealPlanList
+------------
+
+::
+
+	<soapenv:Envelope
+		xmlns:soapenv = "http://schemas.xmlsoap.org/soap/envelope/"
+		xmlns:ns = "http://schemas.xmltravelgate.com/hub/2012/06"
+		xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+		<soapenv:Header>
+			<wsse:Security>
+				<wsse:UsernameToken>
+					  <wsse:Username>XXXXXX</wsse:Username>
+					  <wsse:Password>XXXXXX</wsse:Password>>
+				</wsse:UsernameToken>
+			</wsse:Security>
+		</soapenv:Header>
+	   <soapenv:Body>
+		  <ns:MealPlanList>
+			 <ns:mealPlanListRQ>
+				<ns:timeoutMilliseconds>240000</ns:timeoutMilliseconds>
+				<ns:version>1</ns:version>
+				<ns:providerRQ>
+				   <ns:code>XXX</ns:code>
+				   <ns:id>1</ns:id>
+				   <ns:rqXML>
+					<MealPlanListRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+					  <timeoutMilliseconds>999999</timeoutMilliseconds>
+					  <source>
+						<languageCode>en</languageCode>
+					  </source>
+					  <filterAuditData>
+						<registerTransactions>false</registerTransactions>
+					  </filterAuditData>
+						<User></User>
+						<Password></Password>
+						<UrlGeneric>http://test.Service</UrlGeneric>
+						<Parameter key = "UrlListHoteles" 
+							 value = "http://www.test.net/scr/searchxml/location.php?"></Parameter>
+						  <Parameter key = "UrlConsulta" 
+							 value = "https://www.test.net/scr/xml/travelgate.php?"></Parameter>
+						  <Parameter key = "office" value = "55555"></Parameter>
+						  <Parameter key = "password" value = "XXXXXX"></Parameter>
+						</Parameters>
+					</MealPlanListRQ>
+				   </ns:rqXML>
+				</ns:providerRQ>
+			 </ns:mealPlanListRQ>
+		  </ns:MealPlanList>
+	   </soapenv:Body>
+	</soapenv:Envelope>
+	
+|
+
+Cancel
+------
+
+	<soapenv:Envelope
+		xmlns:soapenv = "http://schemas.xmlsoap.org/soap/envelope/"
+		xmlns:ns = "http://schemas.xmltravelgate.com/hub/2012/06"
+		xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+		<soapenv:Header>
+			<wsse:Security>
+				<wsse:UsernameToken>
+					  <wsse:Username>XXXXXX</wsse:Username>
+					  <wsse:Password>XXXXXX</wsse:Password>>
+				</wsse:UsernameToken>
+			</wsse:Security>
+		</soapenv:Header>
+	   <soapenv:Body>
+		  <ns:MealPlanList>
+			 <ns:mealPlanListRQ>
+				<ns:timeoutMilliseconds>180000</ns:timeoutMilliseconds>
+				<ns:version>1</ns:version>
+				<ns:providerRQ>
+				   <ns:code>XXX</ns:code>
+				   <ns:id>1</ns:id>
+				   <ns:rqXML>
+					<CancelRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" hotelCode="">
+					  <timeoutMilliseconds>999999</timeoutMilliseconds>
+					  <source>
+						<languageCode>en</languageCode>
+					  </source>
+					  <filterAuditData>
+						<registerTransactions>false</registerTransactions>
+					  </filterAuditData>
+						<User></User>
+						<Password></Password>
+						<UrlGeneric>http://test.Service</UrlGeneric>
+						<Parameter key = "UrlListHoteles" 
+							 value = "http://www.test.net/scr/searchxml/location.php?"></Parameter>
+						  <Parameter key = "UrlConsulta" 
+							 value = "https://www.test.net/scr/xml/travelgate.php?"></Parameter>
+						  <Parameter key = "office" value = "55555"></Parameter>
+						  <Parameter key = "password" value = "XXXXXX"></Parameter>
+					  <Locators>
+						<Provider>1</Provider>
+					  </Locators>
+					  <StartDate>11/11/2011</StartDate>
+					  <EndDate>12/11/2011</EndDate>
+					</CancelRQ>
+				   </ns:rqXML>
+				</ns:providerRQ>
+			 </ns:mealPlanListRQ>
+		  </ns:MealPlanList>
+	   </soapenv:Body>
+	</soapenv:Envelope>
+	
+|
+
+RunTimeConfiguration
+--------------------
+
+
+::
+
+	<soapenv:Envelope
+		xmlns:soapenv = "http://schemas.xmlsoap.org/soap/envelope/"
+		xmlns:ns = "http://schemas.xmltravelgate.com/hub/2012/06"
+		xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+		<soapenv:Header>
+			<wsse:Security>
+				<wsse:UsernameToken>
+					  <wsse:Username>XXXXXX</wsse:Username>
+					  <wsse:Password>XXXXXX</wsse:Password>
+				</wsse:UsernameToken>
+			</wsse:Security>
+		</soapenv:Header>
+	   <soapenv:Body>
+		  <ns:RuntimeConfiguration>
+			 <ns:runtimeConfigurationRQ>
+				<ns:timeoutMilliseconds>10000</ns:timeoutMilliseconds>
+				<ns:version>1</ns:version>
+				<ns:providerRQ>
+				   <ns:code>XXX</ns:code>
+				   <ns:id>1</ns:id>
+				   <ns:rqXML>
+				<RuntimeConfigurationRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+				  <timeoutMilliseconds>999999</timeoutMilliseconds>
+				  <source>
+					<languageCode>en</languageCode>
+				  </source>
+				  <filterAuditData>
+					<registerTransactions>false</registerTransactions>
+				  </filterAuditData>
+				  <Configuration>
+					<User></User>
+					<Password></Password>
+					<UrlGeneric>http://test.Service</UrlGeneric>
+					<Parameter key = "UrlListHoteles" 
+						 value = "http://www.test.net/scr/searchxml/location.php?"></Parameter>
+					  <Parameter key = "UrlConsulta" 
+						 value = "https://www.test.net/scr/xml/travelgate.php?"></Parameter>
+					  <Parameter key = "office" value = "55555"></Parameter>
+					  <Parameter key = "password" value = "XXXXXX"></Parameter>
+					</Parameters>
+				  </Configuration>
+				</RuntimeConfigurationRQ>
+				   </ns:rqXML>
+				</ns:providerRQ>
+			 </ns:runtimeConfigurationRQ>
+		  </ns:RuntimeConfiguration>
+	   </soapenv:Body>
+	</soapenv:Envelope>
+
+|
+
+
+StaticConfiguration
+-------------------
+
+::
+
+	<soapenv:Envelope
+		xmlns:soapenv = "http://schemas.xmlsoap.org/soap/envelope/"
+		xmlns:ns = "http://schemas.xmltravelgate.com/hub/2012/06"
+		xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+		<soapenv:Header>
+			<wsse:Security>
+				<wsse:UsernameToken>
+					  <wsse:Username>XXXXXX</wsse:Username>
+					  <wsse:Password>XXXXXX</wsse:Password>
+				</wsse:UsernameToken>
+			</wsse:Security>
+		</soapenv:Header>
+	   <soapenv:Body>
+		  <ns:StaticConfiguration>
+			 <ns:staticConfigurationRQ>
+				<ns:timeoutMilliseconds>10000</ns:timeoutMilliseconds>
+				<ns:version>1</ns:version>
+				<ns:providerRQ>
+				   <ns:code>XXX</ns:code>
+				   <ns:id>1</ns:id>
+				   <ns:rqXML>
+			<StaticConfigurationRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			  <timeoutMilliseconds>999999</timeoutMilliseconds>
+			  <source>
+				<languageCode>en</languageCode>
+			  </source>
+			  <filterAuditData>
+				<registerTransactions>false</registerTransactions>
+			  </filterAuditData>
+				  <Configuration>
+					<User></User>
+					<Password></Password>
+					<UrlGeneric>http://test.Service</UrlGeneric>
+					<Parameter key = "UrlListHoteles" 
+						 value = "http://www.test.net/scr/searchxml/location.php?"></Parameter>
+					  <Parameter key = "UrlConsulta" 
+						 value = "https://www.test.net/scr/xml/travelgate.php?"></Parameter>
+					  <Parameter key = "office" value = "55555"></Parameter>
+					  <Parameter key = "password" value = "XXXXXX"></Parameter>
+					</Parameters>
+				  </Configuration>
+			</StaticConfigurationRQ>
+				   </ns:rqXML>
+				</ns:providerRQ>
+			 </ns:staticConfigurationRQ>
+		  </ns:StaticConfiguration>
+	   </soapenv:Body>
+	</soapenv:Envelope>
+
+|
+
+
