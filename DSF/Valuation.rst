@@ -129,7 +129,7 @@ ValuationRS Example
         <Parameters>
             <Parameter key = "bd1" value = "43"/>
         </Parameters>
-        <Price currency = "EUR" amount = "36.20" binding = "false" commission = "-1" importeNoComisionable = "0"/>
+        <Price currency = "EUR" amount = "36.20" binding = "false" commission = "-1" />
         <CancelPenalties nonRefundable = "false">
             <CancelPenalty>
                 <HoursBefore>48</HoursBefore>

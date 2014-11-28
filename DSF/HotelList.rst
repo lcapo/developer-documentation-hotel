@@ -43,8 +43,18 @@ HotelListRQ Example
 
 ::
 
-    <HotelListRQ>
-    </HotelListRQ>
+	<HotelListRQ>
+	  <timeoutMilliseconds>270000</timeoutMilliseconds>
+	  <source>
+		<languageCode>en</languageCode>
+	  </source>
+	  <filterAuditData>
+		<registerTransactions>false</registerTransactions>
+	  </filterAuditData>
+	  <Configuration>
+		Configuration given by the provider or XML TragelGate team
+	  </Configuration>
+	</HotelListRQ>
 
 |
 
