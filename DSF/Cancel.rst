@@ -66,7 +66,7 @@ CancelRQ Description
 +=====================+==========+==========+=============================================================================================+
 | CancelRQ            | 1        |          | Root node.                                                                                  |
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
-| @hotelCode        | 1        | String   | Hotel code.                                                                                 |
+| @hotelCode          | 1        | String   | Hotel code.                                                                                 |
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
 | Locators            | 1        |          | Information of the locators (it is mandatory indicate one of two, or client or provider).   |
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
@@ -131,7 +131,7 @@ CancelRS Description
 | TransactionStatus   | 1        | String   | Status response (DESCONOCIDO (Unknown), EXISTE (Exists), EXISTECANCELADA                    |
 | /RSStatus           |          |          | (Cancelled), NO\_EXISTE (Does not exist)).                                                  |
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
-| TransactionStatus   | 1        | String   | Status booking (OK = confirmed, RQ = on request, CN = cancelled, UN = unknown).              |
+| TransactionStatus   | 1        | String   | Status booking (OK = confirmed, RQ = on request, CN = cancelled, UN = unknown).             |
 | /ResStatus          |          |          |                                                                                             |
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
 
