@@ -46,17 +46,6 @@ RoomListRQ Example
 
 
 	<RoomListRQ>
-	<timeoutMilliseconds>99999</timeoutMilliseconds>
-	<source>
-	<languageCode>en</languageCode>
-	</source>
-	<filterAuditData>
-	<registerTransactions>false</registerTransactions>
-	</filterAuditData>
-	<Configuration>
-	<Configuration>
-	Configuration given by the provider or XML TragelGate team 
-	</Configuration>
 	</RoomListRQ>
 
 |

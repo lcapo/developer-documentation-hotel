@@ -6,7 +6,7 @@ Frequently asked questions!
 
     You can find the answer to this question in the Hotel API in the "Avail" section under the paragraph "remarks":
     
-    http://xml-travelgate-developer-documentation.readthedocs.org/en/latest/general-structure.html#avail
+    http://docs.xmltravelgate.com/en/latest/hotel/DSF/Avail.html
 
 
 

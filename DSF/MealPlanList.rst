@@ -45,16 +45,6 @@ MealPlanRQ Example
 
 
 	<MealPlanListRQ>
-	<timeoutMilliseconds>99999</timeoutMilliseconds>
-	<source>
-	<languageCode>en</languageCode>
-	</source>
-	<filterAuditData>
-	<registerTransactions>true</registerTransactions>
-	</filterAuditData>
-	<Configuration>
-	Configuration given by the provider or XML TragelGate team 
-	</Configuration>
 	</MealPlanListRQ>
 
 |
