@@ -121,7 +121,8 @@ AvailRQ Description
 | AvailDestinations/Destination       | 0..n     |           | Contains the list of destinations filters                          |
 |                                     |          |           | (hotels or cities or zones or geocodes).                           |
 +-------------------------------------+----------+-----------+--------------------------------------------------------------------+
-| *@type*                             | 1        | String    | Destination type ( HOT, CTY, ZON, GEO).                            |
+| *@type*                             | 1        | String    | Destination type ( HOT, CTY, ZON, GEO). Clarification: ZONs        |
+|                                     |          |           | contains CTYs. ZONs are higher nodes and CTY are lower nodes.      |
 +-------------------------------------+----------+-----------+--------------------------------------------------------------------+
 | *@code*                             | 1        | String    | Native destination code as returned by provider in *HotelList*     |
 |                                     |          |           | or *AvailDestinationTree*.                                         |
