@@ -153,6 +153,8 @@ StaticConfigurationRS Description
 +----------------------+----------+----------+---------------------------------------------------------------------------------------------+
 | InformNRFRate        | 1        | Boolean  | The provider can inform in availability if the rate is non-refundable.                      |
 +----------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| InformNRFRateByRoom  | 1        | Boolean  | The provider can inform in availability if the room is non-refundable.                      |
++----------------------+----------+----------+---------------------------------------------------------------------------------------------+
 | Inform55Rate         | 1        | Boolean  | The provider informs the options with rates of pax of 55 years old or over in availability. |
 +----------------------+----------+----------+---------------------------------------------------------------------------------------------+
 | InformPackageRate    | 1        | Boolean  | The provider informs the options with package rates in availability. These options cant be  |

@@ -160,7 +160,7 @@ AvailRS Example
 			  <Options>
 				<Option type = "Hotel" paymentType = "MerchantPay" status = "OK">
 				  <Rooms>
-					<Room id = "4582" roomCandidateRefId = "1" code = "506" description = "Doble Standard..">
+					<Room id = "4145" roomCandidateRefId = "1" code = "DBL#STAND" description = "Doble Standard" nonRefundable = "false">
 					  <Price currency = "EUR" amount = "36.20" binding = "false" commission = "-1"/>
 					</Room>
 				  </Rooms>
@@ -172,7 +172,7 @@ AvailRS Example
 			  <Options>
 				<Option type = "Hotel" paymentType = "MerchantPay" status = "OK">
 				  <Rooms>
-					<Room id = "4582" roomCandidateRefId = "1" code = "506" description = "Doble Standard..">
+					<Room id = "4145" roomCandidateRefId = "1" code = "DBL#STAND" description = "Doble Standard" nonRefundable = "false">
 					  <Price currency = "EUR" amount = "42.90" binding = "false" commission = "-1"/>
 					</Room>
 				  </Rooms>
@@ -185,7 +185,7 @@ AvailRS Example
 			  <Options>
 				<Option type = "HotelSkiPass" paymentType = "MerchantPay" status = "OK">
 				  <Rooms>
-					<Room id = "4145" roomCandidateRefId = "1" code = "DBL#STAND" description = "Doble Standard">
+					<Room id = "4145" roomCandidateRefId = "1" code = "DBL#STAND" description = "Doble Standard" nonRefundable = "false">
 					  <Price currency = "EUR" amount = "636.80" binding = "false" commission = "-1"/>
 					</Room>
 				  </Rooms>
@@ -218,7 +218,7 @@ AvailRS Example
 				</Option>
 				<Option type = "HotelSkiPass" paymentType = "MerchantPay" status = "OK">
 				  <Rooms>
-					<Room id = "4145" roomCandidateRefId = "1" code = "DBL#STAND" description = "Doble Standard">
+					<Room id = "4145" roomCandidateRefId = "1" code = "DBL#STAND" description = "Doble Standard" nonRefundable = "false">
 					  <Price currency = "EUR" amount = "636.80" binding = "false" commission = "-1"/>
 					</Room>
 				  </Rooms>
@@ -249,7 +249,7 @@ AvailRS Example
 				</Option>
 				<Option type = "HotelSkiPass" paymentType = "MerchantPay" status = "OK">
 				  <Rooms>
-					<Room id = "4145" roomCandidateRefId = "1" code = "DBL#STAND" description = "Doble Standard">
+					<Room id = "4145" roomCandidateRefId = "1" code = "DBL#STAND" description = "Doble Standard" nonRefundable = "false">
 					  <Price currency = "EUR" amount = "636.80" binding = "false" commission = "-1"/>
 					</Room>
 				  </Rooms>
@@ -356,6 +356,8 @@ AvailRS Description
 | *@code*                                                                         | 1        | String    | Room code.                                                                                                                                                                                                        |
 +---------------------------------------------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | *@description*                                                                  | 1        | String    | Room description.                                                                                                                                                                                                 |
++---------------------------------------------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| *@nonRefundable*                                                                | 1        | String    | Identifies if the room is refundable or not.                                                                                                                                                                  |
 +---------------------------------------------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | MealPlans/MealPlan/Options/Option/Rooms/Room/Price                              | 1        |           | Room price.                                                                                                                                                                                                       |
 +---------------------------------------------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+

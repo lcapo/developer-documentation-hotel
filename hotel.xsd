@@ -66,7 +66,6 @@
   </xs:complexType>
   <xs:simpleType name="eTypeSearch">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="MultiRoom" />
       <xs:enumeration value="Combined" />
     </xs:restriction>
   </xs:simpleType>
@@ -217,6 +216,7 @@
     <xs:attribute name="roomCandidateRefId" type="xs:int" use="required" />
     <xs:attribute name="code" type="xs:string" />
     <xs:attribute name="description" type="xs:string" />
+    <xs:attribute name="nonRefundable" type="xs:boolean" />
   </xs:complexType>
   <xs:complexType name="Price">
     <xs:attribute name="currency" type="xs:string" />
@@ -1203,6 +1203,7 @@
           <xs:element minOccurs="1" maxOccurs="1" name="ImplementsDeltaPrice" type="xs:boolean" />
 		  <xs:element minOccurs="1" maxOccurs="1" name="RequiredAllPassengers" type="xs:boolean" />
           <xs:element minOccurs="0" maxOccurs="1" name="ModifyTransactions" type="ModifyTransactions" />
+		  <xs:element minOccurs="1" maxOccurs="1" name="InformNRFRateByRoom" type="xs:boolean" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
