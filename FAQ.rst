@@ -1,7 +1,4 @@
 
-.. highlight:: xml
-
-
 ###########################
 Frequently asked questions! 
 ###########################
