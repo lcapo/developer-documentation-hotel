@@ -4,6 +4,9 @@ Hotel API Docs's documentation!
 
 **Contents:**
 
+Hotel XSD Schemas describing the request and response XML structures:
+	:download:`Hotel XSDs <./hotel.xsd>`
+
 .. toctree::
   :maxdepth: 2
   :numbered:
@@ -13,5 +16,3 @@ Hotel API Docs's documentation!
   Data Structure <./data-structure.rst>
   SOAP Examples <./soap-examples.rst>
 
-Hotel XSD Schemas describing the request and response XML structures:
-:download:`Hotel XSDs <./hotel.xsd>`
