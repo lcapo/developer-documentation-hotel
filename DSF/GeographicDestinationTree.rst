@@ -110,58 +110,6 @@ GeographicDestinationTreeRS Description
 Detailed description
 --------------------
 
-**Location type:**
-
-**Standard case:**
-
-::
-
-     <GeographicDestinationTreeRS>
-        <DestinationTree code = "ES" name = "España" avail = "False">
-            <DestinationLeaf code = "BAL"/>
-            <DestinationLeaf code = "AST"/>
-            <DestinationLeaf code = "AND"/>
-        </DestinationTree>
-        <DestinationTree code= "IT" name = "Italia" avail = "False">
-            <DestinationLeaf code = "AA"/>
-            <DestinationLeaf code = "BB"/>
-            . . .
-        </DestinationTree>
-        <DestinationTree code = "EN" name = "England" avail = "False">. . .</DestinationTree>
-        <DestinationTree code = "BAL" name = "Baleares" avail = "True">
-            <DestinationLeaf code = "PAL0"/>
-            <DestinationLeaf code = "ALC0"/>
-        </DestinationTree>
-        <DestinationTree code = "AST" name = "Asturias" avail = "True"/>
-        <DestinationTree code = "AND" name = "Andalucia" avail = "True"/>
-        . . .
-        <DestinationTree code = "PAL0" name = "Palma de Mallorca" avail = " True"/>
-        <DestinationTree code = "ALC0" name = "Alcudia" avail = " True"/>
-        . . .
-    </GeographicDestinationTreeRS>
-
-|
-
-This example starts with "<DestinationTree code = "ES" name = "Spain" avail = "false">" where it is indicating that Spain hasn't
-got availability because it is false. It also has three children node called <DestinationLeaf code = "BAL"/>, 
-<DestinationLeaf code = "AST"/> and <DestinationLeaf code = "AND"/>. 
-
-The child "BAL" has avail = true, meaning it is possible to do an availability. This node "BAL" also has two other 
-children called PAL0 and ALC0. Ergo, If DestinationTree code as avail = "true" and also, at the same time, has one or more
-children then this will indicate that this is a Zone node. In this case, if you want to do an avail with this code you will
-need to indicate it as a zone type(ZON). 
-
-These two children PAL0 and ALC0, also have available because they are true, but they have no DestinationLeaf (or children). 
-This indicates that these nodes are cities. In this case, if you want to do an avail with these codes you will need to indicate
-them as city types (CTY)  
-
-In conclusion, if the DestinationTree code has avail true and children, then it is a **ZONE**. If the DestinationTree code has
-avail true, but no children then this will indicate a **CITY**.   
-
-|
-
-**Specific case:**
-
 ::
 
        <GeographicDestinationTreeRS>
@@ -176,6 +124,7 @@ avail true, but no children then this will indicate a **CITY**.
             . . .
         </DestinationTree>
         <DestinationTree code = "EN" name = "England" avail = "False">. . .</DestinationTree>
+		
         <DestinationTree code = "BAL" name = "Baleares" avail = "True">
             <DestinationLeaf code = "PAL0"/>
             <DestinationLeaf code = "ALC0"/>
@@ -194,13 +143,31 @@ avail true, but no children then this will indicate a **CITY**.
     </GeographicDestinationTreeRS>
     
 |
-    
-There is also another possible case where the city isn't the lowest child or DestinationLeaf code and has children of their own. 
-Meaning the cities will have DestinationLeaf code (children) that will represent neighbourhoods. Like in this example 
-"Son Sardina" and "Indioteria" represent neighbourhoods of the city Palma of Mallorca. Even though "Son Sardina" and "Indioteria"
-are the lowest DestinationLeaf ( child ) these codes can't represent as cities codes, because they haven't got attackable 
-Avail, because their Avail is false.
 
-So even if PAL0 has DestinationLeafs he will be the city code because his DestinationLeafs have false avail.
+There are two primordial definitions that needs to be clear to understand the difference in city and zone: types of nodes and if these nodes are attackable or not.
+
+Lets start with the two types of nodes. First there is the parent node, also named DestinationTree node, and the child node, also named Destination leaf node. A parent
+can have zero to n children ( 0..n ) and a child will have only one parent ( 1..1 ). For example, the DestinationTree code = "ES" is the parent of the DestinationLeaf
+code = "BAL", "AST" and "AND" and at the same time DestinationTree code = "BAL" is also a the parent of the DestinationLeaf code = "PAL0" and "ALC0", and so on. 
+
+Attackable on an **availability** level means that it is possible doing an avail for that zone. 
+A node is attackable when the tag avail is set as true, if it is set as false the node is not attackable and consequently it is not available.  
+
+Therefore:
+
+	* **City:** Lowest attackable node. 
+
+	* **Zone:** Not the lowest attackable node. 
+	
+  
+
+|
+
+.. image:: ../images/diagrama1.png
+    :align: center 
+	
+|
+
+.. note:: In rare occasions it is possible finding nodes lower than cities, which won't be attackable, but the standard scenario is not to find lower nodes than cities. 
 
 |

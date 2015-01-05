@@ -120,23 +120,26 @@ Detailed description
     
 |
 
-In availDestinationTree you will always receive zones and cities with an attackable availability ( the
-difference between availDestinationTree and GeographicDestinationTree is that in GeographicDestinationTree
-there is a parameter indicating the avail with true or false )
+There is one primordial definition that needs to be clear to understand the difference in city and zone: types of nodes.
+
+There are two types of nodes. First there is the parent node, also named DestinationTree node, and the child node, also named Destination leaf node. A parent
+can have zero to n children ( 0..n ) and a child will have only one parent ( 1..1 ). For example, the DestinationTree code = "ES" is the parent of the DestinationLeaf
+code = "BAL", "AST" and "AND" and at the same time DestinationTree code = "BAL" is also a the parent of the DestinationLeaf code = "PAL0" and "ALC0", and so on. 
 
 
-*Distinction Zone & City:*
+Therefore:
 
-If DestinationTree code has DestinationLeafs ( children ) like in this case 
-"<DestinationTree code = "BAL" name = "Baleares">" has two children called <DestinationLeaf code = "PAL0"/> and
-<DestinationLeaf code = "ALC0"/> then this will indicate that it is a zone node.  In this case, if you want to 
-do an avail with this code you will need to indicate it as a zone type(ZON).
+	* **City:** Lowest node. 
 
-If DestinationTree code has no DestinationLeafs ( no children ) like in this case <DestinationLeaf code = "PAL0"/> 
-and <DestinationLeaf code = "ALC0"/> then this will indicate that is is a city code. In this case, if you want to do an avail 
-with these codes you will need to indicate them as city types (CTY)
+	* **Zone:** Not the lowest node.
 
-In conclusion, if the DestinationTree code has children, then it is a **ZONE**. If the DestinationTree code 
-has no children then this will indicate a **CITY**.
+|
+
+.. image:: ../images/diagrama2.png
+    :align: center 
+
+|
+	
+.. note:: All of the zones that appear in this particular call ( DestinationsTree call ) are all attackable nodes on an availability level.  
 
 |

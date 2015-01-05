@@ -1,9 +1,37 @@
+.. highlight:: xml
 
 ###########################
-Frequently asked questions! 
+Frequently Asked Questions! 
 ###########################
 
-#. **How does the price work? and how should I interpret the value in the field "commission"?**
+#. **How many providers can we do a one request?**
+
+	Only one provider per request. The only exception is with the petition MultiAvail, where you can use one or more providers. 
+
+#. **How can I identify which providers is which in the MultiAvail call?**
+
+	By using the field ID in the request. 
+	
+	For example:
+	
+	
+	**In the request:**
+	
+	::
+
+	<!--First provider-->               <!--Second provider-->
+	<ns:code>TEST</ns:code>             <ns:code>TEST2</ns:code>
+	<ns:id>1</ns:id>                    <ns:id>2</ns:id>
+	
+	**In the response:**
+	
+	::
+	
+	<!--Response first provider-->       <!--Response Second provider-->
+	<refId>1</refId>                     <refId>2</refId>
+	
+
+#. **How does the price work and how should I interpret the value in the field "commission"?**
 
     You can find the answer to this question in the Hotel API in the "Avail" section under the paragraph "remarks":
     

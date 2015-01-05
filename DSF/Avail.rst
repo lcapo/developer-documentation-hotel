@@ -74,8 +74,8 @@ The maximum time, that is permitted in our system, before the connection is clos
    provider or with the binding price is true/false)
 
 -  When commission is greater than 0, for example: commission = 12, it
-   is a sale price, and this commission is informed for the provider (
-   this price is mandatory depends if binding price is true /false).
+   is a sale price, and this commission is informed for the provider ( If in the static configuration the field binding price is set at true, then
+   the price is mandatory ).
 
 
 
@@ -206,15 +206,10 @@ AvailRS Example
 				  </Parameters>
 				  <CancelPenalties nonRefundable = "false">
 					<CancelPenalty>
-					  <HoursBefore>17653824</HoursBefore>
+					  <HoursBefore>24</HoursBefore>
 					  <Penalty type = "Importe" currency = "EUR">0</Penalty>
 					</CancelPenalty>
 				  </CancelPenalties>
-				  <RateRules>
-					<Rules>
-					  <Rule type = "NonRefundable"/>
-					</Rules>
-				  </RateRules>
 				</Option>
 				<Option type = "HotelSkiPass" paymentType = "MerchantPay" status = "OK">
 				  <Rooms>
@@ -235,12 +230,6 @@ AvailRS Example
 				  <Parameters>
 					<Parameter key = "sesion" value = "888de014"/>
 				  </Parameters>
-				  <CancelPenalties nonRefundable = "false">
-					<CancelPenalty>
-					  <HoursBefore>17653824</HoursBefore>
-					  <Penalty type = "Importe" currency = "EUR">0</Penalty>
-					</CancelPenalty>
-				  </CancelPenalties>
 				  <RateRules>
 					<Rules>
 					  <Rule type = "NonRefundable"/>
@@ -268,15 +257,10 @@ AvailRS Example
 				  </Parameters>
 				  <CancelPenalties nonRefundable = "false">
 					<CancelPenalty>
-					  <HoursBefore>17653824</HoursBefore>
+					  <HoursBefore>24</HoursBefore>
 					  <Penalty type = "Importe" currency = "EUR">0</Penalty>
 					</CancelPenalty>
 				  </CancelPenalties>
-				  <RateRules>
-					<Rules>
-					  <Rule type = "NonRefundable"/>
-					</Rules>
-				  </RateRules>
 				</Option>
 			  </Options>
 			</MealPlan>
