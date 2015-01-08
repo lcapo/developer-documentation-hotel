@@ -409,23 +409,54 @@ AvailRS Description
 Detailed description 
 ---------------------
 
+**Price, binding price and commission:**
+
+Every option has a price and every price indicates the currency, the amount, if it is binding and the commission.
+
+* *Binding:*
+
+If binding is set as true, then the client can't sell the product, which is provided by the supplier, with an inferior price established by the provider , if it set
+as as false, the client can sell the product with an inferior price. 
+
+* *Commission:* 
+
+
+	-  If commission = 0 then the price returned is a net price, and the
+	   provider is informing that the commission **must** be 0.
+
+	-  If commission = -1 then the provider is not informing the sale price 
+	   nor if the price is net. This information is obtained when signing with the
+	   provider or also if the binding price is true/false.
+
+	-  When commission is greater than 0, then X = % of the commission that applies to the amount
+
+
+|
+
+**PAX ages:**
+
+In the avail process, being the first step of a reservation, it is mandatory to indicate the age and the number of paxes that there will be. 
+This information is mandatory because the provider will treat each pax differently depending on the age ( like for example, special rates ). 
+
+..note:: Once the age as been established for each pax then it must not be modified for the rest of the calls, like for example the valutaion process.
+ 
+
+|
 
 **PaymentOptions:**
 
+|
 
 * **MerchantPay:** The customer pays the client and the client will pay de provider.
 
-|
 
 * **LaterPay:** The customer will have to use a credit-card as a guaranty for the hotel and the 
 payment will be done by the costumer at checking.
 
-|
 
 * **CardBookingPay:** The client will use a credit-card with the exact amount of the 
 option so he can pay the provider/hotel. The provider will charge the payment on the reservation day.
 
-|
 
 * **CardChekingPay:** The client will use a credit-card with the exact amount of the 
 option so he can pay the provider/hotel. The provider will charge the payment on the checking day.
@@ -453,9 +484,8 @@ option so he can pay the provider/hotel. The provider will charge the payment on
  
 <RoomCandidate "cantidad=“1” id=“1">
   
-The quantity ( or "cantidad" ) as to be one. This quantity is obsolete.
+The quantity ( or "cantidad" ) has to be one. This quantity is obsolete.
   
-|
 
 * **HoursBefore:** Number of hours which are in between the reservation date and the checking date. 
 

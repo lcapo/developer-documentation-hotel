@@ -69,7 +69,7 @@ ReservationRQ Example
         </ResGuests>
         <PaymentType>MenchardPay</PaymentType>
         <Rooms>
-            <Room id = "4582" roomCandidateRefId = "1" code = "506" description = "Doble Standard.."/>
+            <Room id = "4582" roomCandidateRefId = "1" code = "506" description = "Double Standard.."/>
         </Rooms>
         <RoomCandidates>
             <RoomCandidate id = "1">
@@ -183,7 +183,7 @@ ReservationRS Description
 +-------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 | ProviderLocator   | 1        | String    | Provider locator                                                                                                                                         |
 +-------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-| ResStatus         | 1        | String    | Status of book (OK = confirmed, RQ = on request, CN = canceled, UN = unknown                                                                             |
+| ResStatus         | 1        | String    | Status of book (OK = confirmed, RQ = on request, CN = cancelled, UN = unknown                                                                             |
 +-------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Price             | 0..1     |           | Total price of this book.                                                                                                                                |
 +-------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -200,8 +200,22 @@ ReservationRS Description
 
 |
 
-**Note:**
+Detailed description 
+---------------------
 
-Keep the parameters in the valuation response to include them in the reservation request.
+**ResStatus:**
+
+When doing a reservation, in the response, there will be a field named ResStatus which will indicate the status of the reservation. 
+The status of the reservation can have fours values: OK, RQ, CN and UN.
+
+* *OK:* The reservation finished with no problems.
+
+* *RQ:* The reservation is finished but the product is still not available, so it will set the reservation in a waiting list  ( Request ).
+
+* *CN:* The reservation is finished but a provider error or a timeout occurred, then for some providers, the system will immediately cancel the reservation to prevent possible errors. 
+
+* *UN:* The reservation is finished but a provider error or a timeout occurred and we can't assure 100% that the status of the reservation is in a OK status, therefore it is the clients responsibility to check if the reservation fulfilled completely.
 
 |
+
+.. note:: Keep the parameters in the valuation response to include them in the reservation request.
