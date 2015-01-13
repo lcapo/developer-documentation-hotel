@@ -103,7 +103,7 @@ AvailRQ Description
 |                                     |          |           | AvailRS, as long as the provider returns it in this call           |
 |                                     |          |           | (see StaticConfiguration).                                         |
 +-------------------------------------+----------+-----------+--------------------------------------------------------------------+
-| AvailDestinations/Destination       | 0..n     |           | Contains the list of destinations filters                          |
+| AvailDestinations/Destination       | 1..n     |           | Contains the list of destinations filters                          |
 |                                     |          |           | (hotels or cities or zones or geocodes).                           |
 +-------------------------------------+----------+-----------+--------------------------------------------------------------------+
 | *@type*                             | 1        | String    | Destination type ( HOT, CTY, ZON, GEO). Clarification: ZONs        |
