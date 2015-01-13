@@ -58,4 +58,11 @@ Error codes
 
 |
 
+Currency list
+-------------
+
+We use a standard ISO - 4217.
+
+
+
 

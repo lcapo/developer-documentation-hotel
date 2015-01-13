@@ -449,8 +449,7 @@ The range of what is considered and adult, infant or baby depends on each provid
 * *Baby:* 0 to 1 year old. 
 
 
-.. note:: Once the age as been established for each pax then it must not be modified for the rest of the calls, like for example the valuation process.
-You can send an adult with a standard of 30 years old to avoid possible errors.
+.. note:: Once the age as been established for each pax then it must not be modified for the rest of the calls, like for example the valuation process. You can send an adult with a standard of 30 years old to avoid possible errors.
 
 |
 
@@ -479,6 +478,8 @@ option so he can pay the provider/hotel. The provider will charge the payment on
 
 * **CardChekingPay:** The client will use a credit-card with the exact amount of the 
 option so he can pay the provider/hotel. The provider will charge the payment on the checking day.
+
+.. note :: In the case that the client doesn't want to display the options, we can filter the them given that the provider typifies.
 
 |
 

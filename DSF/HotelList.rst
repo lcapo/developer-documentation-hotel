@@ -168,6 +168,44 @@ HotelListRS Description
 Detailed Description
 --------------------
 
+**Giata Code:**
+
+A Giata code is a hotel code that provides information of said hotel. This code is common for all of the providers. 
+
+*For example:*
+
+For the provider TravellingTest:
+
+::
+
+	<Hotel>
+		<Code>5</Code>
+		<GiataFormatCode>254</GiataFormatCodez>
+		<Name>BADAJOZ</Name>
+	</Hotel>
+	
+For the provider TestOnTour:
+
+::
+
+	<Hotel>
+		<Code>14</Code>
+		<GiataFormatCode>254</GiataFormatCodez>
+		<Name>BADAJOZ</Name>
+	</Hotel>
+	
+Please note that for the same hotel, the internal code of each provider is different, but the Giata code stays the same.
+Giata system it is an external company that does an generic mapping of all of the hotels information.  
+
+|
+
+**AvailDestination & GeographicDestination:**
+
+Please note that the code for these parameters needs to be the lowest destination level. And these values are available in the 
+AvailDestinationTree & GeographicDestinationTree call respectively. 
+
+|
+
 **Hotel types:**
 
 H (Hotel)

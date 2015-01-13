@@ -119,6 +119,12 @@ StaticConfigurationRS Example
                 <Modify>ModifyRoomsRemoveRooms</Modify>
             </ModifyTransaction>
         </ModifyTransactions>
+		<CurrencyList>
+			<CurrencyCode>EUR</CurrencyCode>
+			<CurrencyCode>USD</CurrencyCode>
+			<CurrencyCode>BRL</CurrencyCode>
+		</CurrencyList>
+
     </StaticConfigurationRS>
 
 |
@@ -195,7 +201,11 @@ StaticConfigurationRS Description
 | InformPrice          | 1        | Boolean  | The provider informs about the price in the reservation in the booking RS.                  |
 | Reservation          |          |          |                                                                                             |
 +----------------------+----------+----------+---------------------------------------------------------------------------------------------+
-| HotelListLanguages   | 1        | Boolean  | Languages that the provider can return their information.                                   |
+| HotelListLanguages   | 1        |          | Languages that the provider can return their information.                                   |
++----------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| Languages            | 1        |          | Languages.                                                                                  |
++----------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| Language             | 1..n     | String   | Languages description.                                                                      |
 +----------------------+----------+----------+---------------------------------------------------------------------------------------------+
 | ReservationList      | 1        | Boolean  | The provider implements the list of bookings transaction by creation date.                  |
 | CreationDate         |          |          |                                                                                             |
@@ -225,8 +235,13 @@ StaticConfigurationRS Description
 | Implements           | 1        | Boolean  | Observation and comments.                                                                   |
 | RemarksAvail         |          |          |                                                                                             |
 +----------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| CurrencyList         | 0..1     |          | List of currency which the client can specify in the availability call. In the case that    |
+|                      |          |          | there is no currency specifications, the client won't be able to specify the currency via   |
+|                      |          |          | XML in the availability call.                                                               |
++----------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| CurrencyCode         | 1..n     | String   | Standard currency ISO - 4217.                                                               |
++----------------------+----------+----------+---------------------------------------------------------------------------------------------+
 
-
-
+.. note :: The currency list is currently under development. 
 |
 
