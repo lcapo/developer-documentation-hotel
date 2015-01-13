@@ -479,7 +479,7 @@ option so he can pay the provider/hotel. The provider will charge the payment on
 * **CardChekingPay:** The client will use a credit-card with the exact amount of the 
 option so he can pay the provider/hotel. The provider will charge the payment on the checking day.
 
-.. note :: In the case that the client doesn't want to display the options, we can filter the them given that the provider typifies.
+.. note :: In the case that the client doesn't want to display the options, we can filter them given that the provider typifies.
 
 |
 
