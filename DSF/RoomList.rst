@@ -93,3 +93,11 @@ RoomListRS Description
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
 
 |
+
+Detailed description 
+---------------------
+
+**Room types & languages** 
+
+The language of the room description can be defined the RQ given that the provider supplies the selected language, otherwise it will use a default language
+which in most cases will be English. The standard languages are : English & Spanish.  

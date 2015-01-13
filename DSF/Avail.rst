@@ -64,21 +64,6 @@ This method **must** be called **before** the *Valuation* method.
 The maximum time, that is permitted in our system, before the connection is closed,  is of **25000** milliseconds.
 
 
-**Price, binding price and commission**:
-
--  If commission = 0. The price returned is a net price, and the
-   provider is informing that the commission **must** be 0.
-
--  If commission = -1. The provider is not informing if the price is net
-   or sale price. This information is informed when signing with the
-   provider or with the binding price is true/false)
-
--  When commission is greater than 0, for example: commission = 12, it
-   is a sale price, and this commission is informed for the provider ( If in the static configuration the field binding price is set at true, then
-   the price is mandatory ).
-
-
-
 |
 
 AvailRQ Example
@@ -204,12 +189,6 @@ AvailRS Example
 				  <Parameters>
 					<Parameter key = "sesion" value = "888de014"/>
 				  </Parameters>
-				  <CancelPenalties nonRefundable = "false">
-					<CancelPenalty>
-					  <HoursBefore>24</HoursBefore>
-					  <Penalty type = "Importe" currency = "EUR">0</Penalty>
-					</CancelPenalty>
-				  </CancelPenalties>
 				</Option>
 				<Option type = "HotelSkiPass" paymentType = "MerchantPay" status = "OK">
 				  <Rooms>
@@ -258,7 +237,7 @@ AvailRS Example
 				  <CancelPenalties nonRefundable = "false">
 					<CancelPenalty>
 					  <HoursBefore>24</HoursBefore>
-					  <Penalty type = "Importe" currency = "EUR">0</Penalty>
+					  <Penalty type = "Importe" currency = "EUR">20</Penalty>
 					</CancelPenalty>
 				  </CancelPenalties>
 				</Option>
@@ -311,11 +290,11 @@ AvailRS Description
 +---------------------------------------------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | *@value*                                                                        | 1        | String    | Contains the value of the parameter                                                                                                                                                                               |
 +---------------------------------------------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| MealPlans/MealPlan/Options/Option/CancelPenalties                               | 0..n     |           | Listing cancellation penalties.                                                                                                                                                                                   |
+| MealPlans/MealPlan/Options/Option/CancelPenalties                               | 0..1     |           | Listing cancellation penalties.                                                                                                                                                                                   |
 +---------------------------------------------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | MealPlans/MealPlan/Options/Option/CancelPenalties/HoursBefore                   | 1        | String    | Number of hours prior to arrival day in which this Cancellation policy applies.                                                                                                                                   |
 +---------------------------------------------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| MealPlans/MealPlan/Options/Option/CancelPenalties/CancelPenalty                 | 1        |           | Contains the value to apply.                                                                                                                                                                                      |
+| MealPlans/MealPlan/Options/Option/CancelPenalties/CancelPenalty                 | 1..n     |           | Contains the value to apply.                                                                                                                                                                                      |
 +---------------------------------------------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | *@type*                                                                         | 1        | String    | Type of penalty Possible values: "Noches" (nights) , "Porcentaje" (percentage) ,"Importe" (price value).                                                                                                          |
 +---------------------------------------------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -415,33 +394,73 @@ Every option has a price and every price indicates the currency, the amount, if 
 
 * *Binding:*
 
-If binding is set as true, then the client can't sell the product, which is provided by the supplier, with an inferior price established by the provider , if it set
+If binding is set as true, then the client can't sell the product, which is provided by the supplier, with an inferior price. If it set
 as as false, the client can sell the product with an inferior price. 
 
 * *Commission:* 
 
 
-	-  If commission = 0 then the price returned is a net price, and the
-	   provider is informing that the commission **must** be 0.
+	-  Commission = 0: the price returned is a net price.
 
-	-  If commission = -1 then the provider is not informing the sale price 
-	   nor if the price is net. This information is obtained when signing with the
-	   provider or also if the binding price is true/false.
+	-  Commission = -1: the provider is not informing the sale price 
+	   neither the commission. This information is obtained by signing a contract with the provider. 
 
-	-  When commission is greater than 0, then X = % of the commission that applies to the amount
+	-  Commission is greater than 0: X = % of the commission that is applied to the amount
 
+*As follows the 4 possible cases that can be given:*
+
+
+::
+
+	<Price currency = "EUR" amount = "200" binding = "false" commission = "-1"/>
+
+We have no notion if the price is PVP or a net price given that the commission is not sent to us via XML. 
+The commission is established by contract. 
+
+:: 
+	
+	<Price currency = "EUR" amount = "300" binding = "true" commission = "-1"/>
+
+The price is PVP, the commission is not sent to us via XML. 
+The commission is established by contract. 
+
+::
+	
+	<Price currency = "EUR" amount = "150" binding = "true/false" commission = "20"/>
+
+The price is net with a commission of a 20%. The binding in this case can be true or false.	
+	
+::
+
+	<Price currency = "EUR" amount = "100" binding = "false" commission = "0"/>
+
+The price is net. 
 
 |
 
 **PAX ages:**
 
-In the avail process, being the first step of a reservation, it is mandatory to indicate the age and the number of paxes that there will be. 
-This information is mandatory because the provider will treat each pax differently depending on the age ( like for example, special rates ). 
+The range of what is considered and adult, infant or baby depends on each provider but the standard case of the range of ages is: 
 
-..note:: Once the age as been established for each pax then it must not be modified for the rest of the calls, like for example the valutaion process.
- 
+* *Adult:* 18 to 30 years old or over. 
+
+* *Infant:* 2 to 17 years old.
+
+* *Baby:* 0 to 1 year old. 
+
+
+.. note:: Once the age as been established for each pax then it must not be modified for the rest of the calls, like for example the valuation process.
+You can send an adult with a standard of 30 years old to avoid possible errors.
 
 |
+
+**Cancellation policies:**
+
+The cancellation policies or penalizations may be displayed in the response, provided that in the request the parameter <CancellationPolicies> is set as true, 
+and also that the provider supplies this information in the availability call.  
+
+
+| 
 
 **PaymentOptions:**
 
@@ -479,7 +498,20 @@ option so he can pay the provider/hotel. The provider will charge the payment on
 * The rate **BalearicResident** is like CanaryResdient but applied with the Balearic island. I.e. there are options that can only be sold to people that live in the Balearic islands.
  
 |
- 
+
+**Status options:**
+
+The possible values of the status in the response is OK or RQ:
+
+::
+
+<Option type = "Hotel" paymentType = "MerchantPay" status = "OK">
+
+In the case that the client doesn't want to display the options in a status RQ, we can filter the options given that the provider typifies this status. 
+In the case the provider doesn't facilitates this information, then this will have to be treated on a commercial level. 
+
+|
+  
 **Room quantity:**
  
 <RoomCandidate "cantidad=“1” id=“1">
@@ -568,9 +600,7 @@ and the check out of the stay of the reservation/option.
 
 |
 
-**Note:** 
-
-Keep the parameters in the avail response to include them in the valuation request. 
+.. note:: Keep the parameters in the avail response to include them in the valuation request. 
 
 ::
 

@@ -69,6 +69,7 @@ HotelListRS Example
         <Hotels>
             <Hotel>
                 <Code>5</Code>
+				<GiataFormatCode>254</GiataFormatCodez>
                 <Name>BADAJOZ</Name>
                 <Address>CTRA.NACIONAL V, KM 393</Address>
                 <Town>BADAJOZ</Town>
@@ -87,6 +88,7 @@ HotelListRS Example
             </Hotel>
             <Hotel>
                 <Code>7</Code>
+				<GiataFormatCode>189654</GiataFormatCodez>
                 <Name>ILLA</Name>
                 <Address>AVDA. ILLA S/N</Address>
                 <Town>HUELVA</Town>
@@ -118,7 +120,9 @@ HotelListRS Description
 | HotelListRS         | 0..n     |          | Root node. Hotel sheet.                                                                     |
 | /Hotels/Hotel       |          |          |                                                                                             |
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
-| Code                | 1        | String   | code.                                                                                       |
+| Code                | 1        | String   | Internal code established by the provider.                                                  |
++---------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| GiataFormatCode     | 0..1     | String   | Giata code, depends on the product of each provider is in a Giata System.                   |
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
 | Name                | 1        | String   | Name.                                                                                       |
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
