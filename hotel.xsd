@@ -196,6 +196,7 @@
       <xs:element minOccurs="0" maxOccurs="1" name="Fees" type="Fees" />
       <xs:element minOccurs="0" maxOccurs="1" name="Parameters" type="Parameters" />
       <xs:element minOccurs="0" maxOccurs="1" name="CancelPenalties" type="CancelPenalties" />
+	    <xs:element minOccurs="0" maxOccurs="1" name="Remarks" type="Remarks" />
     </xs:sequence>
     <xs:attribute name="supplierCode" type="xs:string" />
     <xs:attribute name="type" type="eTipoOpcion" use="required" />
@@ -260,10 +261,6 @@
       <xs:enumeration value="BalearicResident" />
     </xs:restriction>
   </xs:simpleType>
-  <xs:complexType name="cPdi">
-    <xs:attribute name="Codigo" type="xs:string" />
-    <xs:attribute name="Descripcion" type="xs:string" />
-  </xs:complexType>
   <xs:complexType name="RangeDates">
     <xs:attribute name="startDate" type="xs:string" />
     <xs:attribute name="endDate" type="xs:string" />
@@ -355,6 +352,17 @@
         <xs:attribute name="type" type="xs:string" />
         <xs:attribute name="paymentType" type="eTipoFormaPago" use="required" />
         <xs:attribute name="currency" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="Remarks">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Remark" type="Remark" />
+    </xs:sequence>
+  </xs:complexType>
+   <xs:complexType name="Remark">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -1204,6 +1212,7 @@
 		  <xs:element minOccurs="1" maxOccurs="1" name="RequiredAllPassengers" type="xs:boolean" />
           <xs:element minOccurs="0" maxOccurs="1" name="ModifyTransactions" type="ModifyTransactions" />
 		  <xs:element minOccurs="1" maxOccurs="1" name="InformNRFRateByRoom" type="xs:boolean" />
+		  <xs:element minOccurs="0" maxOccurs="1" name="CurrencyList" type="CurrencyList" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -1240,6 +1249,11 @@
   <xs:complexType name="Languages">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Language" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+    <xs:complexType name="CurrencyList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CurrencyCode" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:simpleType name="eListado">
