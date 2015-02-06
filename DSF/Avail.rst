@@ -449,6 +449,8 @@ given that this depends on the provider. For example if you request EUR and the 
 
 We will always return the coin that the provider sends us, we will never do a conversion. 
 
+|
+
 **PAX ages:**
 
 The range of what is considered and adult, infant or baby depends on each provider but the standard case of the range of ages is: 
