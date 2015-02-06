@@ -438,6 +438,17 @@ The price is net.
 
 |
 
+**Currency:**
+
+The currency node indicates the value of the coin that you want to request. 
+
+This field will be sent to the supplier provided that the the supplier permits this in the request, otherwise it won't be sent. 
+
+On another note, if the provider permits the field currency to indicate the value of the coin, we can't assure that the response will be with the same coin that it is request, 
+given that this depends on the provider. For example if you request EUR and the provider only works with GBP, the provider will only return GBP.
+
+We will always return the coin that the provider sends us, we will never do a conversion. 
+
 **PAX ages:**
 
 The range of what is considered and adult, infant or baby depends on each provider but the standard case of the range of ages is: 
