@@ -196,7 +196,8 @@
       <xs:element minOccurs="0" maxOccurs="1" name="Fees" type="Fees" />
       <xs:element minOccurs="0" maxOccurs="1" name="Parameters" type="Parameters" />
       <xs:element minOccurs="0" maxOccurs="1" name="CancelPenalties" type="CancelPenalties" />
-	    <xs:element minOccurs="0" maxOccurs="1" name="Remarks" type="Remarks" />
+	  <xs:element minOccurs="0" maxOccurs="1" name="Remarks" type="Remarks" />
+	  <xs:element minOccurs="0" maxOccurs="1" name="Offers" type="Offers" />
     </xs:sequence>
     <xs:attribute name="supplierCode" type="xs:string" />
     <xs:attribute name="type" type="eTipoOpcion" use="required" />
@@ -1239,6 +1240,8 @@
       <xs:enumeration value="ModifyHolder" />
       <xs:enumeration value="ModifyRoomsAddRooms" />
       <xs:enumeration value="ModifyRoomsRemoveRooms" />
+	  <xs:enumeration value="ModifyMealPlan" />
+	  <xs:enumeration value="ModifyAddComment" />
     </xs:restriction>
   </xs:simpleType>
  <xs:complexType name="HotelListLanguages">
@@ -1305,7 +1308,6 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Hotel" type="Hotel" />
     </xs:sequence>
   </xs:complexType>
-
   <xs:element name="ModifyValuationRQ" type="ModifyValuationRQ" />
   <xs:complexType name="ModifyValuationRQ">
     <xs:complexContent mixed="false">
@@ -1335,6 +1337,8 @@
       <xs:element minOccurs="0" maxOccurs="1" name="ModifyHolder" type="ModifyHolder" />
       <xs:element minOccurs="0" maxOccurs="1" name="ModifyRoomsAddRooms" type="ModifyRoomsAddRooms" />
       <xs:element minOccurs="0" maxOccurs="1" name="ModifyRoomsRemoveRooms" type="ModifyRoomsRemoveRooms" />
+	  <xs:element minOccurs="0" maxOccurs="1" name="ModifyMealPlan" type="ModifyMealPlan" />
+	  <xs:element minOccurs="0" maxOccurs="1" name="ModifyAddComment" type="ModifyAddComment" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="StartDate">
@@ -1395,6 +1399,16 @@
       <xs:element minOccurs="0" maxOccurs="1" name="Price" type="Price" />
     </xs:sequence>
     <xs:attribute name="code" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="ModifyMealPlan">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="MealPlanCode" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+   <xs:complexType name="ModifyAddComment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Comment" type="xs:string" />
+    </xs:sequence>
   </xs:complexType>
   <xs:element name="ModifyValuationRS" type="ModifyValuationRS" />
   <xs:complexType name="ModifyValuationRS">
