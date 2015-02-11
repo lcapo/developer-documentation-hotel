@@ -601,59 +601,76 @@ Reservation
 
 ::
 
-	<soapenv:Envelope xmlns:soapenv = "http://schemas.xmlsoap.org/soap/envelope/" 
-	xmlns:ns = "http://schemas.xmltravelgate.com/hub/2012/06" 
-	xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+	<soapenv:Envelope xmlns:soapenv = "http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns = "http://schemas.xmltravelgate.com/hub/2012/06" xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
 	  <soapenv:Header>
 		<wsse:Security>
 		  <wsse:UsernameToken>
-			<wsse:Username>XXXXXX</wsse:Username>
-			<wsse:Password>XXXXXX</wsse:Password>
-			>
+			<wsse:Username>xxx</wsse:Username>
+			<wsse:Password>xxxx</wsse:Password>
 		  </wsse:UsernameToken>
 		</wsse:Security>
 	  </soapenv:Header>
 	  <soapenv:Body>
-		<ns:MealPlanList>
-		  <ns:mealPlanListRQ>
-			<ns:timeoutMilliseconds>180000</ns:timeoutMilliseconds>
+		<ns:Reservation>
+		  <ns:reservationRQ>
+			<ns:timeoutMilliseconds>15000</ns:timeoutMilliseconds>
 			<ns:version>1</ns:version>
 			<ns:providerRQ>
 			  <ns:code>XXX</ns:code>
 			  <ns:id>1</ns:id>
 			  <ns:rqXML>
-				<CancelRQ xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd = "http://www.w3.org/2001/XMLSchema" hotelCode = "">
-				  <timeoutMilliseconds>999999</timeoutMilliseconds>
+				<ReservationRQ>
+				  <echoToken>TEST</echoToken>
+				  <timeoutMilliseconds>14000</timeoutMilliseconds>
 				  <source>
-					<languageCode>en</languageCode>
+					<agencyCode>XXXX</agencyCode>
+					<languageCode>es</languageCode>
 				  </source>
 				  <filterAuditData>
-					<registerTransactions>false</registerTransactions>
+					<registerTransactions>true</registerTransactions>
 				  </filterAuditData>
-				  <Configuration>
-					<User></User>
-					<Password></Password>
-					<UrlAvail>http://www.test.net/test_XML_V10.php?</UrlAvail>
-					<UrlReservation>http://www.test.net/scr/reservation_xml.php</UrlReservation>
-					<Parameters>
-					  <Parameter key = "UrlListHoteles" value = "http://www.test.net/scr/searchxml/location.php?"></Parameter>
-					  <Parameter key = "UrlConsulta" value = "https://www.test.net/scr/xml/travelgate.php?"></Parameter>
-					  <Parameter key = "office" value = "55555"></Parameter>
-					  <Parameter key = "password" value = "XXXXXX"></Parameter>
-					</Parameters>
-				  </Configuration>
-				  <Locators>
-					<Provider>1</Provider>
-				  </Locators>
-				  <StartDate>11/11/2011</StartDate>
-				  <EndDate>12/11/2011</EndDate>
-				</CancelRQ>
+				  <Configuration></Configuration>
+				  <ClientLocator>XXXXXXX</ClientLocator>
+				  <StartDate>28/07/2014</StartDate>
+				  <EndDate>31/07/2014</EndDate>
+				  <MealPlanCode>XX</MealPlanCode>
+				  <HotelCode>XXX</HotelCode>
+				  <Price currency = "EUR" amount = "500.00" binding = "true" commission = "-1"/>
+				  <ResGuests>
+					<Guests>
+					  <Guest roomCandidateId = "1" paxId = "1">
+						<GivenName>PRUEBAS</GivenName>
+						<SurName>TEST</SurName>
+					  </Guest>
+					  <Guest roomCandidateId = "1" paxId = "2">
+						<GivenName>PRUEBAS</GivenName>
+						<SurName>TEST</SurName>
+					  </Guest>
+					</Guests>
+				  </ResGuests>
+				  <PaymentType>MerchantPay</PaymentType>
+				  <Rooms>
+					<Room roomCandidateRefId = "1" code = "10" description = "Superior"/>
+				  </Rooms>
+				  <RoomCandidates>
+					<RoomCandidate id = "1">
+					  <Paxes>
+						<Pax age = "30" id = "1"/>
+						<Pax age = "30" id = "2"/>
+					  </Paxes>
+					</RoomCandidate>
+				  </RoomCandidates>
+				  <Parameters>
+					<Parameter key = "codigoOferta" value = "XXX"/>
+				  </Parameters>
+				</ReservationRQ>
 			  </ns:rqXML>
 			</ns:providerRQ>
-		  </ns:mealPlanListRQ>
-		</ns:MealPlanList>
+		  </ns:reservationRQ>
+		</ns:Reservation>
 	  </soapenv:Body>
 	</soapenv:Envelope>
+
 	
 |
 

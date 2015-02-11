@@ -67,7 +67,7 @@ ReservationRQ Example
                 </Guest>
             </Guests>
         </ResGuests>
-        <PaymentType>MenchardPay</PaymentType>
+        <PaymentType>MerchantPay</PaymentType>
         <Rooms>
             <Room id = "4582" roomCandidateRefId = "1" code = "506" description = "Double Standard.."/>
         </Rooms>
@@ -225,3 +225,33 @@ The status of the reservation can have fours values: OK, RQ, CN and UN.
 |
 
 .. note:: Keep the parameters in the valuation response to include them in the reservation request.
+
+|
+
+**MerchantPay & CardBookingPay/CardCheckInPay**
+
+In the reservation, you can pay with cash or with a credit card. If the payment is done by cash, in the XML petition you only have to specify the payment type, like so:
+
+::
+
+    <PaymentType>MerchantPay</PaymentType>
+
+|
+	
+If the payment is done by credit card, then in the XML petition, is it mandatory to specify the payment type and the credit card information, like so: 
+
+
+::
+
+	<PaymentType>CardBookingPay/CardCheckInPay</PaymentType>
+	  <CardInfo>
+	   <CardCode>XX</CardCode>
+	   <Number>XXXXXXXXXX</Number>
+	   <Holder>XXXX</Holder>
+	   <ValidityDate>	
+		 <Month>XX</Month>
+		 <Year>XX</Year>
+	   </ValidityDate>
+	   <CVC>XXX</CVC>
+	 </CardInfo>	
+

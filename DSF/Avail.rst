@@ -417,6 +417,8 @@ as as false, the client can sell the product with an inferior price.
 We have no notion if the price is PVP or a net price given that the commission is not sent to us via XML. 
 The commission is established by contract. 
 
+|
+
 :: 
 	
 	<Price currency = "EUR" amount = "300" binding = "true" commission = "-1"/>
@@ -424,12 +426,16 @@ The commission is established by contract.
 The price is PVP, the commission is not sent to us via XML. 
 The commission is established by contract. 
 
+|
+
 ::
 	
 	<Price currency = "EUR" amount = "150" binding = "true/false" commission = "20"/>
 
 The price is net with a commission of a 20%. The binding in this case can be true or false.	
 	
+|
+
 ::
 
 	<Price currency = "EUR" amount = "100" binding = "false" commission = "0"/>
