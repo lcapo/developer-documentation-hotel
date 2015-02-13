@@ -459,13 +459,9 @@ We will always return the coin that the provider sends us, we will never do a co
 
 **PAX ages:**
 
-The range of what is considered and adult, infant or baby depends on each provider but the standard case of the range of ages is: 
+The range of what is considered and adult, infant or baby depends on each provider. 
 
-* *Adult:* 18 to 30 years old or over. 
-
-* *Infant:* 2 to 17 years old.
-
-* *Baby:* 0 to 1 year old. 
+We don't difference each pax by their age, everyone is considered a pax with a determined age ( baby, infant & adult )
 
 
 .. note:: Once the age as been established for each pax then it must not be modified for the rest of the calls, like for example the valuation process. You can send an adult with a standard of 30 years old to avoid possible errors.
