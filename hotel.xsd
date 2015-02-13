@@ -372,6 +372,8 @@
       <xs:enumeration value="LaterPay" />
       <xs:enumeration value="MerchantPay" />
       <xs:enumeration value="MixedPay" />
+	  <xs:enumeration value="CardBookingPay" />
+	  <xs:enumeration value="CardCheckInPay" />
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="eTipoOpcion">
@@ -633,6 +635,7 @@
       <xs:element minOccurs="0" maxOccurs="1" name="Rooms" type="RoomsAvail" />
       <xs:element minOccurs="0" maxOccurs="1" name="RoomCandidates" type="RoomCandidates" />
       <xs:element minOccurs="0" maxOccurs="1" name="CancelPenalties" type="CancelPenalties" />
+	  <xs:element minOccurs="0" maxOccurs="1" name="PaymentOptions" type="PaymentOptions" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="Holder">
@@ -1444,6 +1447,9 @@
           <xs:element minOccurs="0" maxOccurs="1" name="ProviderLocator" type="xs:string" />
           <xs:element minOccurs="1" maxOccurs="1" name="ResStatus" type="eEstadoReserva" />
           <xs:element minOccurs="0" maxOccurs="1" name="Price" type="Price" />
+		  <xs:element minOccurs="0" maxOccurs="1" name="Remarks" type="xs:string" />
+		  <xs:element minOccurs="0" maxOccurs="1" name="BillingSupplierCode" type="xs:string" />     
+		  <xs:element minOccurs="0" maxOccurs="1" name="Payable" type="Payable" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
