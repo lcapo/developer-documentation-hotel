@@ -472,6 +472,7 @@ We don't have any age ranges in our system, we will act accordingly for each pro
 
 |
 
+
 **Cancellation policies:**
 
 The cancellation policies or penalizations may be displayed in the response, provided that in the request the parameter <CancellationPolicies> is set as true, 
