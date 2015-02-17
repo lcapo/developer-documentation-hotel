@@ -478,6 +478,8 @@ The cancellation policies or penalizations may be displayed in the response, pro
 and also that the provider supplies this information in the availability call.  
 
 
+
+
 | 
 
 **PaymentOptions:**
