@@ -461,10 +461,14 @@ We will always return the coin that the provider sends us, we will never do a co
 
 The range of what is considered and adult, infant or baby depends on each provider. 
 
-We don't difference each pax by their age, everyone is considered a pax with a determined age ( baby, infant & adult )
+We don't have a standardization of the paxs ages, we adapt to what the providers says. If, for the provider considers that a kid is a kid until 
+he is 1 years old, then we will consider the same, and if for another provider a kid is considered a kid until he is 15 years old then we will consider the same as well. 
+If the providers requires it, we will convert the age of a pax to a pax type ( like for example, convert a 30 year old pax to an adult ) or send directly the age of the pax. This depends on the provider's request. 
+
+We don't have any age ranges in our system, we will act accordingly for each provider. 
 
 
-.. note:: Once the age as been established for each pax then it must not be modified for the rest of the calls, like for example the valuation process. You can send an adult with a standard of 30 years old to avoid possible errors.
+.. note:: Once the age as been established for each pax then it must not be modified for the rest of the petitions, like for example the valuation process.
 
 |
 
