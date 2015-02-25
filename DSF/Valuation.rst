@@ -189,6 +189,31 @@ ValuationRS Description
 Detailed Description
 --------------------
 
+
+**Providers with session**
+
+
+Due to the nature of the business, the traffic it generates can be very intense, therefore, here in XML Travelgate we assume that our clients have in place some kind of 
+caching strategy. For this reason, the same availability (search) response can be used more than once to serve more than one client. 
+
+Please note that in the case of a provider using said session code to identify the option of the reservation, an update of said code will be necessary, and with this, 
+we recommended to simply relaunch the same availability petition and therefore you will obtain a new session code.
+
+|
+
+**Providers with allotment blockage**
+
+There are some providers which, for their internal reasons, block the allotments of the petitions. If this should be the case, the clients have to relaunch automatically the valuation, provided that
+it has past more than 30 minutes of the last valuation petition. 
+
+Given the case, that a provider has a specific transaction for blocking allotments ( normally called pre-confirmation, quote, booking with a parameter quote.. ), then there is two possible paths that you need to follow:
+
+* If the provider assures a blockage equal or superior to 30 minutes then you will have to do the blockage of allotment petition.
+
+* If the provider doesn't assure a blockage superior of 30 minutes then the petition of blockage of allotment will have to be done in the booking petition.
+
+|
+
 **CardInfo:**
 
 
