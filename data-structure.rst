@@ -84,4 +84,5 @@ the specific objects related to the operation
   RunTimeConfiguration<./DSF/RunTimeConfiguration.rst>
   ModifyValuation<./DSF/ModifyValuation.rst>
   ModifyReservation<./DSF/ModifyReservation.rst>
+  CurrencyList<./DSF/CurrencyList.rst>
   MasterData<./DSF/MasterData.rst>
