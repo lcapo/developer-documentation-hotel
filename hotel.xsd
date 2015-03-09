@@ -423,7 +423,6 @@
       </xs:complexContent>
     </xs:complexType>
 
-
     <xs:element name="ValuationRS" nillable="true" type="ValuationRS" />
     <xs:complexType name="ValuationRS">
       <xs:complexContent mixed="false">
@@ -441,13 +440,6 @@
         </xs:extension>
       </xs:complexContent>
     </xs:complexType>
-   
-    
-    
-   
-   
-  
-    
    
     <xs:complexType name="PaymentOptions">
       <xs:sequence>
@@ -1217,6 +1209,7 @@
           <xs:element minOccurs="0" maxOccurs="1" name="ModifyTransactions" type="ModifyTransactions" />
 		  <xs:element minOccurs="1" maxOccurs="1" name="InformNRFRateByRoom" type="xs:boolean" />
 		  <xs:element minOccurs="0" maxOccurs="1" name="CurrencyList" type="CurrencyList" />
+		  <xs:element minOccurs="0" maxOccurs="1" name="AllowsCurrencyAvail" type="xs:boolean" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -1434,6 +1427,7 @@
           <xs:element minOccurs="0" maxOccurs="1" name="Modifications" type="Modifications" />
           <xs:element minOccurs="0" maxOccurs="1" name="ModifyPenalty" type="Price" />
           <xs:element minOccurs="0" maxOccurs="1" name="HotelReservation" type="HotelRes" />
+		  <xs:element minOccurs="0" maxOccurs="1" name="CardInfo" type="CardInfo" />
           <xs:element minOccurs="0" maxOccurs="1" name="Parameters" type="Parameters" />
         </xs:sequence>
       </xs:extension>
@@ -1453,5 +1447,34 @@
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CurrencyListRQ" nillable="true" type="CurrencyListRQ" />
+    <xs:complexType name="CurrencyListRQ">
+      <xs:complexContent mixed="false">
+          <xs:extension base="HotelBaseRQ" />
+      </xs:complexContent>
+    </xs:complexType> 
+
+<xs:element name="CurrencyListRS" nillable="true" type="CurrencyListRS" />
+  <xs:complexType name="CurrencyListRS">
+    <xs:complexContent mixed="false">
+      <xs:extension base="HotelBaseRS">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Currencies" type="Currencies" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="Currencies">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Currency" type="Currency" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Currency">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Code" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+    </xs:sequence>
   </xs:complexType>
 </xs:schema>
