@@ -1,9 +1,12 @@
-Master Codes
-============
+Lists of Data
+=============
 
 |
 
-Standard codes 
+Method Goals
+------------
+
+This paragraph aims to describe all of our lists with data.  
 
 |
 
@@ -63,6 +66,7 @@ Currency list
 
 We use a standard ISO - 4217.
 
+|
 
 
 

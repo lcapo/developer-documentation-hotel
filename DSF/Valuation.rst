@@ -27,7 +27,8 @@ Response Format
 The returned XML contains the total price and list of cancel policies. 
 Sometimes this method will fail since the selected option at *Avail* 
 time will not be available in this stage. In this case the integration 
-returns an error code 301.
+returns one of our errors: code 301. For more information of our errors, 
+please consult the paragraph "Lists of Data" 
 
 |
 

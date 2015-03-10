@@ -85,4 +85,4 @@ the specific objects related to the operation
   ModifyValuation<./DSF/ModifyValuation.rst>
   ModifyReservation<./DSF/ModifyReservation.rst>
   CurrencyList<./DSF/CurrencyList.rst>
-  MasterData<./DSF/MasterData.rst>
+  Lists of Data<./DSF/ListsData.rst>
