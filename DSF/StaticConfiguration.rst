@@ -124,7 +124,7 @@ StaticConfigurationRS Example
 			<CurrencyCode>USD</CurrencyCode>
 			<CurrencyCode>BRL</CurrencyCode>
 		</CurrencyList>
-
+		<AllowsCurrencyAvail>true</AllowsCurrencyAvail>
     </StaticConfigurationRS>
 
 |
@@ -210,7 +210,7 @@ StaticConfigurationRS Description
 | ReservationList      | 1        | Boolean  | The provider implements the list of bookings transaction by creation date.                  |
 | CreationDate         |          |          |                                                                                             |
 +----------------------+----------+----------+---------------------------------------------------------------------------------------------+
-| ReservationList      | 1        | Boolean  | The provider implements the list of bookings transaction by checking date.                  |
+| ReservationList      | 1        | Boolean  | The provider implements the list of bookings transaction by check in date.                  |
 | CheckDate            |          |          |                                                                                             |
 +----------------------+----------+----------+---------------------------------------------------------------------------------------------+
 | InformCancelPolicies | 1        | Boolean  | Informs of the cancellation policies in the booking consultation.                           |
@@ -241,7 +241,11 @@ StaticConfigurationRS Description
 +----------------------+----------+----------+---------------------------------------------------------------------------------------------+
 | CurrencyCode         | 1..n     | String   | Standard currency ISO - 4217.                                                               |
 +----------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| AllowsCurrencyAvail  | 0..1     | Boolean  | If true, then it is possible to indicate the currency on a availability level.              |
++----------------------+----------+----------+---------------------------------------------------------------------------------------------+
+
 
 .. note :: The currency list is currently under development. 
+
 |
 
