@@ -414,7 +414,7 @@ Every option has a price and every price indicates the currency, the amount, if 
 
 * *Binding:*
 
-If binding is set as true, then the client can't sell the product, which is provided by the supplier, with an inferior price. If it is set
+If binding is set as true, then the client can't sell the product, which is provided by the supplier, with an inferior price. If it set
 as as false, the client can sell the product with an inferior price. 
 
 * *Commission:* 
@@ -422,18 +422,19 @@ as as false, the client can sell the product with an inferior price.
 
 	-  Commission = 0: the price returned is a net price.
 
-	-  Commission = -1: the provider is not informing of the sale price or the commission. This information is obtained by signing a contract with the provider. 
+	-  Commission = -1: the provider is not informing the sale price 
+	   neither the commission. This information is obtained by signing a contract with the provider. 
 
 	-  Commission is greater than 0: X = % of the commission that is applied to the amount
 
-*As follows, the 4 possible cases that can be given:*
+*As follows the 4 possible cases that can be given:*
 
 
 ::
 
 	<Price currency = "EUR" amount = "200" binding = "false" commission = "-1"/>
 
-We haven't got the notion if the price is PVP or a net price given that the commission is not sent to us via XML. 
+We have no notion if the price is PVP or a net price given that the commission is not sent to us via XML. 
 The commission is established by contract. 
 
 |
@@ -451,7 +452,7 @@ The commission is established by contract.
 	
 	<Price currency = "EUR" amount = "150" binding = "true/false" commission = "20"/>
 
-The price is PVP with a commission of a 20%. The binding in this case can be true or false.	
+The price is net with a commission of a 20%. The binding in this case can be true or false.	
 	
 |
 
