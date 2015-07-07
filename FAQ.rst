@@ -66,7 +66,7 @@ as as false, the client can sell the product with an inferior price.
     but this call can take more that 5 minutes, so, how can we do this quicker?
     We will download all of your information necessary to our servers,
     so when this happens, we can send you the static information
-    that we have loaded in our system.
+    that we have loaded into our system.
 
 
 
