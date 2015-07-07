@@ -7,6 +7,7 @@
         <xs:sequence>
           <xs:element minOccurs="1" maxOccurs="1" name="SearchType" type="eTypeSearch" />
           <xs:element minOccurs="1" maxOccurs="1" name="CancellationPolicies" type="xs:boolean" />
+		  <xs:element minOccurs="1" maxOccurs="1" name="OnRequest" type="xs:boolean" />
           <xs:element minOccurs="0" maxOccurs="1" name="AvailDestinations" type="AvailDestinations" />
           <xs:element minOccurs="0" maxOccurs="1" name="StartDate" type="xs:string" />
           <xs:element minOccurs="0" maxOccurs="1" name="EndDate" type="xs:string" />
@@ -31,6 +32,7 @@
       <xs:element minOccurs="1" maxOccurs="1" name="timeoutMilliseconds" type="xs:int" />
       <xs:element minOccurs="0" maxOccurs="1" name="source" type="Source" />
       <xs:element minOccurs="0" maxOccurs="1" name="filterAuditData" type="FilterAuditData" />
+	  <xs:element minOccurs="1" maxOccurs="1" name="optionsQuota" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="Source">
@@ -213,6 +215,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="1" name="Price" type="Price" />
       <xs:element minOccurs="0" maxOccurs="1" name="DailyPrices" type="ArrayOfDailyPrice" />
+	  <xs:element minOccurs="0" maxOccurs="1" name="Features" type="Features" />
     </xs:sequence>
     <xs:attribute name="id" type="xs:string" />
     <xs:attribute name="roomCandidateRefId" type="xs:int" use="required" />
@@ -237,6 +240,14 @@
     </xs:sequence>
     <xs:attribute name="effectiveDate" type="xs:string" />
     <xs:attribute name="expireDate" type="xs:string" />
+  </xs:complexType>
+    <xs:complexType name="Features">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Feature" type="Feature" />
+    </xs:sequence>
+  </xs:complexType>
+   <xs:complexType name="Feature">
+    <xs:attribute name="code" type="xs:string" />
   </xs:complexType>
   <xs:complexType name="RateRules">
     <xs:sequence>
@@ -356,10 +367,38 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
+  <xs:complexType name="AvailableModifications">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AvailableModification" type="AvailableModification" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AvailableModification">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="ModificationTypes" type="ModificationTypes" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ModificationPenalties" type="ModificationPenalties" />	  
+    </xs:sequence>
+  </xs:complexType>
+   <xs:complexType name="ModificationTypes">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ModificationType" type="eTypeModify" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="Remarks">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Remark" type="Remark" />
     </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModificationPenalties">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ModificationPenalty" type="ModificationPenalty" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModificationPenalty">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="HoursBefore" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Penalty" type="Penalty" />
+    </xs:sequence>
+     <xs:attribute name="allowed" type="xs:boolean" use ="required" />		
   </xs:complexType>
    <xs:complexType name="Remark">
     <xs:simpleContent>
@@ -398,10 +437,8 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="Offer">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="1" name="code" type="xs:string" />
-      <xs:element minOccurs="0" maxOccurs="1" name="name" type="xs:string" />
-    </xs:sequence>
+    <xs:attribute name="code" type="xs:string" />
+    <xs:attribute name="name" type="xs:string" />
   </xs:complexType>
     <xs:element name="ValuationRQ" nillable="true" type="ValuationRQ" />
     <xs:complexType name="ValuationRQ">
@@ -411,6 +448,7 @@
             <xs:element minOccurs="0" maxOccurs="1" name="StartDate" type="xs:string" />
             <xs:element minOccurs="0" maxOccurs="1" name="EndDate" type="xs:string" />
             <xs:element minOccurs="0" maxOccurs="1" name="SupplierCode" type="xs:string" />
+			<xs:element minOccurs="1" maxOccurs="1" name="OnRequest" type="xs:boolean" />
             <xs:element minOccurs="0" maxOccurs="1" name="Parameters" type="Parameters" />
             <xs:element minOccurs="0" maxOccurs="1" name="MealPlanCode" type="xs:string" />
             <xs:element minOccurs="0" maxOccurs="1" name="HotelCode" type="xs:string" />
@@ -429,11 +467,13 @@
         <xs:extension base="HotelBaseRS">
           <xs:sequence>
             <xs:element minOccurs="0" maxOccurs="1" name="Parameters" type="Parameters" />
+		    <xs:element minOccurs="1" maxOccurs="1" name="Status" type="eEstadoReserva" />
             <xs:element minOccurs="0" maxOccurs="1" name="Price" type="Price" />
             <xs:element minOccurs="0" maxOccurs="1" name="Fees" type="Fees" />
             <xs:element minOccurs="0" maxOccurs="1" name="CancelPenalties" type="CancelPenalties" />
+            <xs:element minOccurs="0" maxOccurs="1" name="AvailableModifications" type="AvailableModifications" />			
             <xs:element minOccurs="0" maxOccurs="1" name="Remarks" type="xs:string" />
-		    <xs:element minOccurs="0" maxOccurs="1" name="Offers" type="Offers" />
+	    <xs:element minOccurs="0" maxOccurs="1" name="Offers" type="Offers" />
             <xs:element minOccurs="0" maxOccurs="1" name="PaymentOptions" type="PaymentOptions" />
             <xs:element minOccurs="0" maxOccurs="1" name="Option" type="Option" />
           </xs:sequence>
@@ -490,6 +530,7 @@
       <xs:extension base="HotelBaseRQ">
         <xs:sequence>
           <xs:element minOccurs="0" maxOccurs="1" name="ClientLocator" type="xs:string" />
+		  <xs:element minOccurs="1" maxOccurs="1" name="OnRequest" type="xs:boolean" />
           <xs:element minOccurs="0" maxOccurs="1" name="Parameters" type="Parameters" />
           <xs:element minOccurs="0" maxOccurs="1" name="DeltaPrice" type="DeltaPrice" />
           <xs:element minOccurs="0" maxOccurs="1" name="StartDate" type="xs:string" />
@@ -1210,6 +1251,9 @@
 		  <xs:element minOccurs="1" maxOccurs="1" name="InformNRFRateByRoom" type="xs:boolean" />
 		  <xs:element minOccurs="0" maxOccurs="1" name="CurrencyList" type="CurrencyList" />
 		  <xs:element minOccurs="0" maxOccurs="1" name="AllowsCurrencyAvail" type="xs:boolean" />
+		  <xs:element minOccurs="1" maxOccurs="1" name="SearchTypeMultiRoom" type="xs:boolean" />
+		  <xs:element minOccurs="1" maxOccurs="1" name="InformCancelPoliciesModify" type="xs:boolean" />
+		  <xs:element minOccurs="1" maxOccurs="1" name="AllowOnRequest" type="xs:boolean" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -1393,6 +1437,7 @@
   <xs:complexType name="RoomRemove">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="1" name="Price" type="Price" />
+	  <xs:element minOccurs="0" maxOccurs="1" name="PaxGuests" type="ArrayOfPaxGuest" />
     </xs:sequence>
     <xs:attribute name="code" type="xs:string" />
   </xs:complexType>
@@ -1413,6 +1458,7 @@
         <xs:sequence>
           <xs:element minOccurs="0" maxOccurs="1" name="ModifyPenalty" type="Price" />
           <xs:element minOccurs="0" maxOccurs="1" name="HotelReservation" type="HotelRes" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CancelPenalties" type="CancelPenalties" />		  
           <xs:element minOccurs="0" maxOccurs="1" name="Parameters" type="Parameters" />
         </xs:sequence>
       </xs:extension>
