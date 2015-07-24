@@ -73,6 +73,7 @@ AvailRQ Example
    
     <AvailRQ>
         <CancellationPolicies>false</CancellationPolicies>
+		<OnRequest>false</OnRequest>
         <AvailDestinations>
             <Destination type = "CTY" code = "5"/>
         </AvailDestinations>
@@ -100,6 +101,10 @@ AvailRQ Description
 | AvailRQ                             | 1        |           | Root node.                                                         |
 +-------------------------------------+----------+-----------+--------------------------------------------------------------------+
 | CancellationPolicies                | 1        | Boolean   | Indicates if you want to receive the cancellation policies in      |
+|                                     |          |           | AvailRS, as long as the provider returns it in this call           |
+|                                     |          |           | (see StaticConfiguration).                                         |
++-------------------------------------+----------+-----------+--------------------------------------------------------------------+
+| OnRequest                           | 1        | Boolean   | Indicates if you want to receive the on request options in         |
 |                                     |          |           | AvailRS, as long as the provider returns it in this call           |
 |                                     |          |           | (see StaticConfiguration).                                         |
 +-------------------------------------+----------+-----------+--------------------------------------------------------------------+
@@ -499,6 +504,13 @@ The cancellation policies or penalizations may be displayed in the response, pro
 and also that the provider supplies this information in the availability call.  
 
 
+| 
+
+
+**On Request:**
+
+The on request options may be displayed in the response, provided that in the request the parameter <OnRequest> is set as true. 
+In case that the parameter <OnRequest> is set as false, the integration filter this options in AvailRS only if the supplier provide us this information in the availability call.
 
 
 | 
@@ -550,8 +562,8 @@ The possible values of the status in the response is OK or RQ:
 
 <Option type = "Hotel" paymentType = "MerchantPay" status = "OK">
 
-In the case that the client doesn't want to display the options in a status RQ, we can filter the options given that the provider typifies this status. 
-In the case the provider doesn't facilitates this information, then this will have to be treated on a commercial level. 
+In the case that the client doesn't want to display the options in a status RQ, we can filter the options given that the provider typifies this status when the AvailRQ specifies the <OnRequest> tag. 
+In the case the provider doesn't facilitates this information, wich will be informed into the StaticConfiguration call, then this will have to be treated on a commercial level. 
 
 |
   

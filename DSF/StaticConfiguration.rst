@@ -125,6 +125,7 @@ StaticConfigurationRS Example
 			<CurrencyCode>BRL</CurrencyCode>
 		</CurrencyList>
 		<AllowsCurrencyAvail>true</AllowsCurrencyAvail>
+		<AllowOnRequest>true</AllowOnRequest>
     </StaticConfigurationRS>
 
 |
@@ -241,11 +242,16 @@ StaticConfigurationRS Description
 +----------------------+----------+----------+---------------------------------------------------------------------------------------------+
 | CurrencyCode         | 1..n     | String   | Standard currency ISO - 4217.                                                               |
 +----------------------+----------+----------+---------------------------------------------------------------------------------------------+
-| AllowsCurrencyAvail  | 0..1     | Boolean  | If true, then it is possible to indicate the currency on a availability level.              |
+| AllowsCurrencyAvail  | 1        | Boolean  | If true, then it is possible to indicate the currency on a availability level.              |
++----------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| AllowOnRequest       | 1        | Boolean  | If true, then the provider specifies the on request status option on a availability,        |
+|                      |          |          | valuation, or reservation level.                                                            |
 +----------------------+----------+----------+---------------------------------------------------------------------------------------------+
 
 
-.. note :: The currency list is currently under development. 
+.. note :: The parameter AllowOnRequest is currently under development. In this moment, the most of integration filter the status RQ. 
+In case that the provider return the status in process response in avail, valuation or confirmation you can filter this option if you send 
+the parameter <OnRequest>true</OnRequest>.
 
 |
 

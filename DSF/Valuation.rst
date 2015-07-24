@@ -47,6 +47,7 @@ ValuationRQ Example
     <ValuationRQ>
         <StartDate>28/01/2014</StartDate>
         <EndDate>29/01/2014</EndDate>
+	    <OnRequest>false</OnRequest>	
         <MealPlanCode>D</MealPlanCode>
         <HotelCode>10</HotelCode>
         <PaymentType>MerchantPay</PaymentType>
@@ -77,6 +78,9 @@ ValuationRQ Description
 | StartDate                                | 1        | String    | Start date to search rates.                                             |
 +------------------------------------------+----------+-----------+-------------------------------------------------------------------------+
 | EndDate                                  | 1        | String    | End date to search rates.                                               |
++------------------------------------------+----------+-----------+-------------------------------------------------------------------------+
+| OnRequest                                | 1        | Boolean   | Indicates if you want to receive the on request options in AvailRS, as  |
+|                                          |          |           | long as the provider returns it in this call (see StaticConfiguration). |
 +------------------------------------------+----------+-----------+-------------------------------------------------------------------------+
 | MealPlanCode                             | 1        | String    | MealPlan code.                                                          |
 +------------------------------------------+----------+-----------+-------------------------------------------------------------------------+
@@ -130,6 +134,7 @@ ValuationRS Example
 		<Parameters>
 			<Parameter key = "bd1" value = "43"/>
 		</Parameters>
+		<Status>OK</Status>
 		<Price currency = "EUR" amount = "36.20" binding = "false" commission = "-1"/>
 		<CancelPenalties nonRefundable = "false">
 			<CancelPenalty>
@@ -162,6 +167,8 @@ ValuationRS Description
 | *@key*                                                                          | 1        | String    | Contains the keyword/Id to identify a parameter.                                                                                                                                                                  |
 +---------------------------------------------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | *@value*                                                                        | 1        | String    | Contains the value of the parameter.                                                                                                                                                                              |
++---------------------------------------------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Status                                                                          | 1        |           | Status option (OK = available, RQ = on request).                                                                                                                                                                  |
 +---------------------------------------------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Price                                                                           | 1        |           | Total price of this valuation.                                                                                                                                                                                    |
 +---------------------------------------------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -237,6 +244,14 @@ Given the case, that a provider has a specific transaction for blocking allotmen
 * If the provider doesn't assure a blockage superior of 30 minutes then the petition of blockage of allotment will have to be done in the booking petition.
 
 |
+
+**Status:**
+
+The valuation response depends the parameter <OnRequest> set:
+In case that the parameter <OnRequest> is set as false, the integration filter this options if the supplier provide us the new status with value on request in ValuationRS, then we return an error because the provider change the status option.
+In case that the parameter <OnRequest> is set as true, we don't filter the option.
+
+| 
 
 **CardInfo:**
 
