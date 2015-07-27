@@ -71,24 +71,25 @@ AvailRQ Example
 
 ::
    
-    <AvailRQ>
-        <CancellationPolicies>false</CancellationPolicies>
+	<AvailRQ>
+		<CancellationPolicies>false</CancellationPolicies>
 		<OnRequest>false</OnRequest>
-        <AvailDestinations>
-            <Destination type = "CTY" code = "5"/>
-        </AvailDestinations>
-        <StartDate>28/01/2014</StartDate>
-        <EndDate>29/01/2014</EndDate>
-        <Currency>EUR</Currency>
-        <RoomCandidates>
-            <RoomCandidate id = "1">
-                <Paxes>
-                    <Pax age = "30" id = "1"/>
-                    <Pax age = "30" id = "2"/>
-                </Paxes>
-            </RoomCandidate>
-        </RoomCandidates>
-    </AvailRQ>
+		<AvailDestinations>
+			<Destination type = "CTY" code = "5"/>
+		</AvailDestinations>
+		<StartDate>28/01/2014</StartDate>
+		<EndDate>29/01/2014</EndDate>
+		<Currency>EUR</Currency>
+		<RoomCandidates>
+			<RoomCandidate id = "1">
+				<Paxes>
+					<Pax age = "30" id = "1"/>
+					<Pax age = "30" id = "2"/>
+				</Paxes>
+			</RoomCandidate>
+		</RoomCandidates>
+	</AvailRQ>
+
 
 |
 

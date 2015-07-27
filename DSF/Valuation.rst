@@ -44,26 +44,27 @@ ValuationRQ Example
 
 ::
 
-    <ValuationRQ>
-        <StartDate>28/01/2014</StartDate>
-        <EndDate>29/01/2014</EndDate>
-	    <OnRequest>false</OnRequest>	
-        <MealPlanCode>D</MealPlanCode>
-        <HotelCode>10</HotelCode>
-        <PaymentType>MerchantPay</PaymentType>
-        <OptionType>Hotel</OptionType>
-        <Rooms>
-            <Room id = "4582" roomCandidateRefId = "1" code = "506" description = "Doble Standard.."/>
-        </Rooms>
-        <RoomCandidates>
-            <RoomCandidate id = "1">
-                <Paxes>
-                    <Pax age = "30" id = "1"/>
-                    <Pax age = "30" id = "2"/>
-                </Paxes>
-            </RoomCandidate>
-        </RoomCandidates>
-    </ValuationRQ>
+	<ValuationRQ>
+		<StartDate>28/01/2014</StartDate>
+		<EndDate>29/01/2014</EndDate>
+		<OnRequest>false</OnRequest>
+		<MealPlanCode>D</MealPlanCode>
+		<HotelCode>10</HotelCode>
+		<PaymentType>MerchantPay</PaymentType>
+		<OptionType>Hotel</OptionType>
+		<Rooms>
+			<Room id = "4582" roomCandidateRefId = "1" code = "506"	description = "Doble Standard.."/>
+		</Rooms>
+		<RoomCandidates>
+			<RoomCandidate id = "1">
+				<Paxes>
+					<Pax age = "30" id = "1"/>
+					<Pax age = "30" id = "2"/>
+				</Paxes>
+			</RoomCandidate>
+		</RoomCandidates>
+	</ValuationRQ>
+
 
 
 

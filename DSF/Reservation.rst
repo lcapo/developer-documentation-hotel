@@ -45,42 +45,43 @@ ReservationRQ Example
 
 ::
 
-    <ReservationRQ>
-        <ClientLocator>2537459</ClientLocator>
+	<ReservationRQ>
+		<ClientLocator>2537459</ClientLocator>
 		<OnRequest>false</OnRequest>
-        <Parameters>
-            <Parameter key = "extra" value = "31"/>
-        </Parameters>
-        <StartDate>28/01/2014</StartDate>
-        <EndDate>29/01/2014</EndDate>
-        <MealPlanCode>D</MealPlanCode>
-        <HotelCode>10</HotelCode>
-        <Price currency = "EUR" amount = "36.20" binding = "false" commission = "-1"/>
-        <ResGuests>
-            <Guests>
-                <Guest roomCandidateId = "1" paxId = "1">
-                    <GivenName>Test11</GivenName>
-                    <SurName>TestAp11</SurName>
-                </Guest>
-                <Guest roomCandidateId = "1" paxId = "2">
-                    <GivenName>Test12</GivenName>
-                    <SurName>TestAp12</SurName>
-                </Guest>
-            </Guests>
-        </ResGuests>
-        <PaymentType>MerchantPay</PaymentType>
-        <Rooms>
-            <Room id = "4582" roomCandidateRefId = "1" code = "506" description = "Double Standard.."/>
-        </Rooms>
-        <RoomCandidates>
-            <RoomCandidate id = "1">
-                <Paxes>
-                    <Pax age = "30" id = "1"/>
-                    <Pax age = "30" id = "2"/>
-                </Paxes>
-            </RoomCandidate>
-        </RoomCandidates>
-    </ReservationRQ>
+		<Parameters>
+			<Parameter key = "extra" value = "31"/>
+		</Parameters>
+		<StartDate>28/01/2014</StartDate>
+		<EndDate>29/01/2014</EndDate>
+		<MealPlanCode>D</MealPlanCode>
+		<HotelCode>10</HotelCode>
+		<Price currency = "EUR"	amount = "36.20" binding = "false" commission = "-1"/>
+		<ResGuests>
+			<Guests>
+				<Guest roomCandidateId = "1" paxId = "1">
+					<GivenName>Test11</GivenName>
+					<SurName>TestAp11</SurName>
+				</Guest>
+				<Guest roomCandidateId = "1" paxId = "2">
+					<GivenName>Test12</GivenName>
+					<SurName>TestAp12</SurName>
+				</Guest>
+			</Guests>
+		</ResGuests>
+		<PaymentType>MerchantPay</PaymentType>
+		<Rooms>
+			<Room id = "4582" roomCandidateRefId = "1" code = "506"	description = "Double Standard.."/>
+		</Rooms>
+		<RoomCandidates>
+			<RoomCandidate id = "1">
+				<Paxes>
+					<Pax age = "30" id = "1"/>
+					<Pax age = "30" id = "2"/>
+				</Paxes>
+			</RoomCandidate>
+		</RoomCandidates>
+	</ReservationRQ>
+
 
 |
 
