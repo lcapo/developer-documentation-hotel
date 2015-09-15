@@ -125,7 +125,17 @@ StaticConfigurationRS Example
 			<CurrencyCode>BRL</CurrencyCode>
 		</CurrencyList>
 		<AllowsCurrencyAvail>true</AllowsCurrencyAvail>
-		<AllowOnRequest>true</AllowOnRequest>
+		<InformCancelPoliciesModify>false</InformCancelPoliciesModify>
+		<AllowOnRequest>false</AllowOnRequest>
+		<ImplementsDailyRatePlan>false</ImplementsDailyRatePlan>
+		<AllowRemarks>false</AllowRemarks>
+		<InformSharedBed>false</InformSharedBed>
+		<InformBedType>false</InformBedType>
+		<InformNumberOfBeds>false</InformNumberOfBeds>	
+		<AllowBlockOption>false</AllowBlockOption>	
+		<InformExclusiveDeal>false</InformExclusiveDeal>	
+		<InformPriceCancel>false</InformPriceCancel>
+		<AllowUrlCard>false</AllowUrlCard>
     </StaticConfigurationRS>
 
 |
@@ -247,11 +257,49 @@ StaticConfigurationRS Description
 | AllowOnRequest       | 1        | Boolean  | If true, then the provider specifies the on request status option on a availability,        |
 |                      |          |          | valuation, or reservation level.                                                            |
 +----------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| InformCancel         | 1        | Boolean  | Informs of the cancellation policies in Modification call.                                  |
+| PoliciesModify       |          |          |                                                                                             |
++----------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| Implements           | 1        | Boolean  | Specifies if the provider return the daily price in availability call.                      |
+| DailyPrice           |          |          |                                                                                             |
++----------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| Implements           | 1        | Boolean  | Specifies if the provider return the daily rate in availability call.                       |
+| DailyRatePlan        |          |          |                                                                                             |
++----------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| AllowRemarks         | 1        | Boolean  | Specifies if the provider allows send remarks in Reservation request.                        |
++----------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| InformSharedBed      | 1        | Boolean  | Specifies if the provider informs in availability response if beds in the room are shared.  |
++----------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| InformBedType        | 1        | Boolean  | Specifies if the provider informs in availability response the beds types.                  |
++----------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| InformNumberOfBeds   | 1        | Boolean  | Specifies if the provider informs in availability response the number of beds for each room.|
++----------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| AllowBlockOption     | 1        | Boolean  | Specifies if the provider block the option in valuation call.                               |
++----------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| InformExclusiveDeal  | 1        | Boolean  | The provider indicates in one Hotel is an Exclusive Deal in HotelList and/or DescriptiveInfo|
++----------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| InformPriceCancel    | 1        | Boolean  | The provider informs about the cancelation price in the cancel response.                    |
++----------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| AllowUrlCard         | 1        | Boolean  | Specifies if the provider allows url card data encode when the option type is LaterPay.     |
++----------------------+----------+----------+---------------------------------------------------------------------------------------------+
 
 
 .. note :: The parameter AllowOnRequest is currently under development. In this moment, the most of integration filter the status RQ. 
 In case that the provider return the status in process response in avail, valuation or confirmation you can filter this option if you send 
 the parameter <OnRequest>true</OnRequest>.
 
+By default the following tags:
+
+* **ImplementsDailyRatePlan**
+* **AllowRemarks**
+* **InformSharedBed**
+* **InformBedType**
+* **InformNumberOfBeds**
+* **AllowBlockOption**
+* **InformExclusiveDeal**
+* **InformPriceCancel**
+* **AllowUrlCard**
+
+Rigth now, this tags are set up to false value, either because the provider doesn't support it or because is not updated yet.
 |
 

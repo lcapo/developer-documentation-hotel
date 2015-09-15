@@ -52,6 +52,7 @@ ValuationRQ Example
 		<HotelCode>10</HotelCode>
 		<PaymentType>MerchantPay</PaymentType>
 		<OptionType>Hotel</OptionType>
+		<BlockOption>true</BlockOption>		
 		<Rooms>
 			<Room id = "4582" roomCandidateRefId = "1" code = "506"	description = "Doble Standard.."/>
 		</Rooms>
@@ -82,6 +83,9 @@ ValuationRQ Description
 +------------------------------------------+----------+-----------+-------------------------------------------------------------------------+
 | OnRequest                                | 1        | Boolean   | Indicates if you want to receive the on request options in AvailRS, as  |
 |                                          |          |           | long as the provider returns it in this call (see StaticConfiguration). |
++------------------------------------------+----------+-----------+-------------------------------------------------------------------------+
+| BlockOption                              | 1        | Boolean   | Indicates if you want to block the option selected in AvailRS, as       |
+|                                          |          |           | long as the provider allow it in this call (see StaticConfiguration).   |
 +------------------------------------------+----------+-----------+-------------------------------------------------------------------------+
 | MealPlanCode                             | 1        | String    | MealPlan code.                                                          |
 +------------------------------------------+----------+-----------+-------------------------------------------------------------------------+
