@@ -532,7 +532,7 @@ The commission is established by contract.
 	
 	<Price currency = "EUR" amount = "150" binding = "true/false" commission = "20"/>
 
-The price is net with a commission of a 20%. The binding in this case can be true or false.	
+The price is PVP with a commission of a 20%. The binding in this case can be true or false.	
 	
 |
 
