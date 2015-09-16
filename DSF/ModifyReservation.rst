@@ -39,7 +39,7 @@ ModifyReservationRQ Example
 ::
 
     <ModifyReservationRQ>
-		<OnRequest>false</OnRequest>
+        <OnRequest>false</OnRequest>
         <Reservation>
             <Locators>
                 <Client>5356342</Client>
