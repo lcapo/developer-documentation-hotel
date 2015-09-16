@@ -266,7 +266,7 @@ StaticConfigurationRS Description
 | Implements           | 1        | Boolean  | Specifies if the provider return the daily rate in availability call.                       |
 | DailyRatePlan        |          |          |                                                                                             |
 +----------------------+----------+----------+---------------------------------------------------------------------------------------------+
-| AllowRemarks         | 1        | Boolean  | Specifies if the provider allows send remarks in Reservation request.                        |
+| AllowRemarks         | 1        | Boolean  | Specifies if the provider allows send remarks in Reservation request.                       |
 +----------------------+----------+----------+---------------------------------------------------------------------------------------------+
 | InformSharedBed      | 1        | Boolean  | Specifies if the provider informs in availability response if beds in the room are shared.  |
 +----------------------+----------+----------+---------------------------------------------------------------------------------------------+

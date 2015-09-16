@@ -42,8 +42,8 @@ ModifyValuationRQ Example
 ::
 
     <ModifyValuationRQ>
-	    <OnRequest>false</OnRequest>
-	    <BlockOption>true</BlockOption>
+		<OnRequest>false</OnRequest>
+		<BlockOption>true</BlockOption>
         <Reservation>
             <Locators>
                 <Client>5356342</Client>
@@ -102,11 +102,9 @@ ModifyValuationRQ Description
 +=============================================================================+==========+===========+==========================================================================================================================================================+
 | ModifyValuationRQ                                                           | 1        |           | Root node.                                                                                                                                               |
 +-----------------------------------------------------------------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-| OnRequest                                                                   | 1        | Boolean   | Indicates if you want to receive the on request options in AvailRS, as                                                                                   |
-|                                                                             |          |           | long as the provider returns it in this call (see StaticConfiguration). 																					|
+| OnRequest                                                                   | 1        | Boolean   | Indicates if you want to receive the on request options in AvailRS, as long as the provider returns it in this call (see StaticConfiguration).           |
 +-----------------------------------------------------------------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-| BlockOption                                                                 | 1        | Boolean   | Indicates if you want to block the option selected in AvailRS, as     																			        |
-|                                                                             |          |           | long as the provider allow it in this call (see StaticConfiguration). 																	 			    |
+| BlockOption                                                                 | 1        | Boolean   | Indicates if you want to block the option selected in AvailRS, as long as the provider allow it in this call (see StaticConfiguration).   		        |
 +-----------------------------------------------------------------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Reservation                                                                 | 1        |           | Reservation data.                                                                                                                                        |
 +-----------------------------------------------------------------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -184,7 +182,7 @@ ModifyValuationRQ Description
 +-----------------------------------------------------------------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 | *@binding*                                                                  | 1        | Boolean   | Identifies if is the price is binding ( When true the sale price returned **must** not be less than the price informed.                                  |
 +-----------------------------------------------------------------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-| *@commission*                                                               | 1        | Decimal   | Commission ( -1 = not specified (will come indicated with the provider contract ), 0 = net price, X = % of the commission that applies to the amount).   |
+| *@commission*                                                               | 1        | Decimal   | Commission (-1 = not specified (will come indicated with the provider contract), 0 = net price, X = % of the commission that applies to the amount).     |
 +-----------------------------------------------------------------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 |

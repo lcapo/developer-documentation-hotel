@@ -281,7 +281,7 @@ DescriptiveInfoRS Description
 |Images/Picture/Url   | 1        | String   | Url.                                                                                        |
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
 |Images/Picture       |          |          |                                                                                             |
-|/Classification      | 1        | String   | Classification ( HOT=hotel, HAB=room, SER=service and GRAL=generic).                        |
+|/Classification      | 1        | String   | Classification (HOT=hotel, HAB=room, SER=service and GRAL=generic).                         |
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
 |Images/Picture       |          |          |                                                                                             |
 |/Ordered             | 0..1     | String   | Images should be ordered from 1 onward. 1 is top.                                           |
@@ -293,9 +293,9 @@ DescriptiveInfoRS Description
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
 |CategoryCode         | 1        | String   | CategoryCode.                                                                               |
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
-|ExclusiveDeal        | 0..1     | Boolean  | Best Value indicates that a Hotel is an Exclusive Deal. The provider has formed partnerships| 
-|   				  |          |          | with select Hotels in order to bring you list rates and superior availability in prime      |
-|					  |          |          | locations. The provider suggests which provide the best value.							  |
+|ExclusiveDeal        | 0..1     | Boolean  | Best Value indicates that a Hotel is an Exclusive Deal. The provider has formed             | 
+|   				  |          |          | partnerships with select Hotels in order to bring you list rates and superior  prime        |
+|					  |          |          | availability in locations. The provider suggests which provide the best value.			  |
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
 
 
