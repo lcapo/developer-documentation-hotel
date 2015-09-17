@@ -119,11 +119,6 @@ StaticConfigurationRS Example
                 <Modify>ModifyRoomsRemoveRooms</Modify>
             </ModifyTransaction>
         </ModifyTransactions>
-		<CurrencyList>
-			<CurrencyCode>EUR</CurrencyCode>
-			<CurrencyCode>USD</CurrencyCode>
-			<CurrencyCode>BRL</CurrencyCode>
-		</CurrencyList>
 		<AllowsCurrencyAvail>true</AllowsCurrencyAvail>
 		<InformCancelPoliciesModify>false</InformCancelPoliciesModify>
 		<AllowOnRequest>false</AllowOnRequest>
@@ -245,12 +240,6 @@ StaticConfigurationRS Description
 +----------------------+----------+----------+---------------------------------------------------------------------------------------------+
 | Implements           | 1        | Boolean  | Observation and comments.                                                                   |
 | RemarksAvail         |          |          |                                                                                             |
-+----------------------+----------+----------+---------------------------------------------------------------------------------------------+
-| CurrencyList         | 0..1     |          | List of currency which the client can specify in the availability call. In the case that    |
-|                      |          |          | there is no currency specifications, the client won't be able to specify the currency via   |
-|                      |          |          | XML in the availability call.                                                               |
-+----------------------+----------+----------+---------------------------------------------------------------------------------------------+
-| CurrencyCode         | 1..n     | String   | Standard currency ISO - 4217.                                                               |
 +----------------------+----------+----------+---------------------------------------------------------------------------------------------+
 | AllowsCurrencyAvail  | 1        | Boolean  | If true, then it is possible to indicate the currency on a availability level.              |
 +----------------------+----------+----------+---------------------------------------------------------------------------------------------+
