@@ -293,9 +293,9 @@ DescriptiveInfoRS Description
 +---------------------+----------+----------+----------------------------------------------------------------------------------------------+
 |CategoryCode         | 1        | String   | CategoryCode.                                                                                |
 +---------------------+----------+----------+----------------------------------------------------------------------------------------------+
-|ExclusiveDeal        | 0..1     | Boolean  | Best Value indicates that a Hotel is an Exclusive Deal. The provider has formed partnerships | 
-|   				  |          |          | with select Hotels in order to bring you list rates and superior  prime availability         |
-|					  |          |          | in locations. The provider suggests which provide the best value.		                       |
+|ExclusiveDeal        | 0..1     | Boolean  | Best Value indicates that a Hotel is an Exclusive Deal. The provider has formed partnerships |
+|   			      |          |          | with select Hotels in order to bring you list rates and superior  prime availability in      |
+|                     |          |          | locations. The provider suggests which provide the best value.		                       |
 +---------------------+----------+----------+----------------------------------------------------------------------------------------------+
 
 
