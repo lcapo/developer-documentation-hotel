@@ -75,6 +75,7 @@ the specific objects related to the operation
   Cancel<./DSF/Cancel.rst>
   HotelList<./DSF/HotelList.rst>
   DescriptiveInfo<./DSF/DescriptiveInfo.rst>
+  DescriptiveInfoExtended<./DSF/DescriptiveInfoExtended.rst>
   DestinationTree<./DSF/AvailDestinationTree.rst>
   GeographicalTree<./DSF/GeographicDestinationTree.rst>
   MealPlanList<./DSF/MealPlanList.rst>
