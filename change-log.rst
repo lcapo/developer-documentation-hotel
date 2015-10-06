@@ -104,5 +104,6 @@ DeltaPrice in Confirmation
 
 CancelPoliciesDescription in Valuation
 
+DescriptiveInfoExtended
 
 |
