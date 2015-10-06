@@ -100,9 +100,9 @@ Offers in Avail
 
 Fees in Valuation
 
-DeltaPrice in Confirmation
-
 CancelPoliciesDescription in Valuation
+
+DeltaPrice in Confirmation
 
 DescriptiveInfoExtended
 
