@@ -96,11 +96,13 @@ BlockOption
 
 ExclusiveDeal
 
-Offers
+Offers in Avail
 
-DeltaPrice
+Fees in Valuation
 
-CancelPoliciesDescription
+DeltaPrice in Confirmation
+
+CancelPoliciesDescription in Valuation
 
 
 |
