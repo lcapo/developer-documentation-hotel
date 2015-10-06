@@ -80,7 +80,7 @@ Improvement documentation PaymentType, CardInfo and MasterCodes
 
 |
 
-* **Version 1.0.10:** Date 15/09/2015
+* **Version 1.0.10:** Date 29/09/2015
 
 OnRequest
 
@@ -95,6 +95,12 @@ SharedBed
 BlockOption
 
 ExclusiveDeal
+
+Offers
+
+DeltaPrice
+
+CancelPoliciesDescription
 
 
 |

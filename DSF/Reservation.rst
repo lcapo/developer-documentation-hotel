@@ -51,6 +51,7 @@ ReservationRQ Example
 		<Parameters>
 			<Parameter key = "extra" value = "31"/>
 		</Parameters>
+		<DeltaPrice amount="10" percent="5" applyBoth="false"/>
 		<StartDate>28/01/2014</StartDate>
 		<EndDate>29/01/2014</EndDate>
 		<MealPlanCode>D</MealPlanCode>
@@ -104,6 +105,14 @@ ReservationRQ Description
 | *@key*                                   | 1        | String    | Contains the keyword/Id to identify a parameter.                                                                                                      |
 +------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
 | *@value*                                 | 1        | String    | Contains the value of the parameter                                                                                                                   |
++------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+| DeltaPrice                               | 0..1     |           | Price range accepted by the client to be higher than valuation and confirmation process.                                                              |
++------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+| *@amount*                                | 0..1     | String    | Amount (in the currency returned into the option) that is accepted by the client to be higher than the valuation price.                                                                                                      |
++------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+| *@percent*                               | 0..1     | String    | Percentage accepted by the client to be higher than the valuation price.                                                                              |
++------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+| *@applyBoth*                             | 1        | Boolean   | Indicates that the range between valuation price and the new price does not exceed the amount and/or porcentage indicated by the client.              |
 +------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
 | StartDate                                | 1        | String    | Start date to search rates.                                                                                                                           |
 +------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -269,3 +278,20 @@ If the payment is done by credit card, then in the XML petition, is it mandatory
 	   <CVC>XXX</CVC>
 	 </CardInfo>	
 
+|
+
+DeltaPrice description
+----------------------
+
+**applyBoth:**
+
+Depending on the value of applyBoth:
+
+* *applyBoth ="false"*: Indicates that one of the conditions (amount or percentage) has to meet the critertia before confirmation process.
+* *applyBoth ="true"*:  Indicates that the new price can not exceed neither amount nor percentage indicated by the client.
+
+In case that the checking is not correct, an error will be returned before confirmation process.
+If DeltaPrice tag is not sent in case that the integration implements it, we will take into account that the price range is 0 so the process will keep on
+in case that the price is lower or equal to the price showed in valuation process.
+
+|	 

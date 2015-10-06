@@ -271,6 +271,9 @@ StaticConfigurationRS Description
 +----------------------+----------+----------+---------------------------------------------------------------------------------------------+
 | AllowUrlCard         | 1        | Boolean  | Specifies if the provider allows url card data encode when the option type is LaterPay.     |
 +----------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| InformCancelPolicies | 1        | Boolean  | Specifies if the provider inform the cancel policies in free text in Valuation response.    |
+| Description          |          |          |                                                                                             |
++----------------------+----------+----------+---------------------------------------------------------------------------------------------+
 
 
 .. note :: The parameter AllowOnRequest is currently under development. In this moment, the most of integration filter the status RQ. 
@@ -288,6 +291,7 @@ By default the following tags:
 * **InformExclusiveDeal**
 * **InformPriceCancel**
 * **AllowUrlCard**
+* **InformCancelPoliciesDescription**
 
 Rigth now, this tags are set up to false value, either because the provider doesn't support it or because is not updated yet.
 |

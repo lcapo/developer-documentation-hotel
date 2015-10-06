@@ -496,9 +496,10 @@
             <xs:element minOccurs="0" maxOccurs="1" name="CancelPenalties" type="CancelPenalties" />
             <xs:element minOccurs="0" maxOccurs="1" name="AvailableModifications" type="AvailableModifications" />			
             <xs:element minOccurs="0" maxOccurs="1" name="Remarks" type="xs:string" />
-	    <xs:element minOccurs="0" maxOccurs="1" name="Offers" type="Offers" />
+	        <xs:element minOccurs="0" maxOccurs="1" name="Offers" type="Offers" />
             <xs:element minOccurs="0" maxOccurs="1" name="PaymentOptions" type="PaymentOptions" />
             <xs:element minOccurs="0" maxOccurs="1" name="Option" type="Option" />
+            <xs:element minOccurs="0" maxOccurs="1" name="CancelPoliciesDescription" type="xs:string" />			
           </xs:sequence>
         </xs:extension>
       </xs:complexContent>
@@ -1286,7 +1287,10 @@
 		  <xs:element minOccurs="0" maxOccurs="1" name="AllowBlockOption" type="xs:boolean" />		
 		  <xs:element minOccurs="0" maxOccurs="1" name="InformExclusiveDeal" type="xs:boolean" />	
 		  <xs:element minOccurs="0" maxOccurs="1" name="InformPriceCancel" type="xs:boolean" />	
-		  <xs:element minOccurs="0" maxOccurs="1" name="AllowUrlCard" type="xs:boolean" />		  
+		  <xs:element minOccurs="0" maxOccurs="1" name="AllowUrlCard" type="xs:boolean" />		
+		  <xs:element minOccurs="0" maxOccurs="1" name="InformCancelPoliciesDescription" type="xs:boolean" />
+		  <xs:element minOccurs="0" maxOccurs="1" name="PaymentTypes" type="PaymentTypes" />
+          <xs:element minOccurs="0" maxOccurs="1" name="InformCancelPoliciesDescription" type="xs:boolean" />		  
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -1317,6 +1321,13 @@
 	  <xs:enumeration value="ModifyAddComment" />
     </xs:restriction>
   </xs:simpleType>
+  
+  <xs:complexType name="PaymentTypes">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PaymentType" type="eTipoFormaPago" />
+    </xs:sequence>
+  </xs:complexType>
+  
  <xs:complexType name="HotelListLanguages">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="1" name="Languages" type="Languages" />
