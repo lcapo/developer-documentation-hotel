@@ -1109,8 +1109,6 @@ Attributes
 | @Data       | 1        |  Data        | `data`_                                                                       |
 +-------------+----------+--------------+-------------------------------------------------------------------------------+
 
-Attributes returned by the provider typified by 1 context -> N `contextItem`_ + 1 `data`_ .
-
 Attribute is defined as every element returned in the provider response which is not either `Descriptions`_ or `Medias`_.
 
 Example:
@@ -1204,8 +1202,6 @@ Descriptions
 +-------------+----------+--------------+-------------------------------------------------------------------------------+
 | /Text       | 1        |  Text        | `text`_                                                                       |
 +-------------+----------+--------------+-------------------------------------------------------------------------------+
-
-Descriptions returned by the provider typified by 1 context -> N `contextItem`_ + 1 `text`_ for each one.
 
 Description is defined as every element returned in the provider response which is a description (Hotel description, Room description, Media description)
 
