@@ -19,9 +19,9 @@ With the combination of `contextItem`_ plus `data`_ you will have the informatio
 Request Format
 --------------
 
-In addition to the hotel code, you can set language filters. How it works ?
+In addition to the hotel code, you can set language filters.
 
-Filling LanguageCode element with *Culture* or *No Culture* value:
+To define language filters fill LanguageCode element with *Culture* or *No Culture* value:
 
 	*Culture (xx_YY) :*    Reponse will return only `values`_ / `text`_ with the specified language_culture
 
@@ -38,7 +38,7 @@ i.e. en could return en_GB and en_US
 Remarks
 -------
 
-The maximum time, that is permitted in our system, before the connection is closed,  is of **180000** milliseconds.
+The maximum time before the connection gets closed, is of **180000** milliseconds.
 
 |
 
@@ -48,7 +48,7 @@ DescriptiveInfoExtendedRQ Example
 ::
 
     <DescriptiveInfoExtendedRQ>
-        <timeoutMilliseconds>999999</timeoutMilliseconds>
+        <timeoutMilliseconds>180000</timeoutMilliseconds>
         <Hotel>
             <Code>343229</Code>
         </Hotel>
@@ -74,13 +74,13 @@ DescriptiveInfoExtendedRQ Description
 | /Hotel                     | 1        | String          | Hotel requested.                                                                            |
 +----------------------------+----------+-----------------+---------------------------------------------------------------------------------------------+
 | DescriptiveInfoExtendedRQ  |          |                 |                                                                                             |
-| /Filters                   | 0-1      | Filters         | Filters.                                                                                    |
+| /Filters                   | 0..1     | Filters         | Filters.                                                                                    |
 +----------------------------+----------+-----------------+---------------------------------------------------------------------------------------------+
 | DescriptiveInfoExtendedRQ  |          |                 |                                                                                             |
-| /Filters/LanguageCodes     | 0-1      | LanguageCodes   | LanguageCodes.                                                                              |
+| /Filters/LanguageCodes     | 0..1     | LanguageCodes   | LanguageCodes.                                                                              |
 +----------------------------+----------+-----------------+---------------------------------------------------------------------------------------------+
 | LanguageCodes              |          |                 |                                                                                             |
-| /LanguageCode              | 1-n      | String          | LanguageCode.                                                                               |
+| /LanguageCode              | 1..n     | String          | LanguageCode.                                                                               |
 +----------------------------+----------+-----------------+---------------------------------------------------------------------------------------------+
 
 |
@@ -1056,7 +1056,7 @@ Typified hotel information from the provider.
 
 **Chains**
 
-    Contains the chains infromation from the provider, it could be returned 2 ways :
+    Contains the chains infromation from the provider, it could be returned in 2 ways 
 
     1. By code And Name
 
@@ -1108,8 +1108,6 @@ Attributes
 +-------------+----------+--------------+-------------------------------------------------------------------------------+
 | @Data       | 1        |  Data        | `data`_                                                                       |
 +-------------+----------+--------------+-------------------------------------------------------------------------------+
-
-Attributes returned by the provider typified by 1 context -> N `contextItem`_ + 1 `data`_ .
 
 Attribute is defined as every element returned in the provider response which is not either `Descriptions`_ or `Medias`_.
 
@@ -1180,7 +1178,7 @@ Example:
 
 * Context explanation :
 
-    Exists 1 description with contextItem child HotelSummary ( Summary elements for the property returned )
+    There is 1 description with a contextItem child in HotelSummary ( Summary elements for the property returned )
 
 * Data explanation (en) :
 
@@ -1204,8 +1202,6 @@ Descriptions
 +-------------+----------+--------------+-------------------------------------------------------------------------------+
 | /Text       | 1        |  Text        | `text`_                                                                       |
 +-------------+----------+--------------+-------------------------------------------------------------------------------+
-
-Descriptions returned by the provider typified by 1 context -> N `contextItem`_ + 1 `text`_ for each one.
 
 Description is defined as every element returned in the provider response which is a description (Hotel description, Room description, Media description)
 
@@ -1284,7 +1280,7 @@ Example:
 
 * Context explanation :
 
-    Exists 1 description with contextItem child locationDescription and description : General location as entered by the property, e.g. \"Near Pike Place Market\" which it's parent is HotelSummary ( Summary elements for the property returned )
+    There is 1 description with a contextItem child locationDescription and description : General location as entered by the property, e.g. \"Near Pike Place Market\" which it's parent is HotelSummary ( Summary elements for the property returned )
 
 * Text explanation :
 
@@ -1744,13 +1740,13 @@ Data element is used to return the value of an item which is in the context spec
 * String
 * xml
 
-*xml is only returned when we cannot parse a provider response element. When xml is returned in type field, value element will be the xml of the provider without any parse ( xml code )*
+*xml is only returned when we cannot parse a provider response element. When xml is returned in type field, value element will be the raw xml value of the provider*
 
 **Multilanguage value :**
 
     There will be a value element for each language available for each element, languageCode is specified as attribute for each value
 
-**Language not provided or to be filled as default :**
+**Language not provided will be returned as default :**
 
     There will be only 1 value element with languageCode set as "" or not being returned.
 
@@ -1774,7 +1770,7 @@ text
 +------------------------+----------+--------------+-------------------------------------------------------------------------------------------------+
 
 
-Description field can be nothing if the provider documentation / response doesn't provide explanation of the element.
+Description field is filled with the provider documentation or response from the provider. It will be empty if the provider documentation / response doesn't provide explanation of the element.
 
 It is returned by each language Code available. If  and contains name and description of the element refered to.
 
