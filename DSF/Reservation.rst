@@ -294,4 +294,7 @@ In case that the checking is not correct, an error will be returned before confi
 If DeltaPrice tag is not sent in case that the integration implements it, we will take into account that the price range is 0 so the process will keep on
 in case that the price is lower or equal to the price showed in valuation process.
 
+This field it is implemented if the provider has it as a native or if it is necessary to do another availability/valuation process. In case that
+the provider blocks the option in valuation process, confirmation process will be done directly (because the provider does not have native delta price and this will not be implemented). Static configuration of each provider informs if it is implemented or it is not.
+
 |	 
