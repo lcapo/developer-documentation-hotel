@@ -274,6 +274,13 @@ StaticConfigurationRS Description
 | InformCancelPolicies | 1        | Boolean  | Specifies if the provider inform the cancel policies in free text in Valuation response.    |
 | Description          |          |          |                                                                                             |
 +----------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| Implements           | 1        | Boolean  | Specifies if in this  provider use the business rule in availability.                       |
+| BusinessRule         |          |          |                                                                                             |
++----------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| InformAvailable      | 1        | Boolean  | Specifies if the provider inform the available modifications in ReservationReadRS.          |
+| ModificationsIn      |          |          |                                                                                             |
+| ReservationRead      |          |          |                                                                                             |
++----------------------+----------+----------+---------------------------------------------------------------------------------------------+
 
 
 .. note :: The parameter AllowOnRequest is currently under development. In this moment, the most of integration filter the status RQ. 
@@ -283,15 +290,13 @@ the parameter <OnRequest>true</OnRequest>.
 By default the following tags:
 
 * **ImplementsDailyRatePlan**
-* **AllowRemarks**
 * **InformSharedBed**
 * **InformBedType**
 * **InformNumberOfBeds**
 * **AllowBlockOption**
-* **InformExclusiveDeal**
 * **InformPriceCancel**
-* **AllowUrlCard**
-* **InformCancelPoliciesDescription**
+* **ImplementsBusinessRule**
+* **InformAvailableModificationsInReservationRead**
 
 Rigth now, this tags are set up to false value, either because the provider doesn't support it or because is not updated yet.
 |

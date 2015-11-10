@@ -107,3 +107,16 @@ DeltaPrice in Confirmation
 DescriptiveInfoExtended
 
 |
+
+* **Version 1.0.11:** Date 17/11/2015
+
+BusinessRule in AvailRQ
+
+AvailableModifications in ReservationRead
+
+ImplementsBusinessRule in StaticConfiguration
+
+InformAvailableModificationsInReservationRead in StaticConfiguration
+
+
+|

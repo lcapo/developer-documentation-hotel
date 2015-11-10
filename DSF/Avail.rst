@@ -74,6 +74,7 @@ AvailRQ Example
 	<AvailRQ>
 		<CancellationPolicies>false</CancellationPolicies>
 		<OnRequest>false</OnRequest>
+		<BusinessRule>CheaperAmount</BusinessRule>		
 		<AvailDestinations>
 			<Destination type = "CTY" code = "5"/>
 		</AvailDestinations>
@@ -108,6 +109,10 @@ AvailRQ Description
 | OnRequest                           | 1        | Boolean   | Indicates if you want to receive the on request options in         |
 |                                     |          |           | AvailRS, as long as the provider returns it in this call           |
 |                                     |          |           | (see StaticConfiguration).                                         |
++-------------------------------------+----------+-----------+--------------------------------------------------------------------+
+| BusinessRule                        | 1        |           | Indicates if the business rule that client want to apply in        |
+|                                     |          |           | availability (cheaperAmount), as long as the provider returns      |
+|                                     |          |           | it in this call (see StaticConfiguration).                         |
 +-------------------------------------+----------+-----------+--------------------------------------------------------------------+
 | AvailDestinations/Destination       | 1..n     |           | Contains the list of destinations filters                          |
 |                                     |          |           | (hotels or cities or zones or geocodes).                           |
@@ -153,10 +158,10 @@ AvailRS Example
 				  <Rooms>
 					<Room id = "4145" roomCandidateRefId = "1" code = "DBL#STAND" description = "Doble Standard" nonRefundable = "false">
 					  <Price currency = "EUR" amount = "36.20" binding = "false" commission = "-1"/>
-					</Room>
 					<Beds sharedBed = "false">
 						<Bed numberOfBeds = "1" type = "Doble"/>
-					</Beds>
+					</Beds>					
+					</Room>
 					<DailyPrices>
 						<DailyPrice effectiveDate = "28/01/2014" expireDate = "29/01/2014">
 							<Price
@@ -186,10 +191,10 @@ AvailRS Example
 				  <Rooms>
 					<Room id = "4146" roomCandidateRefId = "1" code = "TWN#STAND" description = "Twin Standard" nonRefundable = "false">
 					  <Price currency = "EUR" amount = "42.90" binding = "false" commission = "-1"/>
-					</Room>
 					<Beds sharedBed = "false">
 						<Bed numberOfBeds = "2" type = "Twin"/>
-					</Beds>
+					</Beds>					
+					</Room>
 					<DailyPrices>
 						<DailyPrice effectiveDate = "28/01/2014" expireDate = "29/01/2014">
 							<Price
@@ -294,8 +299,20 @@ AvailRS Example
 		...
 	  </Hotels>
 	</AvailRS>
+	
+|
 
+Detailed description 
+---------------------
 
+**BusinessRule:**
+
+This new tag will be used just for those suppliers that return a really big quantity of options into availability response (about 20.000 options in the same response).
+It is impractible treat so much options for us and for the client. In order to avoid this issue, the client will be able to decide between different business rules to filter the options they are interested in.
+
+* *CheaperAmount:* 
+At first, there will be just one business rule. The options will be filtered by a limited quantity of room per meal plan. This way we will avoid problem when returning the options when the provider return back a massive number of options.
+The number of rooms to be filtered will be stipulate by system level and it will be set up to the maximum supported by our system.
 
 |
 
@@ -377,7 +394,7 @@ AvailRS Description
 +---------------------------------------------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | *@type*                                                                         | 0..1     | String    | Indicates the type of bed.                                                                                                                                                                                        |
 +---------------------------------------------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| MealPlans/MealPlan/Options/Option/Rooms/Room/DailyPrices                        | 0..1     |           | Specifies the daily price.                                                                                                                                                                                        |
+| MealPlans/MealPlan/Options/Option/Rooms/Room/DailyPrices                        | 0..1     |           | Specifies the daily price, as long as the provider returns it in this call (see StaticConfiguration).                                                                                                             |
 +---------------------------------------------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | MealPlans/MealPlan/Options/Option/Rooms/Room/DailyPrices/DailyPrice             | 1..n     |           | Specifies the price for each day.                                                                                                                                                                                 |
 +---------------------------------------------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -395,7 +412,7 @@ AvailRS Description
 +---------------------------------------------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | *@commission*                                                                   | 1        | Decimal   | Commission ( -1 = not specified (will come indicated with the provider contract ), 0 = net price, X = % of the commission that applies to the amount.                                                             |
 +---------------------------------------------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| MealPlans/MealPlan/Options/Option/Rooms/Room/DailyRatePlans                     | 0..1     |           | Specifies the daily rate.                                                                                                                                                                                         |
+| MealPlans/MealPlan/Options/Option/Rooms/Room/DailyRatePlans                     | 0..1     |           | Specifies the daily rate, as long as the provider returns it in this call (see StaticConfiguration).                                                                                                              |
 +---------------------------------------------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | MealPlans/MealPlan/Options/Option/Rooms/Room/DailyRatePlans/DailyRatePlan       | 1..n     |           | Specifies the rates for each day.                                                                                                                                                                                 |
 +---------------------------------------------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+

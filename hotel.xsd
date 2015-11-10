@@ -8,6 +8,7 @@
           <xs:element minOccurs="1" maxOccurs="1" name="SearchType" type="eTypeSearch" />
           <xs:element minOccurs="1" maxOccurs="1" name="CancellationPolicies" type="xs:boolean" />
 		  <xs:element minOccurs="1" maxOccurs="1" name="OnRequest" type="xs:boolean" />
+		  <xs:element minOccurs="0" maxOccurs="1" name="BusinessRule" type="eTypeBusinessRule" />		  
           <xs:element minOccurs="0" maxOccurs="1" name="AvailDestinations" type="AvailDestinations" />
           <xs:element minOccurs="0" maxOccurs="1" name="StartDate" type="xs:string" />
           <xs:element minOccurs="0" maxOccurs="1" name="EndDate" type="xs:string" />
@@ -71,6 +72,11 @@
       <xs:enumeration value="Combined" />
     </xs:restriction>
   </xs:simpleType>
+  <xs:simpleType name="eTypeBusinessRule">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CheaperAmount" />
+    </xs:restriction>
+  </xs:simpleType> 
   <xs:complexType name="AvailDestinations">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Destination" type="Destination" />
@@ -693,6 +699,7 @@
       <xs:element minOccurs="0" maxOccurs="1" name="RoomCandidates" type="RoomCandidates" />
       <xs:element minOccurs="0" maxOccurs="1" name="CancelPenalties" type="CancelPenalties" />
 	  <xs:element minOccurs="0" maxOccurs="1" name="PaymentOptions" type="PaymentOptions" />
+      <xs:element minOccurs="0" maxOccurs="1" name="AvailableModifications" type="AvailableModifications" />		  
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="Holder">
@@ -1290,7 +1297,8 @@
 		  <xs:element minOccurs="0" maxOccurs="1" name="AllowUrlCard" type="xs:boolean" />		
 		  <xs:element minOccurs="0" maxOccurs="1" name="InformCancelPoliciesDescription" type="xs:boolean" />
 		  <xs:element minOccurs="0" maxOccurs="1" name="PaymentTypes" type="PaymentTypes" />
-          <xs:element minOccurs="0" maxOccurs="1" name="InformCancelPoliciesDescription" type="xs:boolean" />		  
+          <xs:element minOccurs="0" maxOccurs="1" name="ImplementsBusinessRule" type="xs:boolean" />	
+          <xs:element minOccurs="0" maxOccurs="1" name="InformAvailableModificationsInReservationRead" type="xs:boolean" />			  
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
