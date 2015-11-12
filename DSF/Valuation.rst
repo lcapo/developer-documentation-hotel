@@ -280,7 +280,7 @@ In case that the parameter <OnRequest> is set as true, we don't filter the optio
 
 | 
 
-.. _card-info-label:
+.. card-info-label:
 
 **CardInfo:**
 
