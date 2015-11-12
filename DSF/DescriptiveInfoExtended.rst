@@ -952,6 +952,16 @@ DescriptiveInfoExtendedRS Description
 |Languages                   |          |              |                                                                                              |
 |/language                   | 1..n     | String       |  Languages sopken at the hotel.                                                              |
 +----------------------------+----------+--------------+----------------------------------------------------------------------------------------------+
+| PaymentOptions/Cards       | 1        |              | List of cards allowed.                                                                       |
++----------------------------+----------+--------------+----------------------------------------------------------------------------------------------+
+| PaymentOptions/Cards/Card  | 1..n     |              | Type card allowed.                                                                           |
++----------------------------+----------+--------------+----------------------------------------------------------------------------------------------+
+| *@code*                    | 1        | String       | Code card (see in *Lists of Data* (VI,AX,BV,CA...)).                                         |
++----------------------------+----------+--------------+----------------------------------------------------------------------------------------------+
+| ExclusiveDeal              | 0..1     | Boolean      | Indicates that a Hotel is an Exlusive Deal. The provider has formed partnerships with        |
+|                            |          |              | select Hotels in order to bring you list rates and superior prime availability in locations. |
+|                            |          |              | The provider suggests with provide the best value.                                           |
++----------------------------+----------+--------------+----------------------------------------------------------------------------------------------+
 |NumberOfRooms               | 0..1     | Integer      |  Total rooms of hotel.                                                                       |
 +----------------------------+----------+--------------+----------------------------------------------------------------------------------------------+
 |HotelAttributes             | 0..1     |              |                                                                                              |

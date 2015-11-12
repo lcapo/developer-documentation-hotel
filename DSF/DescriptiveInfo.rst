@@ -171,6 +171,13 @@ DescriptiveInfoRS Example
             </Picture>
         </Images>
         <LocationType>City</LocationType>
+		<PaymentOptions cash="false" bankAcct="false">
+			<Cards>
+				<Card code="VI"/>
+				<Card code="AX"/>
+				<Card code="CA"/>  
+			</Cards> 
+		<PaymentOptions/>		
         <ExclusiveDeal>true</ExclusiveDeal>				
     </Hotel>
     </DescriptiveInfoRS>
@@ -292,6 +299,21 @@ DescriptiveInfoRS Description
 |LocationType         | 0..1     | String   | LocationCode.                                                                                |
 +---------------------+----------+----------+----------------------------------------------------------------------------------------------+
 |CategoryCode         | 1        | String   | CategoryCode.                                                                                |
++---------------------+----------+----------+----------------------------------------------------------------------------------------------+
+| PaymentOptions      | 0..1     | String   | Type of cards allowed by the provider. This tag only is mandatory if payment type is         |
+|                     |          |          | different that *MerchantPay*.                                                                |
++---------------------+----------+----------+----------------------------------------------------------------------------------------------+
+| *@cash*             | 1        | Boolean  | Deprecated attribute.                                                                        |
++---------------------+----------+----------+----------------------------------------------------------------------------------------------+
+| *@bankAcct*         | 1        | Boolean  | Deprecated attribute.                                                                        |
++---------------------+----------+----------+----------------------------------------------------------------------------------------------+
+| PaymentOptions/Cards| 1        |          | List of cards allowed.                                                                       |
+| /Cards              |          |          |                                                                                              |
++---------------------+----------+----------+----------------------------------------------------------------------------------------------+
+| PaymentOptions/Cards| 1..n     |          | Type card allowed.                                                                           |
+| /Cards              |          |          |                                                                                              |
++---------------------+----------+----------+----------------------------------------------------------------------------------------------+
+| *@code*             | 1        | String   | Code card (see in *Lists of Data* (VI,AX,BV,CA...)).                                         |
 +---------------------+----------+----------+----------------------------------------------------------------------------------------------+
 |ExclusiveDeal        | 0..1     | Boolean  | Indicates that a Hotel is an Exlusive Deal. The provider has formed partnerships with        |
 |                     |          |          | select Hotels in order to bring you list rates and superior prime availability in locations. |
