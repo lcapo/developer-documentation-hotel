@@ -1,7 +1,7 @@
 .. highlight:: xml
 
-DescriptiveInfoExtended
-=======================
+DescriptiveInfoExtended (In development)
+========================================
 
 |
 
@@ -1785,5 +1785,7 @@ Description field is filled with the provider documentation or response from the
 It is returned by each language Code available. If  and contains name and description of the element refered to.
 
 See `data`_ section regarding Languages.
+
+.. note :: This new call is currently under development. At this moment, most of the integrations do not have implemented this method.
 
 |
