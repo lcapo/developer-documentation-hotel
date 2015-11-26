@@ -69,7 +69,7 @@ HotelListRS Example
         <Hotels>
             <Hotel>
                 <Code>5</Code>
-				<GiataId source = "http://urlGiata">1200</GiataId>
+                <GiataId source = "http://urlGiata">1200</GiataId>
                 <Name>BADAJOZ</Name>
                 <Address>CTRA.NACIONAL V, KM 393</Address>
                 <Town>BADAJOZ</Town>
@@ -96,7 +96,7 @@ HotelListRS Example
             </Hotel>
             <Hotel>
                 <Code>7</Code>
-				<GiataId source = "http://urlGiata">1200</GiataId>
+                <GiataId source = "http://urlGiata">1200</GiataId>
                 <Name>ILLA</Name>
                 <Address>AVDA. ILLA S/N</Address>
                 <Town>HUELVA</Town>
