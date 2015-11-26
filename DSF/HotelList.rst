@@ -69,7 +69,7 @@ HotelListRS Example
         <Hotels>
             <Hotel>
                 <Code>5</Code>
-				<GiataFormatCode>254</GiataFormatCodez>
+				<GiataId source = "http://urlGiata">1200</GiataId>
                 <Name>BADAJOZ</Name>
                 <Address>CTRA.NACIONAL V, KM 393</Address>
                 <Town>BADAJOZ</Town>
@@ -96,7 +96,7 @@ HotelListRS Example
             </Hotel>
             <Hotel>
                 <Code>7</Code>
-				<GiataFormatCode>189654</GiataFormatCodez>
+				<GiataId source = "http://urlGiata">1200</GiataId>
                 <Name>ILLA</Name>
                 <Address>AVDA. ILLA S/N</Address>
                 <Town>HUELVA</Town>
@@ -130,7 +130,11 @@ HotelListRS Description
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
 | Code                | 1        | String   | Internal code established by the provider.                                                  |
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
-| GiataFormatCode     | 0..1     | String   | Giata code, depends on the product of each provider is in a Giata System.                   |
+| GiataId             | 0..1     |          | Giata System.                                                                               |
++---------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| @source             | 0..1     | String   | Giata url, endpoint access where we obtain a Giata id.                                      |
++---------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| @value              | 0..1     | String   | Giata code, depends on the product of each provider is in a Giata System.                   |
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
 | Name                | 1        | String   | Name.                                                                                       |
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+

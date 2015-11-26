@@ -118,5 +118,6 @@ ImplementsBusinessRule in StaticConfiguration
 
 InformAvailableModificationsInReservationRead in StaticConfiguration
 
+GiataId
 
 |

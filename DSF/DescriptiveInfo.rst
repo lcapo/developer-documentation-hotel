@@ -74,7 +74,6 @@ DescriptiveInfoRS Example
     <Hotel>
         <Code>70</Code>
         <Name>ILLA</Name>
-        <GiataFormatCode>70ES</GiataFormatCode>
         <Address>AVDA. ILLA S/N</Address>
         <Town>HUELVA</Town>
         <ZipCode>21449</ZipCode>
