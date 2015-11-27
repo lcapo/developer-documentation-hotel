@@ -459,6 +459,7 @@
       <xs:enumeration value="HotelSkiPassEquipment" />
       <xs:enumeration value="HotelSkiPassMeals" />
       <xs:enumeration value="HotelSkiPassEquipmentMeals" />
+      <xs:enumeration value="HotelActivity" />	  
     </xs:restriction>
   </xs:simpleType>
    <xs:complexType name="Offers">
