@@ -102,7 +102,7 @@ ReservationReadRS Example
                     <CreationDate>17/01/2014</CreationDate>
                     <StartDate>28/01/2014</StartDate>
                     <EndDate>29/01/2014</EndDate>
-                    <Holder name = "Test11" surname = "TestAp11"/>
+                    <Holder name = "Test11" surname = "TestAp11" nationality="ES"/>
                     <Price currency = "EUR" amount = "36.20" binding = "false" commission = "-1"/>
                     <Rooms>
                         <Room id = "4582" roomCandidateRefId = "1" description = "Doble Standard.."/>
@@ -156,6 +156,10 @@ ReservationReadRS Description
 | *@name*             | 1       | String   | Holder name.                                                                                |
 +---------------------+---------+----------+---------------------------------------------------------------------------------------------+
 | *@surname*          | 1       | String   | Holder surname.                                                                             |
++---------------------+---------+----------+---------------------------------------------------------------------------------------------+
+| *@nationality*      | 0..1    | String   | Nationality of the Holder (use ISO3166_1_alfa_2). This informations will be mandatory       |
+|                     |         |          | depending on the provider, as long as the provider returns it in this call                  |
+|                     |         |          | (see StaticConfiguration).                                                                  |
 +---------------------+---------+----------+---------------------------------------------------------------------------------------------+
 | Hotel/Price         | 1       | String   | Price reservation.                                                                          |
 +---------------------+---------+----------+---------------------------------------------------------------------------------------------+

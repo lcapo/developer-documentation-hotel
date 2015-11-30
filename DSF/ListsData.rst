@@ -64,7 +64,7 @@ Error codes
 Currency list
 -------------
 
-We use a standard ISO - 4217.
+Most of providers use a standard ISO - 4217, but this depends of each supplier.
 
 |
 
@@ -121,3 +121,11 @@ Credit Cards
 | O     | others                   |
 +-------+--------------------------+
 
+|
+
+Nationality
+------------
+
+We use a standard ISO - 3166_1_alfa_2.
+
+|

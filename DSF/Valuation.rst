@@ -53,6 +53,7 @@ ValuationRQ Example
 		<PaymentType>MerchantPay</PaymentType>
 		<OptionType>Hotel</OptionType>
 		<BlockOption>true</BlockOption>		
+        <Nationality>ES</Nationality>			
 		<Rooms>
 			<Room id = "4582" roomCandidateRefId = "1" code = "506"	description = "Doble Standard.."/>
 		</Rooms>
@@ -94,6 +95,10 @@ ValuationRQ Description
 | PaymentType                              | 1        | String    | Indicates the typology of payment.                                      |
 +------------------------------------------+----------+-----------+-------------------------------------------------------------------------+
 | OptionType                               | 1        | String    | Indicates the type of option.                                           |
++------------------------------------------+----------+-----------+-------------------------------------------------------------------------+
+| Nationality                              | 0..1     | String    | Nationality of the Holder (use ISO3166_1_alfa_2). This informations     |
+|                                          |          |           | will be mandatory depending on the provider, as long as the provider    |
+|                                          |          |           | returns it in this call (see StaticConfiguration).                      |
 +------------------------------------------+----------+-----------+-------------------------------------------------------------------------+
 | Rooms                                    | 1        |           | Rooms of this option ( room list).                                      |
 +------------------------------------------+----------+-----------+-------------------------------------------------------------------------+

@@ -59,7 +59,7 @@ ModifyReservationRQ Example
                 <EndDate>30/01/2014</EndDate>
             </ModifyEndDateAddDays>
              <ModifyHolder>
-                <Holder name = "Test11Modify" surname = "TestSur11Modify"/>
+                <Holder name = "Test11Modify" surname = "TestSur11Modify" nationality="ES"/>
             </ModifyHolder>
             <ModifyRoomsAddRooms>
                 <Rooms>
@@ -158,6 +158,9 @@ ModifyReservationRQ Description
 +-----------------------------------------------------------------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 | *@surname*                                                                  | 1        | String    | Holder surname .                                                                                                                                         |
 +-----------------------------------------------------------------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
+| *@nationality*                                                              | 0..1     | String    | Nationality of the Holder (use ISO3166_1_alfa_2). This informations will be mandatory depending on the provider, as long as the provider returns it      |
+|                                                                             |          |           | in this call (see StaticConfiguration).                                                                                                                  |
++-----------------------------------------------------------------------------+---------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Modifications/ModifyRoomsAddRooms                                           | 0..1     |           | Add Rooms structure .                                                                                                                                    |
 +-----------------------------------------------------------------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Modifications/ModifyRoomsAddRooms/Rooms                                     | 1        |           | Rooms Add.                                                                                                                                               |

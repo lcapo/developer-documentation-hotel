@@ -131,6 +131,13 @@ StaticConfigurationRS Example
 		<InformExclusiveDeal>false</InformExclusiveDeal>	
 		<InformPriceCancel>false</InformPriceCancel>
 		<AllowUrlCard>false</AllowUrlCard>
+        <InformCancelPoliciesDescription>false</InformCancelPoliciesDescription>		
+        <PaymentTypes>
+             <PaymentType>LaterPay</PaymentType>
+             <PaymentType>MerchantPay</PaymentType>
+        </PaymentTypes>		
+        <InformAvailableModificationsInReservationRead>false</InformAvailableModificationsInReservationRead>	
+        <RequiredNationality>false</RequiredNationality>		
     </StaticConfigurationRS>
 
 |
@@ -277,14 +284,20 @@ StaticConfigurationRS Description
 | Implements           | 1        | Boolean  | Specifies if in this  provider use the business rule in availability.                       |
 | BusinessRule         |          |          |                                                                                             |
 +----------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| PaymentTypes         | 1        |          | List of payment types accepted by the supplier.                                             |
++----------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| PaymentTypes/        | 1..n     |          | Indicates the typology of payment (Merchant, Direct ...) .                                  |
+| PaymentType          |          |          |                                                                                             |
++----------------------+----------+----------+---------------------------------------------------------------------------------------------+
 | InformAvailable      | 1        | Boolean  | Specifies if the provider inform the available modifications in ReservationReadRS.          |
 | ModificationsIn      |          |          |                                                                                             |
 | ReservationRead      |          |          |                                                                                             |
 +----------------------+----------+----------+---------------------------------------------------------------------------------------------+
-
+| RequiredNationality  | 1        | Boolean  | Specifies if the provider required the nationality in Avail, Valuation and Reservation call.|
++----------------------+----------+----------+---------------------------------------------------------------------------------------------+
 
 .. note :: The parameter AllowOnRequest is currently under development. In this moment, the most of integration filter the status RQ. 
-In case that the provider return the status in process response in avail, valuation or confirmation you can filter this option if you send 
+In case that the provider return the status in process response in avail, valuation or reservation you can filter this option if you send 
 the parameter <OnRequest>true</OnRequest>.
 
 By default the following tags:
