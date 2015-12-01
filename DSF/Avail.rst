@@ -92,7 +92,6 @@ AvailRQ Example
 		</RoomCandidates>
 	</AvailRQ>
 
-
 |
 
 AvailRQ Description

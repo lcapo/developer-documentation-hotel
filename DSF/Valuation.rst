@@ -52,7 +52,7 @@ ValuationRQ Example
 		<HotelCode>10</HotelCode>
 		<PaymentType>MerchantPay</PaymentType>
 		<OptionType>Hotel</OptionType>
-		<BlockOption>true</BlockOption>		
+		<BlockOption>true</BlockOption>
         <Nationality>ES</Nationality>			
 		<Rooms>
 			<Room id = "4582" roomCandidateRefId = "1" code = "506"	description = "Doble Standard.."/>
