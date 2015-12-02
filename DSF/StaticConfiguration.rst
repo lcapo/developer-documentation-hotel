@@ -295,6 +295,25 @@ StaticConfigurationRS Description
 +----------------------+----------+----------+---------------------------------------------------------------------------------------------+
 | RequiredNationality  | 1        | Boolean  | Specifies if the provider required the nationality in Avail, Valuation and Reservation call.|
 +----------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| Inform60Rate         | 1        | Boolean  | The provider informs the options with rates of pax of 60 years old or over in availability. |
++----------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| Inform65Rate         | 1        | Boolean  | The provider informs the options with rates of pax of 65 years old or over in availability. |
++----------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| InformCanaryResident | 1        | Boolean  | The provider informs the options with canary resident rates in availability. These options  |
+| Rate                 |          |          | cant be sold if the customer don't have this condition.                                     |
++----------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| InformCanary         | 1        | Boolean  | The provider informs the options with balearic resident rates in availability. These options|
+| ResidentRate         |          |          | can't be sold if the customer don't have this condition.                                    |
++----------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| InformBalearic       | 1        | Boolean  | The provider informs the options with large family rates in availability. These options     |
+| ResidentRate         |          |          | can't be sold if the customer don't have this condition.                                    |
++----------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| InformLargeFamily    | 1        | Boolean  | The provider informs the options with canary resident rates in availability. These options  |
+| Rate                 |          |          | can't be sold if the customer don't have this condition.                                    |
++----------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| InformHoneymoon      | 1        | Boolean  | The provider informs the options with honeymoon rates in availability. These options        |
+| Rate                 |          |          | can't be sold if the customer don't have this condition.                                    |
++----------------------+----------+----------+---------------------------------------------------------------------------------------------+
 
 .. note :: The parameter AllowOnRequest is currently under development. In this moment, the most of integration filter the status RQ. 
 In case that the provider return the status in process response in avail, valuation or reservation you can filter this option if you send 
@@ -308,8 +327,14 @@ By default the following tags:
 * **InformNumberOfBeds**
 * **AllowBlockOption**
 * **InformPriceCancel**
-* **ImplementsBusinessRule**
 * **InformAvailableModificationsInReservationRead**
+* **RequiredNationality**
+* **Inform60Rate**
+* **Inform65Rate**
+* **InformCanaryResidentRate**
+* **InformBalearicResidentRate**
+* **InformLargeFamilyRate**
+* **InformHoneymoonRate**
 
 Rigth now, this tags are set up to false value, either because the provider doesn't support it or because is not updated yet.
 |

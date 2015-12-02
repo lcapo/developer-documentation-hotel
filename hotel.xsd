@@ -70,6 +70,7 @@
   </xs:complexType>
   <xs:simpleType name="eTypeSearch">
     <xs:restriction base="xs:string">
+	  <xs:enumeration value="MultiRoom" />
       <xs:enumeration value="Combined" />
     </xs:restriction>
   </xs:simpleType>
@@ -300,6 +301,8 @@
       <xs:enumeration value="Package" />
       <xs:enumeration value="CanaryResident" />
       <xs:enumeration value="BalearicResident" />
+      <xs:enumeration value="largeFamily" />
+      <xs:enumeration value="honeymoon" />	  
     </xs:restriction>
   </xs:simpleType>
   <xs:complexType name="RangeDates">
@@ -588,8 +591,7 @@
     <xs:attribute name="applyBoth" type="xs:boolean" use="required" />
   </xs:complexType>
   <xs:complexType name="ResGuests">
-    <xs:sequence>
-	  <xs:element minOccurs="0" maxOccurs="1" name="Holder" type="Holder" />	
+    <xs:sequence>	
       <xs:element minOccurs="0" maxOccurs="1" name="Guests" type="Guests" />
     </xs:sequence>
   </xs:complexType>
@@ -709,7 +711,6 @@
   <xs:complexType name="Holder">
     <xs:attribute name="name" type="xs:string" />
     <xs:attribute name="surname" type="xs:string" />
-	<xs:attribute name="nationality" type="xs:string" />
   </xs:complexType>
   <xs:complexType name="TransactionStatus">
     <xs:sequence>
@@ -1309,7 +1310,13 @@
 		  <xs:element minOccurs="0" maxOccurs="1" name="PaymentTypes" type="PaymentTypes" />
           <xs:element minOccurs="0" maxOccurs="1" name="ImplementsBusinessRule" type="xs:boolean" />	
           <xs:element minOccurs="0" maxOccurs="1" name="InformAvailableModificationsInReservationRead" type="xs:boolean" />	
-          <xs:element minOccurs="0" maxOccurs="1" name="RequiredNationality" type="xs:boolean" />				  
+          <xs:element minOccurs="0" maxOccurs="1" name="RequiredNationality" type="xs:boolean" />	
+          <xs:element minOccurs="0" maxOccurs="1" name="Inform60Rate" type="xs:boolean" />	
+          <xs:element minOccurs="0" maxOccurs="1" name="Inform65Rate" type="xs:boolean" />	
+          <xs:element minOccurs="0" maxOccurs="1" name="InformCanaryResidentRate" type="xs:boolean" />	
+          <xs:element minOccurs="0" maxOccurs="1" name="InformBalearicResidentRate" type="xs:boolean" />	
+          <xs:element minOccurs="0" maxOccurs="1" name="InformLargeFamilyRate" type="xs:boolean" />	
+          <xs:element minOccurs="0" maxOccurs="1" name="InformHoneymoonRate" type="xs:boolean" />			  
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -1417,6 +1424,7 @@
       <xs:extension base="HotelBaseRQ">
         <xs:sequence>
 	      <xs:element minOccurs="0" maxOccurs="1" name="OnRequest" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Nationality" type="xs:string" />		  
 	      <xs:element minOccurs="0" maxOccurs="1" name="BlockOption" type="xs:boolean" />	 		  
           <xs:element minOccurs="0" maxOccurs="1" name="Reservation" type="Reservation" />
           <xs:element minOccurs="0" maxOccurs="1" name="Modifications" type="Modifications" />
@@ -1535,7 +1543,8 @@
     <xs:complexContent mixed="false">
       <xs:extension base="HotelBaseRQ">
         <xs:sequence>
-	      <xs:element minOccurs="0" maxOccurs="1" name="OnRequest" type="xs:boolean" />	 		
+	      <xs:element minOccurs="0" maxOccurs="1" name="OnRequest" type="xs:boolean" />	 
+          <xs:element minOccurs="0" maxOccurs="1" name="Nationality" type="xs:string" />		  
           <xs:element minOccurs="0" maxOccurs="1" name="Reservation" type="Reservation" />
           <xs:element minOccurs="0" maxOccurs="1" name="Modifications" type="Modifications" />
           <xs:element minOccurs="0" maxOccurs="1" name="ModifyPenalty" type="Price" />

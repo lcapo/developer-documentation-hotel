@@ -662,7 +662,11 @@ option so he can pay the provider/hotel. The provider will charge the payment on
 * The rate **CanaryResident** is a rate that is applied for the resident in the Canary islands. I.e. there are options that can only be sold to people that live in the Canary islands.
  
 * The rate **BalearicResident** is like CanaryResdient but applied with the Balearic island. I.e. there are options that can only be sold to people that live in the Balearic islands.
- 
+
+* The rate **largeFamily** is a rate that is applied for the large family. I.e. there are options that can only be sold to people with this condition.
+
+* The rate **honeymoon** is a rate that is applied for the just married or to be married. I.e. there are options that can only be sold to people with this condition, the conditions will be released to take the offer appears on remarks.
+
 |
 
 **Status options:**

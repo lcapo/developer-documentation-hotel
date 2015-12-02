@@ -40,6 +40,7 @@ ModifyReservationRQ Example
 
     <ModifyReservationRQ>
         <OnRequest>false</OnRequest>
+        <Nationality>ES</Nationality>
         <Reservation>
             <Locators>
                 <Client>5356342</Client>
@@ -115,6 +116,9 @@ ModifyReservationRQ Description
 | ModifyReservationRQ                                                         | 1        |           | Root node.                                                                                                                                               |
 +-----------------------------------------------------------------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 | OnRequest                                                                   | 1        | Boolean   | Indicates if you want to receive the on request options in AvailRS, as long as the provider returns it in this call (see StaticConfiguration).           |
++-----------------------------------------------------------------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Nationality                                                                 | 0..1     | String    | Nationality of the Holder (use ISO3166_1_alfa_2). This informations  will be mandatory depending on the provider, as long as the provider returns        |
+|                                                                             |          |           | it in this call (see StaticConfiguration).                                                                                                               |
 +-----------------------------------------------------------------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Reservation                                                                 | 1        |           | Reservaton data.                                                                                                                                         |
 +-----------------------------------------------------------------------------+----------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------+

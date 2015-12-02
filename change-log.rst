@@ -124,12 +124,22 @@ GiataId
 
 * **Version 1.0.12:** Date 09/12/2015
 
-Nationality in Avail and Valuation request
+Nationality in Avail, Valuation, ModifyValuation and ModifyReservation request
 
-Holder in ReservationRQ and ModifyReservation (also specified Nationality)
-
-Attribute nationality in ReservationRead and ReservationList response
+New rate conditions: largeFamily and honeymoon
 
 RequiredNationality in StaticConfiguration
+
+Inform60Rate in StaticConfiguration
+
+Inform65Rate in StaticConfiguration
+
+InformCanaryResidentRate in StaticConfiguration
+
+InformBalearicResidentRate in StaticConfiguration
+
+InformLargeFamilyRate in StaticConfiguration
+
+InformHoneymoonRate in StaticConfiguration
 
 |
