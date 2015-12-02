@@ -81,7 +81,7 @@ AvailRQ Example
 		<StartDate>28/01/2014</StartDate>
 		<EndDate>29/01/2014</EndDate>
 		<Currency>EUR</Currency>
-        <Nationality>ES</Nationality>		
+		<Nationality>ES</Nationality>		
 		<RoomCandidates>
 			<RoomCandidate id = "1">
 				<Paxes>

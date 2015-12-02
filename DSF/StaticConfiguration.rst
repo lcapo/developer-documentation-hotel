@@ -137,7 +137,13 @@ StaticConfigurationRS Example
              <PaymentType>MerchantPay</PaymentType>
         </PaymentTypes>		
         <InformAvailableModificationsInReservationRead>false</InformAvailableModificationsInReservationRead>	
-        <RequiredNationality>false</RequiredNationality>		
+        <RequiredNationality>false</RequiredNationality>	
+        <Inform60Rate>false</Inform60Rate>
+        <Inform65Rate>false</Inform65Rate>
+        <InformCanaryResidentRate>false</InformCanaryResidentRate>
+        <InformBalearicResidentRate>false</InformBalearicResidentRate>
+        <InformLargeFamilyRate>false</InformLargeFamilyRate>
+        <InformHoneymoonRate>false</InformHoneymoonRate>		
     </StaticConfigurationRS>
 
 |
