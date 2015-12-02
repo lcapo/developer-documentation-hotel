@@ -60,7 +60,7 @@ ModifyReservationRQ Example
                 <EndDate>30/01/2014</EndDate>
             </ModifyEndDateAddDays>
              <ModifyHolder>
-                <Holder name = "Test11Modify" surname = "TestSur11Modify" nationality="ES"/>
+                <Holder name = "Test11Modify" surname = "TestSur11Modify"/>
             </ModifyHolder>
             <ModifyRoomsAddRooms>
                 <Rooms>

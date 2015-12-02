@@ -345,7 +345,7 @@ In case that the parameter <OnRequest> is set as true, we don't filter the optio
 The penalty in cancelling a booking depends on which situation you do the cancellation. 
 The factors that affects the cancel penalization goes as follows:
  
-* **HoursBefore:** Number of hours which are until the checking date. This time is calculated based on the local time of destination.
+* **HoursBefore:** Number of hours until the checking date. This time is calculated based on the local time of destination.
 
 * **Type:** There are three values that can be inside types: 
 
