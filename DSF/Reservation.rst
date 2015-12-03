@@ -56,7 +56,7 @@ ReservationRQ Example
 		<EndDate>29/01/2014</EndDate>
 		<MealPlanCode>D</MealPlanCode>
 		<HotelCode>10</HotelCode>
-        <Nationality>ES</Nationality>
+		<Nationality>ES</Nationality>
 		<Price currency = "EUR"	amount = "36.20" binding = "false" commission = "-1"/>
 		<ResGuests>	
 			<Guests>
