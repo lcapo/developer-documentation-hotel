@@ -5,14 +5,14 @@ Change Log
 |
 
 **Version 1.0.1:** Date 11/01/2012
----------------
+-----------------------------------
 
 Specified Common Elements Added Appendices
 
 |
 
 **Version 1.0.2:** Date 20/02/2012
----------------
+-----------------------------------
 
 AvailDestinationTree specified destinations only attackable on availability Added ISO country code in response Hotel
 
@@ -72,8 +72,8 @@ Bed information in AvailRS
 
 |
 
-* **Version 1.0.9:** Date 27/03/2014
-------------------------------------
+**Version 1.0.9:** Date 27/03/2014
+-----------------------------------
 
 Modify booking
 
