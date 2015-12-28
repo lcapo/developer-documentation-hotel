@@ -92,7 +92,11 @@ HotelListRS Example
 						<Card code="CA"/>  
 					</Cards> 
 				<PaymentOptions/>				
-                <ExclusiveDeal>true</ExclusiveDeal>				
+                <ExclusiveDeal>true</ExclusiveDeal>		
+                <PropertyCategory>
+                     <Code>1</Code>
+                     <Name>Hotel</Name>				
+				</PropertyCategory>					
             </Hotel>
             <Hotel>
                 <Code>7</Code>
@@ -111,7 +115,11 @@ HotelListRS Example
                     <Telephone>95124578</Telephone>
                     <Fax>910200200</Fax>
                 </Contact>
-                <CategoryCode>4 Estrellas</CategoryCode>     
+                <CategoryCode>4 Estrellas</CategoryCode>   
+                <PropertyCategory>
+                     <Code>2</Code>
+                     <Name>Home</Name>				
+				</PropertyCategory>					
             </Hotel>
             <Hotel>...</Hotel>
         </Hotels>
@@ -174,6 +182,9 @@ HotelListRS Description
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
 | CategoryCode        | 1        | String   | CategoryCode.                                                                               |
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
+|Type                 | 0..1     | String   | Hotel type: H (hotel) A (apartment) AH (aparthotel) C (club) AT (agritourism) HS (hostel)   |
+|                     |          |          | CA (house) V (Ville) B (Bungalows).                                                         | 
++---------------------+----------+----------+---------------------------------------------------------------------------------------------+
 | PaymentOptions      | 0..1     | String   | Type of cards allowed by the provider. This tag only is mandatory if payment type is        |
 |                     |          |          | different that *MerchantPay*.                                                               |
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
@@ -192,6 +203,14 @@ HotelListRS Description
 | ExclusiveDeal       | 0..1     | Boolean  | Indicates that a Hotel is an Exlusive Deal. The provider has formed partnerships with       |
 |                     |          |          | select Hotels in order to bring you list rates and superior prime availability in locations.|
 |                     |          |          | The provider suggests with provide the best value.                                          |
++---------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| PropertyCategory    | 0..1     |          | Property type for each Hotel. Similar to <Type> element, but own the provider.              |
++---------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| PropertyCategory    | 1        | String   | Native property code.                                                                       |
+| /Code               |          |          |                                                                                             |
++---------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| PropertyCategory    | 1        | String   | Native property name.                                                                       |
+| /Name               |          |          |                                                                                             |
 +---------------------+----------+----------+---------------------------------------------------------------------------------------------+
 
 |

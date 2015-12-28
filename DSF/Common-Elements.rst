@@ -28,6 +28,7 @@ Common Elements RQ Example
         <filterAuditData>
             <registerTransactions>True</registerTransactions>
         </filterAuditData>
+        <optionsQuota>500</optionsQuota>
         <Configuration>
             <User>USERXX</User>
             <Password>PWXX</Password>
@@ -68,6 +69,8 @@ Common Elements RQ Description
 +----------------------------------------+----------+-----------+----------------------------------------------------------------------+
 | filterAuditData/registerTransactions   | 1        | Boolean   | Returns all the transactions (XMLs) exchanged with the provider.     |
 +----------------------------------------+----------+-----------+----------------------------------------------------------------------+
+| optionsQuota                           | 0..1     | Integer   | Numbers of options wanted by MealPlan.                               |
++----------------------------------------+----------+-----------+----------------------------------------------------------------------+
 | Configuration                          | 1        |           | Information about source requesting the operation.                   |
 +----------------------------------------+----------+-----------+----------------------------------------------------------------------+
 | Configuration/User                     | 0..1     | String    | User code for connection.                                            |
@@ -92,6 +95,17 @@ Common Elements RQ Description
 +----------------------------------------+----------+-----------+----------------------------------------------------------------------+
 
 | 
+
+Detailed description 
+---------------------
+
+**optionsQuota:**
+
+This new tag will be used just for those suppliers that return a really big quantity of options into availability response (more than 20.000 options in the same response).
+It is impractible treat so much options for us and for the client. In order to avoid this issue the client will be able to decide numbers of options wanted by MealPlan, as long as the provider returns it in this call (see StaticConfiguration *ImplementsBusinessRule*).
+In case that the provider will have ImplementsBusinessRule = True, the client can choose between different business rules to filter the options they are interested in (see in Avail).
+
+|
 
 Common Elements RS Example
 --------------------------

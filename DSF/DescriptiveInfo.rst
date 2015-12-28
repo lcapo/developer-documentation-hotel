@@ -177,7 +177,11 @@ DescriptiveInfoRS Example
 				<Card code="CA"/>  
 			</Cards> 
 		<PaymentOptions/>		
-        <ExclusiveDeal>true</ExclusiveDeal>				
+        <ExclusiveDeal>true</ExclusiveDeal>			
+        <PropertyCategory>
+             <Code>1</Code>
+             <Name>Hotel</Name>				
+	    </PropertyCategory>			
     </Hotel>
     </DescriptiveInfoRS>
 
@@ -318,5 +322,12 @@ DescriptiveInfoRS Description
 |                     |          |          | select Hotels in order to bring you list rates and superior prime availability in locations. |
 |                     |          |          | The provider suggests with provide the best value.                                           |
 +---------------------+----------+----------+----------------------------------------------------------------------------------------------+
-
+| PropertyCategory    | 0..1     |          | Property type for each Hotel. Similar to <Type> element, but own the provider.               |
++---------------------+----------+----------+----------------------------------------------------------------------------------------------+
+| PropertyCategory    | 1        | String   | Native property code.                                                                        |
+| /Code               |          |          |                                                                                              |
++---------------------+----------+----------+----------------------------------------------------------------------------------------------+
+| PropertyCategory    | 1        | String   | Native property name.                                                                        |
+| /Name               |          |          |                                                                                              |
++---------------------+----------+----------+----------------------------------------------------------------------------------------------+
 |

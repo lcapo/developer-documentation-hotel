@@ -164,8 +164,7 @@ AvailRS Example
 					  <Price currency = "EUR" amount = "36.20" binding = "false" commission = "-1"/>
 					<Beds sharedBed = "false">
 						<Bed numberOfBeds = "1" type = "Doble"/>
-					</Beds>					
-					</Room>
+					</Beds>	
 					<DailyPrices>
 						<DailyPrice effectiveDate = "28/01/2014" expireDate = "29/01/2014">
 							<Price
@@ -180,7 +179,8 @@ AvailRS Example
 							effectiveDate = "28/01/2014"
 							expireDate = "29/01/2014"
 							code = "XAD"/>
-					</DailyRatePlans>					
+					</DailyRatePlans>						
+					</Room>
 				  </Rooms>
 				  <Price currency = "EUR" amount = "36.20" binding = "false" commission = "-1"/>
                   <Offers>
@@ -197,8 +197,7 @@ AvailRS Example
 					  <Price currency = "EUR" amount = "42.90" binding = "false" commission = "-1"/>
 					<Beds sharedBed = "false">
 						<Bed numberOfBeds = "2" type = "Twin"/>
-					</Beds>					
-					</Room>
+					</Beds>	
 					<DailyPrices>
 						<DailyPrice effectiveDate = "28/01/2014" expireDate = "29/01/2014">
 							<Price
@@ -213,7 +212,8 @@ AvailRS Example
 							effectiveDate = "28/01/2014"
 							expireDate = "29/01/2014"
 							code = "XAT"/>
-					</DailyRatePlans>					
+					</DailyRatePlans>						
+					</Room>				
 				  </Rooms>
 				  <Price currency = "EUR" amount = "42.90" binding = "false" commission = "-1"/>
 				</Option>

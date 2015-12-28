@@ -1021,6 +1021,7 @@
       <xs:element minOccurs="0" maxOccurs="1" name="ExclusiveDeal" type="xs:boolean" />	  
       <xs:element minOccurs="0" maxOccurs="1" name="AreaInfo" type="AreaInfo" />
       <xs:element minOccurs="0" maxOccurs="1" name="Rooms" type="ArrayOfRoom" />
+	  <xs:element minOccurs="0" maxOccurs="1" name="PropertyCategory" type="PropertyCategory" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="GiataId">
@@ -1222,7 +1223,12 @@
       <xs:enumeration value="Others" />
     </xs:restriction>
   </xs:simpleType>
-  
+  <xs:complexType name="PropertyCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Code" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />	  
+    </xs:sequence>
+  </xs:complexType>
   <xs:element name="CategoryListRS" nillable="true" type="CategoryListRS" />
   <xs:complexType name="CategoryListRS">
     <xs:complexContent mixed="false">
