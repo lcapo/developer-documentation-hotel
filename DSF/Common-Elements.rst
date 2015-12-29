@@ -104,6 +104,7 @@ Detailed description
 This new tag will be used just for those suppliers that return a really big quantity of options into availability response (more than 20.000 options in the same response).
 It is impractible treat so much options for us and for the client. In order to avoid this issue the client will be able to decide numbers of options wanted by MealPlan, as long as the provider returns it in this call (see StaticConfiguration *ImplementsBusinessRule*).
 In case that the provider will have ImplementsBusinessRule = True, the client can choose between different business rules to filter the options they are interested in (see in Avail).
+We also have a system level limit, if the OptionsQuota sent by the client is different than the established by us, we use the minimum of those two values. This way, the rest of the traffic won't be affected.
 
 |
 
