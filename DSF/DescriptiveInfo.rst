@@ -181,7 +181,7 @@ DescriptiveInfoRS Example
         <PropertyCategory>
              <Code>1</Code>
              <Name>Hotel</Name>				
-	    </PropertyCategory>			
+        </PropertyCategory>			
     </Hotel>
     </DescriptiveInfoRS>
 
@@ -322,12 +322,12 @@ DescriptiveInfoRS Description
 |                     |          |          | select Hotels in order to bring you list rates and superior prime availability in locations. |
 |                     |          |          | The provider suggests with provide the best value.                                           |
 +---------------------+----------+----------+----------------------------------------------------------------------------------------------+
-| PropertyCategory    | 0..1     |          | Property type for each Hotel. Similar to <Type> element, but own the provider.               |
+| PropertyCategory    | 0..1     |          | Hotels property type. Similar to <Type>, but on providers side.                              |
 +---------------------+----------+----------+----------------------------------------------------------------------------------------------+
-| PropertyCategory    | 1        | String   | Native property code.                                                                        |
+| PropertyCategory    | 1        | String   | Provider property code.                                                                      |
 | /Code               |          |          |                                                                                              |
 +---------------------+----------+----------+----------------------------------------------------------------------------------------------+
-| PropertyCategory    | 1        | String   | Native property name.                                                                        |
+| PropertyCategory    | 1        | String   | Provider property name.                                                                      |
 | /Name               |          |          |                                                                                              |
 +---------------------+----------+----------+----------------------------------------------------------------------------------------------+
 |
