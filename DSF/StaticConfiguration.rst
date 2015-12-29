@@ -144,6 +144,7 @@ StaticConfigurationRS Example
         <InformBalearicResidentRate>false</InformBalearicResidentRate>
         <InformLargeFamilyRate>false</InformLargeFamilyRate>
         <InformHoneymoonRate>false</InformHoneymoonRate>		
+		<ImplementsBusinessRules>false</ImplementsBusinessRules>	
     </StaticConfigurationRS>
 
 |
