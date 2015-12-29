@@ -287,8 +287,8 @@ StaticConfigurationRS Description
 | InformCancelPolicies | 1        | Boolean  | Specifies if the provider inform the cancel policies in free text in Valuation response.    |
 | Description          |          |          |                                                                                             |
 +----------------------+----------+----------+---------------------------------------------------------------------------------------------+
-| Implements           | 1        | Boolean  | Specifies if in this  provider use the business rule in availability.                       |
-| BusinessRule         |          |          |                                                                                             |
+| Implements           | 1        | Boolean  | Specifies if in this  provider use the business rules in availability.                      |
+| BusinessRules        |          |          |                                                                                             |
 +----------------------+----------+----------+---------------------------------------------------------------------------------------------+
 | PaymentTypes         | 1        |          | List of payment types accepted by the supplier.                                             |
 +----------------------+----------+----------+---------------------------------------------------------------------------------------------+

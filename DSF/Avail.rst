@@ -74,7 +74,7 @@ AvailRQ Example
 	<AvailRQ>
 		<CancellationPolicies>false</CancellationPolicies>
 		<OnRequest>false</OnRequest>
-		<BusinessRule>CheaperAmount</BusinessRule>		
+		<BusinessRules>CheaperAmount</BusinessRules>		
 		<AvailDestinations>
 			<Destination type = "CTY" code = "5"/>
 		</AvailDestinations>
@@ -110,7 +110,7 @@ AvailRQ Description
 |                                     |          |           | AvailRS, as long as the provider returns it in this call           |
 |                                     |          |           | (see StaticConfiguration).                                         |
 +-------------------------------------+----------+-----------+--------------------------------------------------------------------+
-| BusinessRule                        | 1        |           | Indicates if the business rule that client want to apply in        |
+| BusinessRules                       | 1        |           | Indicates if the business rules that client want to apply in       |
 |                                     |          |           | availability (cheaperAmount), as long as the provider returns      |
 |                                     |          |           | it in this call (see StaticConfiguration).                         |
 +-------------------------------------+----------+-----------+--------------------------------------------------------------------+
@@ -309,7 +309,7 @@ AvailRS Example
 Detailed description 
 ---------------------
 
-**BusinessRule:**
+**BusinessRules:**
 
 This new tag will be used just for those suppliers that return a really big quantity of options into availability response (about 20.000 options in the same response).
 It is impractible treat so much options for us and for the client. In order to avoid this issue, the client will be able to decide between different business rules to filter the options they are interested in.

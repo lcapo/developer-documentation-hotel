@@ -160,6 +160,10 @@ InformHoneymoonRate in StaticConfiguration
 **Version 1.0.13:** Date 18/01/2016
 ------------------------------------
 
+BusinessRules in AvailRQ
+
+ImplementsBusinessRules in StaticConfiguration
+
 OptionsQuota in Common-Elements
 
 PropertyCategory in HotelList and DescriptiveInfo

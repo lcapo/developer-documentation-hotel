@@ -8,7 +8,7 @@
           <xs:element minOccurs="1" maxOccurs="1" name="SearchType" type="eTypeSearch" />
           <xs:element minOccurs="1" maxOccurs="1" name="CancellationPolicies" type="xs:boolean" />
 		  <xs:element minOccurs="1" maxOccurs="1" name="OnRequest" type="xs:boolean" />
-		  <xs:element minOccurs="0" maxOccurs="1" name="BusinessRule" type="eTypeBusinessRule" />		  
+		  <xs:element minOccurs="0" maxOccurs="1" name="BusinessRules" type="eTypeBusinessRule" />		  
           <xs:element minOccurs="0" maxOccurs="1" name="AvailDestinations" type="AvailDestinations" />
           <xs:element minOccurs="0" maxOccurs="1" name="StartDate" type="xs:string" />
           <xs:element minOccurs="0" maxOccurs="1" name="EndDate" type="xs:string" />
@@ -1314,7 +1314,7 @@
 		  <xs:element minOccurs="0" maxOccurs="1" name="AllowUrlCard" type="xs:boolean" />		
 		  <xs:element minOccurs="0" maxOccurs="1" name="InformCancelPoliciesDescription" type="xs:boolean" />
 		  <xs:element minOccurs="0" maxOccurs="1" name="PaymentTypes" type="PaymentTypes" />
-          <xs:element minOccurs="0" maxOccurs="1" name="ImplementsBusinessRule" type="xs:boolean" />	
+          <xs:element minOccurs="0" maxOccurs="1" name="ImplementsBusinessRules" type="xs:boolean" />	
           <xs:element minOccurs="0" maxOccurs="1" name="InformAvailableModificationsInReservationRead" type="xs:boolean" />	
           <xs:element minOccurs="0" maxOccurs="1" name="RequiredNationality" type="xs:boolean" />	
           <xs:element minOccurs="0" maxOccurs="1" name="Inform60Rate" type="xs:boolean" />	
