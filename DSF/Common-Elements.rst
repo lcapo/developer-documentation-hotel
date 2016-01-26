@@ -179,14 +179,14 @@ Common Elements RS Description
 +-------------------------------------+----------+-----------+--------------------------------------------------------------------+
 | auditData/transactions/RS           | 1        | String    | Transaction Response.                                              |
 +-------------------------------------+----------+-----------+--------------------------------------------------------------------+
-| auditData/timeStamp                 | 1        | Integer   | imeStamp in which response has been generated                      |
+| auditData/timeStamp                 | 1        | Integer   | TimeStamp in which response has been generated.                    |
 +-------------------------------------+----------+-----------+--------------------------------------------------------------------+
 | auditData/processTimeMilliseconds   | 1        | Integer   | Time in milliseconds consumed by this method.                      |
 +-------------------------------------+----------+-----------+--------------------------------------------------------------------+
 
 |
 
-Detailed description 
+Detailed description
 ---------------------
 
 **ContinuationToken:**
