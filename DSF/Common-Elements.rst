@@ -29,6 +29,7 @@ Common Elements RQ Example
             <registerTransactions>True</registerTransactions>
         </filterAuditData>
         <optionsQuota>500</optionsQuota>
+        <ContinuationToken expectedRange = "6000"></ContinuationToken>
         <Configuration>
             <User>USERXX</User>
             <Password>PWXX</Password>
@@ -70,6 +71,10 @@ Common Elements RQ Description
 | filterAuditData/registerTransactions   | 1        | Boolean   | Returns all the transactions (XMLs) exchanged with the provider.     |
 +----------------------------------------+----------+-----------+----------------------------------------------------------------------+
 | optionsQuota                           | 0..1     | Integer   | Numbers of options wanted by MealPlan.                               |
++----------------------------------------+----------+-----------+----------------------------------------------------------------------+
+| ContinuationToken                      | 0..1     | String    | Internal Token to identify the next set of HotelList.                |
++----------------------------------------+----------+-----------+----------------------------------------------------------------------+
+| *@expectedRange*                       | 0..1     | Integer   | Number of hotels expected in HotelList call.                         |
 +----------------------------------------+----------+-----------+----------------------------------------------------------------------+
 | Configuration                          | 1        |           | Information about source requesting the operation.                   |
 +----------------------------------------+----------+-----------+----------------------------------------------------------------------+
@@ -116,6 +121,7 @@ Common Elements RS Example
     <HotelBaseRS>
         <echoToken>TEST</echoToken>
         <OperationImplemented>true</OperationImplemented>
+        <ContinuationToken expectedRange = "4000">&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;ContinuationToken&gt;&lt;ContinuationToken&gt;&lt;Version&gt;2.0&lt;/Version&gt;&lt;Type&gt;Table&lt;/Type&gt;&lt;NextPartitionKey&gt;1!24!bG93Y29zdGhvbGlkYXlfWk1U&lt;/NextPartitionKey&gt;&lt;NextRowKey&gt;1!40!bG93Y29zdGhvbGlkYXlfWk1UXzBoNFIlMjNvcXBr&lt;/NextRowKey&gt;&lt;TargetLocation&gt;Primary&lt;/TargetLocation&gt;&lt;/ContinuationToken&gt;&lt;/ContinuationToken&gt;</ContinuationToken>
         <applicationErrors>
             <type>102</type>
             <code>xxx</code>
@@ -151,6 +157,10 @@ Common Elements RS Description
 +-------------------------------------+----------+-----------+--------------------------------------------------------------------+
 | OperationImplemented                | 1        | Boolean   | If the operation is implemented by this provider or not.           |
 +-------------------------------------+----------+-----------+--------------------------------------------------------------------+
+| ContinuationToken                   | 0..1     | String    | Internal Token to identify the next set of HotelList.              |
++-------------------------------------+----------+-----------+--------------------------------------------------------------------+
+| *@expectedRange*                    | 0..1     | Integer   | Number of hotels expected in HotelList call.                       |
++-------------------------------------+----------+-----------+--------------------------------------------------------------------+
 | applicationErrors                   | 0..n     |           | Application errors reported by provider.                           |
 +-------------------------------------+----------+-----------+--------------------------------------------------------------------+
 | applicationErrors/type              | 1        | String    | Error Type as specified by XML Travelgate.                         |
@@ -175,3 +185,21 @@ Common Elements RS Description
 +-------------------------------------+----------+-----------+--------------------------------------------------------------------+
 
 |
+
+Detailed description 
+---------------------
+
+**ContinuationToken:**
+
+This new tag is useful to split the hotel list response. This is done because there are suppliers that have a big amount of hotels (over 250.000). In those cases, the response has to be splitted in order to get all the hotels.
+In case that ContinuationToken is not sent, the HotelList returns a maximum of 250.000 hotels. Using this ContinuationToken and the attribute *expectedRange* the client may decide the number of hotels expected in each HotelList call.
+If the provider has more hotels than the amount mentioned before, in order to get all the hotels the client will need to do requests using the ContinuationToken returned inside the HotelListRS response until the ContinuationToken field is not returned in the response (see the example in Common Elements RS). Once the tag is not returned the hotel list is completed.
+The value of this tag is an internal Token that identifies the next set of HotelList to be returned.
+
+-  *expectedRange* :
+
+Hotel list range that the client want to get in each HotelList response. The number of hotels returned will be established in the expectedRange value, though it is possible to get more hotels than the requested.
+Having the list of hotels paged we can not return a range of hotels in one page so we are forced to set a range of +999 hotels. This means that if the client request 6000 hotels, the response may contain a range of 6000 to 6999 hotels.
+In case that this value is not sent, the maximum hotel range is 250.000 although it is recommended to make requests of multiple of 1000.
+
+| 

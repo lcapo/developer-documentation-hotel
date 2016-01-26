@@ -96,7 +96,7 @@ HotelListRS Example
                 <PropertyCategory>
                      <Code>1</Code>
                      <Name>Hotel</Name>				
-				</PropertyCategory>					
+                </PropertyCategory>					
             </Hotel>
             <Hotel>
                 <Code>7</Code>

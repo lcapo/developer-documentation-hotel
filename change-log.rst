@@ -169,3 +169,10 @@ OptionsQuota in Common-Elements
 PropertyCategory in HotelList and DescriptiveInfo
 
 |
+
+**Version 1.0.14:** Date 01/02/2016
+------------------------------------
+
+ContinuationToken in Common Elements
+
+|
