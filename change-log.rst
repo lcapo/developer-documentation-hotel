@@ -173,6 +173,6 @@ PropertyCategory in HotelList and DescriptiveInfo
 **Version 1.0.14:** Date 01/02/2016
 ------------------------------------
 
-ContinuationToken in Common Elements
+ContinuationToken in Common Elements (for HotelList call)
 
 |
