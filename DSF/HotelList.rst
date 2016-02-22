@@ -272,7 +272,7 @@ HS (hostel)
 
 CA (House) 
 
-V (Town)
+V (Ville)
 
 B (Bungalows)
 
