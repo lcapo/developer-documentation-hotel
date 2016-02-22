@@ -198,7 +198,7 @@ ValuationRS Description
 +---------------------------------------------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | *@commission*                                                                   | 1        | Decimal   | Commission ( -1 = not specified (will come indicated with the provider contract ), 0 = net price, X = % of the commission that applies to the amount.                                                             |
 +---------------------------------------------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| CancelPenalties                                                                 | 0..1     |           | Information of cancellation policies.                                                                                                                                                                             |
+| CancelPenalties                                                                 | 1        |           | Information of cancellation policies.                                                                                                                                                                             |
 +---------------------------------------------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | *@nonRefundable*                                                                | 1        | Boolean   | Indicate if this option is nonRefundable (true or false).                                                                                                                                                         |
 +---------------------------------------------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -251,18 +251,6 @@ ValuationRS Description
 
 Detailed Description
 --------------------
-
-
-**Providers with session**
-
-
-Due to the nature of the business, the traffic it generates can be very intense, therefore, here in XML Travelgate we assume that our clients have in place some kind of 
-caching strategy. For this reason, the same availability (search) response can be used more than once to serve more than one client. 
-
-Please note that in the case of a provider using said session code to identify the option of the reservation, an update of said code will be necessary, and with this, 
-we recommended to simply relaunch the same availability petition and therefore you will obtain a new session code.
-
-|
 
 **Providers with allotment blockage**
 

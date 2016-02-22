@@ -176,3 +176,14 @@ PropertyCategory in HotelList and DescriptiveInfo
 ContinuationToken in Common Elements (use in HotelList call)
 
 |
+
+**Version 1.0.15:** Date 29/02/2016
+------------------------------------
+
+New BusinessRules (RoomType) in AvailRQ
+
+ImplementsProviderLocatorCancel in StaticConfiguration
+
+ImplementsClientLocatorCancel in StaticConfiguration
+
+|

@@ -85,6 +85,7 @@
   <xs:simpleType name="eTypeBusinessRule">
     <xs:restriction base="xs:string">
       <xs:enumeration value="CheaperAmount" />
+      <xs:enumeration value="RoomType" />	  
     </xs:restriction>
   </xs:simpleType> 
   <xs:complexType name="AvailDestinations">
@@ -1331,7 +1332,9 @@
           <xs:element minOccurs="0" maxOccurs="1" name="InformCanaryResidentRate" type="xs:boolean" />	
           <xs:element minOccurs="0" maxOccurs="1" name="InformBalearicResidentRate" type="xs:boolean" />	
           <xs:element minOccurs="0" maxOccurs="1" name="InformLargeFamilyRate" type="xs:boolean" />	
-          <xs:element minOccurs="0" maxOccurs="1" name="InformHoneymoonRate" type="xs:boolean" />			  
+          <xs:element minOccurs="0" maxOccurs="1" name="InformHoneymoonRate" type="xs:boolean" />	
+          <xs:element minOccurs="0" maxOccurs="1" name="ImplementsProviderLocatorCancel" type="xs:boolean" />	
+          <xs:element minOccurs="0" maxOccurs="1" name="ImplementsClientLocatorCancel" type="xs:boolean" />		  
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>

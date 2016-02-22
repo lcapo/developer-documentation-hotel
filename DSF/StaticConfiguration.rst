@@ -145,6 +145,8 @@ StaticConfigurationRS Example
         <InformLargeFamilyRate>false</InformLargeFamilyRate>
         <InformHoneymoonRate>false</InformHoneymoonRate>		
 		<ImplementsBusinessRules>false</ImplementsBusinessRules>	
+		<ImplementsProviderLocatorCancel>false</ImplementsProviderLocatorCancel>	
+		<ImplementsClientLocatorCancel>false</ImplementsClientLocatorCancel>			
     </StaticConfigurationRS>
 
 |
@@ -321,6 +323,12 @@ StaticConfigurationRS Description
 | InformHoneymoon      | 1        | Boolean  | The provider informs the options with honeymoon rates in availability. These options        |
 | Rate                 |          |          | can't be sold if the customer don't have this condition.                                    |
 +----------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| ImplementsProvider   | 1        | Boolean  | The provider implements the cancel transaction with the **provider** localizator.           |
+| LocatorCancel        |          |          |                                                                                             |
++----------------------+----------+----------+---------------------------------------------------------------------------------------------+
+| ImplementsClient     | 1        | Boolean  | The provider implements the cancel transaction with the **client** localizator.             |
+| LocatorCancel        |          |          |                                                                                             |
++----------------------+----------+----------+---------------------------------------------------------------------------------------------+
 
 .. note :: The parameter AllowOnRequest is currently under development. In this moment, the most of integration filter the status RQ. 
 In case that the provider return the status in process response in avail, valuation or reservation you can filter this option if you send 
@@ -342,7 +350,10 @@ By default the following tags:
 * **InformBalearicResidentRate**
 * **InformLargeFamilyRate**
 * **InformHoneymoonRate**
+* **ImplementsProviderLocatorCancel**
+* **ImplementsClientLocatorCancel**
 
 Rigth now, this tags are set up to false value, either because the provider doesn't support it or because is not updated yet.
+
 |
 
