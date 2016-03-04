@@ -1,5 +1,8 @@
 .. highlight:: xml
-.. [Ref] http://docs.xmltravelgate.com/en/latest/hotel/DSF/Common-Elements.html#id1
+.. _Common-Elements section: http://docs.xmltravelgate.com/en/latest/hotel/DSF/Common-Elements.html#id1
+.. _link: `Common-Elements section`_
+
+
 
 HotelList
 =========
@@ -37,7 +40,7 @@ The maximum time, that is permitted in our system, before the connection is clos
 This method may be preloaded in **XML Travelgate**'s system if it
 takes more than 4 minutes to download.
 
-The *ContinuationToken* it can be used in this call, see the specification in *Common-Elements* section [Ref]_.
+The *ContinuationToken* it can be used in this call, see the specification in `Common-Elements section`_.
 
 |
 
