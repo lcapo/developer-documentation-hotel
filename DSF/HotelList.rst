@@ -36,7 +36,7 @@ The maximum time, that is permitted in our system, before the connection is clos
 This method may be preloaded in **XML Travelgate**'s system if it
 takes more than 4 minutes to download.
 
-The *ContinuationToken* it can be used in this call, see the specification in :ref:`reference-continuation`.
+The *ContinuationToken* it can be used in this call, see the specification in :ref:`_reference-continuation`.
 
 |
 
