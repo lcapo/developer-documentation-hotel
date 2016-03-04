@@ -185,11 +185,11 @@ Common Elements RS Description
 +-------------------------------------+----------+-----------+--------------------------------------------------------------------+
 
 |
-
+.. _reference-continuation:
 Detailed description
 ---------------------
 
-_reference-continuation:**ContinuationToken:**
+**ContinuationToken:**
 
 This new tag is useful to split the hotel list response. This is done because there are suppliers that have a big amount of hotels (over 250.000). In those cases, the response has to be splitted in order to get all the hotels.
 In case that ContinuationToken is not sent, the HotelList returns a maximum of 250.000 hotels. Using this ContinuationToken and the attribute *expectedRange* the client may decide the number of hotels expected in each HotelList call.
