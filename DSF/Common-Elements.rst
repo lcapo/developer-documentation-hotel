@@ -184,9 +184,8 @@ Common Elements RS Description
 | auditData/processTimeMilliseconds   | 1        | Integer   | Time in milliseconds consumed by this method.                      |
 +-------------------------------------+----------+-----------+--------------------------------------------------------------------+
 
-_reference-continuation:
 |
-
+_reference-continuation:
 Detailed description
 ---------------------
 
