@@ -224,15 +224,15 @@ StaticConfigurationRS Description
 +------------------------------------------------------+----------+----------+--------------------------------------------------------------------------------------------------------------+
 | ReservationListCheckDate                             | 1        | Boolean  | The provider implements the list of bookings transaction by check in date.                                   |
 +------------------------------------------------------+----------+----------+--------------------------------------------------------------------------------------------------------------+
-| HotelListType                                        | 1        | Boolean  | See the specification in `Static-Type section`_.                                                             |
+| HotelListType                                        | 1        | Enum     | See the specification in `Static-Type section`_.                                                             |
 +------------------------------------------------------+----------+----------+--------------------------------------------------------------------------------------------------------------+
-| DescriptiveInfoType                                  | 1        | Boolean  | See the specification in `Static-Type section`_.                                                             |
+| DescriptiveInfoType                                  | 1        | Enum     | See the specification in `Static-Type section`_.                                                             |
 +------------------------------------------------------+----------+----------+--------------------------------------------------------------------------------------------------------------+
-| GeographicDestinationTreeType                        | 1        | Boolean  | See the specification in `Static-Type section`_.                                                             |
+| GeographicDestinationTreeType                        | 1        | Enum     | See the specification in `Static-Type section`_.                                                             |
 +------------------------------------------------------+----------+----------+--------------------------------------------------------------------------------------------------------------+
-| AvailDestinationTreeType                             | 1        | Boolean  | See the specification in `Static-Type section`_.                                                             |
+| AvailDestinationTreeType                             | 1        | Enum     | See the specification in `Static-Type section`_.                                                             |
 +------------------------------------------------------+----------+----------+--------------------------------------------------------------------------------------------------------------+
-| RoomListType                                         | 1        | Boolean  | See the specification in `Static-Type section`_.                                                             |
+| RoomListType                                         | 1        | Enum     | See the specification in `Static-Type section`_.                                                             |
 +------------------------------------------------------+----------+----------+--------------------------------------------------------------------------------------------------------------+
 | InformCancelPoliciesReservationRead                  | 1        | Boolean  | Informs of the cancellation policies in the booking consultation.                                            |
 +------------------------------------------------------+----------+----------+--------------------------------------------------------------------------------------------------------------+
