@@ -1,5 +1,5 @@
 .. highlight:: xml
-.. _Static-Type section: http://docs.xmltravelgate.com/en/latest/hotel/DSF/Common-Elements.html#id1
+.. _Static-Type section: http://docs.xmltravelgate.com/en/latest/hotel/DSF/StaticConfiguration.html#detailed-description
 .. _link: `Static-Type section`_
 
 
