@@ -187,3 +187,24 @@ ImplementsProviderLocatorCancel in StaticConfiguration
 ImplementsClientLocatorCancel in StaticConfiguration
 
 |
+
+**Version 1.0.16:** Date 03/05/2016
+------------------------------------
+
+Currency in AvailRQ
+
+Markets in AvailRQ
+
+NumberOfUnits in AvailRQ
+
+ProviderCode in HotelListRS
+
+NumMarketsAllowed in StaticConfiguration
+
+InformTiket in StaticConfiguration
+
+InformNumberOfUnits in StaticConfiguration
+
+ImplementsDescriptiveInfoExtended in StaticConfiguration
+
+|

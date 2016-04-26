@@ -149,6 +149,10 @@ StaticConfigurationRS Example
 		<ImplementsBusinessRules>false</ImplementsBusinessRules>	
 		<ImplementsProviderLocatorCancel>false</ImplementsProviderLocatorCancel>	
 		<ImplementsClientLocatorCancel>false</ImplementsClientLocatorCancel>			
+		<NumMarketsAllowed>5</NumMarketsAllowed>			
+		<InformTiket>false</InformTiket>
+		<ImplementsDescriptiveInfoExtended>false</ImplementsDescriptiveInfoExtended>
+		<InformNumberOfUnits>true</InformNumberOfUnits>		
     </StaticConfigurationRS>
 
 |
@@ -322,6 +326,14 @@ StaticConfigurationRS Description
 |                                                      |          |          | ModifyEndDateSubtractDays, ModifyHolder, ModifyRoomsAddRooms, ModifyRoomsRemoveRooms, ModifyMealPlan         |
 |                                                      |          |          | or ModifyAddComment).                                                                                        |
 +------------------------------------------------------+----------+----------+--------------------------------------------------------------------------------------------------------------+
+| NumMarketsAllowed                                    | 1        | Integer  | Number of markets that the provider support in the same request.                                             |
++------------------------------------------------------+----------+----------+--------------------------------------------------------------------------------------------------------------+
+| InformTiket                                          | 1        | Boolean  | The provider informs of the possible option type Hotel+Tiket.                                                |
++------------------------------------------------------+----------+----------+--------------------------------------------------------------------------------------------------------------+
+| ImplementsDescriptiveInfoExtended                    | 1        | Boolean  | It indicates whether the new DescriptiveInfo is implemented.                                                 |
++------------------------------------------------------+----------+----------+--------------------------------------------------------------------------------------------------------------+
+| InformNumberOfUnits                                  | 1        | Boolean  | The provider inform the number of units are available per room.                                              |
++------------------------------------------------------+----------+----------+--------------------------------------------------------------------------------------------------------------+
 
 |
 
@@ -357,6 +369,9 @@ By default the following tags:
 * **InformHoneymoonRate**
 * **ImplementsProviderLocatorCancel**
 * **ImplementsClientLocatorCancel**
+* **NumMarketsAllowed**
+* **ImplementsDescriptiveInfoExtended**
+* **InformNumberOfUnits**
 
 Rigth now, this tags are set up to false value, either because the provider doesn't support it or because is not updated yet.
 

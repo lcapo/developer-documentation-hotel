@@ -82,6 +82,10 @@ AvailRQ Example
 		<EndDate>29/01/2014</EndDate>
 		<Currency>EUR</Currency>
 		<Nationality>ES</Nationality>		
+		<Markets>
+			<Market>SP</Market>
+			<Market>EN</Market>
+		</Markets>		
 		<RoomCandidates>
 			<RoomCandidate id = "1">
 				<Paxes>
@@ -127,11 +131,15 @@ AvailRQ Description
 +-------------------------------------+----------+-----------+--------------------------------------------------------------------+
 | EndDate                             | 1        | String    | End date to search rates.                                          |
 +-------------------------------------+----------+-----------+--------------------------------------------------------------------+
-| Currency                            | 1        | String    | Currency value.                                                    |
+| Currency                            | 0..1     | String    | Currency value.                                                    |
 +-------------------------------------+----------+-----------+--------------------------------------------------------------------+
 | Nationality                         | 0..1     | String    | Nationality of the Holder (use ISO3166_1_alfa_2). This informations|
 |                                     |          |           | will be mandatory depending on the provider, as long as the        |
 |                                     |          |           | provider returns it in this call (see StaticConfiguration).        |
++-------------------------------------+----------+-----------+--------------------------------------------------------------------+
+| Markets                             | 0..1     |           | Markets rates supported by the provider.                           |
++-------------------------------------+----------+-----------+--------------------------------------------------------------------+
+| Markets/Market                      | 0..n     | String    | Market list to filter the desired ones (see StaticConfiguration).  |
 +-------------------------------------+----------+-----------+--------------------------------------------------------------------+
 | RoomCandidates/RoomCandidate        | 1..n     |           | Room required.                                                     |
 +-------------------------------------+----------+-----------+--------------------------------------------------------------------+
@@ -160,7 +168,7 @@ AvailRS Example
 			  <Options>
 				<Option type = "Hotel" paymentType = "MerchantPay" status = "OK">
 				  <Rooms>
-					<Room id = "4145" roomCandidateRefId = "1" code = "DBL#STAND" description = "Doble Standard" nonRefundable = "false">
+					<Room id = "4145" roomCandidateRefId = "1" code = "DBL#STAND" description = "Doble Standard" nonRefundable = "false" numberOfUnits = "5" >
 					  <Price currency = "EUR" amount = "36.20" binding = "false" commission = "-1"/>
 					<Beds sharedBed = "false">
 						<Bed numberOfBeds = "1" type = "Doble"/>
@@ -193,7 +201,7 @@ AvailRS Example
 			  <Options>
 				<Option type = "Hotel" paymentType = "MerchantPay" status = "OK">
 				  <Rooms>
-					<Room id = "4146" roomCandidateRefId = "1" code = "TWN#STAND" description = "Twin Standard" nonRefundable = "false">
+					<Room id = "4146" roomCandidateRefId = "1" code = "TWN#STAND" description = "Twin Standard" nonRefundable = "false" numberOfUnits = "5">
 					  <Price currency = "EUR" amount = "42.90" binding = "false" commission = "-1"/>
 					<Beds sharedBed = "false">
 						<Bed numberOfBeds = "2" type = "Twin"/>
@@ -397,6 +405,8 @@ AvailRS Description
 | *@description*                                                                  | 1        | String    | Room description.                                                                                                                                                                                                 |
 +---------------------------------------------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | *@nonRefundable*                                                                | 0..1     | String    | Identifies if the room is refundable or not.                                                                                                                                                                      |
++---------------------------------------------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| *@numberOfUnits*                                                                | 0..1     | Integer   | Number of rooms available with the same type (see StaticConfiguration).                                                                                                                                           |
 +---------------------------------------------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | MealPlans/MealPlan/Options/Option/Rooms/Room/Beds                               | 0..1     |           | Detail of beds.                                                                                                                                                                                                   |
 +---------------------------------------------------------------------------------+----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
