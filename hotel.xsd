@@ -353,7 +353,7 @@
       <xs:element minOccurs="0" maxOccurs="1" name="Services" type="ArrayOfService" />
     </xs:sequence>
     <xs:attribute name="code" type="xs:string" />
-    <xs:attribute name="Description" type="xs:string" />
+    <xs:attribute name="description" type="xs:string" />
   </xs:complexType>
   <xs:complexType name="ArrayOfService">
     <xs:sequence>
