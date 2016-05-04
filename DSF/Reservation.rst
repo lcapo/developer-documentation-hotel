@@ -258,7 +258,7 @@ The status of the reservation can have fours values: OK, RQ, CN and UN.
 
 |
 
-**MerchantPay & CardBookingPay/CardCheckInPay**
+**MerchantPay & LaterPay & CardBookingPay & CardCheckInPay**
 
 In the reservation, you can pay with cash or with a credit card. If the payment is done by cash, in the XML petition you only have to specify the payment type, like so:
 
@@ -273,7 +273,7 @@ If the payment is done by credit card, then in the XML petition, is it mandatory
 
 ::
 
-	<PaymentType>CardBookingPay/CardCheckInPay</PaymentType>
+	<PaymentType>LaterPay/CardBookingPay/CardCheckInPay</PaymentType>
 	  <CardInfo>
 	   <CardCode>XX</CardCode>
 	   <Number>XXXXXXXXXX</Number>
