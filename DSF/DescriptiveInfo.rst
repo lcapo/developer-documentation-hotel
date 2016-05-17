@@ -31,7 +31,7 @@ The result returns the details of that hotel.
 Remarks
 -------
 
-The maximum time, that is permitted in our system, before the connection is closed,  is of **180000** milliseconds.
+The maximum time permitted in our system before the connection is closed is **180000** milliseconds.
 
 |
 
@@ -254,7 +254,7 @@ DescriptiveInfoRS Description
 +---------------------+----------+----------+----------------------------------------------------------------------------------------------+
 |LongDescription      | 0..1     | String   | Long Description.                                                                            | 
 +---------------------+----------+----------+----------------------------------------------------------------------------------------------+
-|HowToGet             | 0..1     | String   | How to get description.                                                                      |
+|HowToGet             | 0..1     | String   | Directions to the hotel                                                                      |
 +---------------------+----------+----------+----------------------------------------------------------------------------------------------+
 |RoomDescription      | 0..1     | String   | Room description.                                                                            |
 +---------------------+----------+----------+----------------------------------------------------------------------------------------------+
@@ -299,9 +299,7 @@ DescriptiveInfoRS Description
 |Images/Picture       |          |          |                                                                                              |
 |/Description         | 1        | String   | Description.                                                                                 |
 +---------------------+----------+----------+----------------------------------------------------------------------------------------------+
-|LocationType         | 0..1     | String   | LocationCode.                                                                                |
-+---------------------+----------+----------+----------------------------------------------------------------------------------------------+
-|CategoryCode         | 1        | String   | CategoryCode.                                                                                |
+|LocationType         | 0..1     | String   | LocationCode.                                                                                |        |
 +---------------------+----------+----------+----------------------------------------------------------------------------------------------+
 | PaymentOptions      | 0..1     | String   | Type of cards allowed by the provider. This tag only is mandatory if payment type is         |
 |                     |          |          | different that *MerchantPay*.                                                                |
