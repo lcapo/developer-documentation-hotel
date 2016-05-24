@@ -15,7 +15,6 @@ This method aims to cancel a booking
 Request Format
 --------------
 
-
 The request requires one of the following data depending on provider:
 
 -  *Locators*: booking codes (this element contains two elements
