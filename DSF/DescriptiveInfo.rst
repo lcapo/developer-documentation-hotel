@@ -174,14 +174,14 @@ DescriptiveInfoRS Example
 			<Cards>
 				<Card code="VI"/>
 				<Card code="AX"/>
-				<Card code="CA"/>  
-			</Cards> 
-		<PaymentOptions/>		
-        <ExclusiveDeal>true</ExclusiveDeal>			
+				<Card code="CA"/>
+			</Cards>
+		<PaymentOptions/>
+        <ExclusiveDeal>true</ExclusiveDeal>
         <PropertyCategory>
              <Code>1</Code>
-             <Name>Hotel</Name>				
-        </PropertyCategory>			
+             <Name>Hotel</Name>
+        </PropertyCategory>
     </Hotel>
     </DescriptiveInfoRS>
 
@@ -208,7 +208,7 @@ DescriptiveInfoRS Description
 +---------------------+----------+----------+----------------------------------------------------------------------------------------------+
 |CountryISOCode       | 1        | String   | CountryISOCode.                                                                              |
 +---------------------+----------+----------+----------------------------------------------------------------------------------------------+
-|AvailDestination     | 0..1     |          |Avail Destination ( will come only if it is attackable on availability, and the type is CTY). | 
+|AvailDestination     | 0..1     |          |Avail Destination ( will come only if it is attackable on availability, and the type is CTY). |
 +---------------------+----------+----------+----------------------------------------------------------------------------------------------+
 |@code                | 1        | String   | Destination code.                                                                            |
 +---------------------+----------+----------+----------------------------------------------------------------------------------------------+
@@ -246,13 +246,13 @@ DescriptiveInfoRS Description
 |BookingContact/Fax   | 1        | String   | Fax.                                                                                         |
 +---------------------+----------+----------+----------------------------------------------------------------------------------------------+
 |Type                 | 0..1     | String   | Hotel type: H (hotel) A (apartment) AH (aparthotel) C (club) AT (agritourism) HS (hostel)    |
-|                     |          |          | CA (house) V (Ville) B (Bungalows).                                                          | 
+|                     |          |          | CA (house) V (Ville) B (Bungalows).                                                          |
 +---------------------+----------+----------+----------------------------------------------------------------------------------------------+
 | Chaincode           | 0..1     | String   | Chain code.                                                                                  |
 +---------------------+----------+----------+----------------------------------------------------------------------------------------------+
 |ShortDescription     | 0..1     | String   | Short Description.                                                                           |
 +---------------------+----------+----------+----------------------------------------------------------------------------------------------+
-|LongDescription      | 0..1     | String   | Long Description.                                                                            | 
+|LongDescription      | 0..1     | String   | Long Description.                                                                            |
 +---------------------+----------+----------+----------------------------------------------------------------------------------------------+
 |HowToGet             | 0..1     | String   | Directions to the hotel                                                                      |
 +---------------------+----------+----------+----------------------------------------------------------------------------------------------+
@@ -299,10 +299,10 @@ DescriptiveInfoRS Description
 |Images/Picture       |          |          |                                                                                              |
 |/Description         | 1        | String   | Description.                                                                                 |
 +---------------------+----------+----------+----------------------------------------------------------------------------------------------+
-|LocationType         | 0..1     | String   | LocationCode.                                                                                |        |
+|LocationType         | 0..1     | String   | LocationCode.                                                                                |
 +---------------------+----------+----------+----------------------------------------------------------------------------------------------+
 | PaymentOptions      | 0..1     | String   | Type of cards allowed by the provider. This tag only is mandatory if payment type is         |
-|                     |          |          | different that *MerchantPay*.                                                                |
+|                     |          |          | different than *MerchantPay*.                                                                |
 +---------------------+----------+----------+----------------------------------------------------------------------------------------------+
 | *@cash*             | 1        | Boolean  | Deprecated attribute.                                                                        |
 +---------------------+----------+----------+----------------------------------------------------------------------------------------------+
@@ -328,4 +328,3 @@ DescriptiveInfoRS Description
 | PropertyCategory    | 1        | String   | Provider property name.                                                                      |
 | /Name               |          |          |                                                                                              |
 +---------------------+----------+----------+----------------------------------------------------------------------------------------------+
-|
