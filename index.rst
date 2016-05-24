@@ -1,5 +1,5 @@
 ###############################
-Hotel API Docs's documentation!
+Hotel API Docs documentation
 ###############################
 
 	**Contents:**
@@ -8,7 +8,7 @@ Hotel XSD Schemas describing the request and response XML structures:
 	:download:`Hotel XSDs <./hotel.xsd>`
 
 
-	
+
 .. toctree::
   :maxdepth: 2
   :numbered:

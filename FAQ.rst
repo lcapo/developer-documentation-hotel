@@ -1,35 +1,35 @@
 .. highlight:: xml
 
 ###########################
-Frequently Asked Questions! 
+Frequently Asked Questions
 ###########################
 
-#. **How many providers can we do a one request?**
+#. **How many suppliers can we request in one call?**
 
-	Only one provider per request. The only exception is with the petition MultiAvail, where you can use one or more providers. 
+	Only one supplier per request. The only exception is using the Avail call, where you can use one or more suppliers.
 
-#. **How can I identify which providers is which in the MultiAvail call?**
+#. **How can I identify which suppliers is which in the Avail call?**
 
-	By using the field ID in the request. 
-	
+	By using the field ID in the request.
+
 	For example:
-	
-	
+
+
 	**In the request:**
-	
+
 	::
 
-	<!--First provider-->               <!--Second provider-->
+	<!--First supplier-->               <!--Second supplier-->
 	<ns:code>TEST</ns:code>             <ns:code>TEST2</ns:code>
 	<ns:id>1</ns:id>                    <ns:id>2</ns:id>
-	
+
 	**In the response:**
-	
+
 	::
-	
-	<!--Response first provider-->       <!--Response Second provider-->
+
+	<!--Response first supplier-->       <!--Response Second supplier-->
 	<refId>1</refId>                     <refId>2</refId>
-	
+
 
 #. **How does the price work and how should I interpret the value in the field "commission"?**
 
@@ -38,21 +38,21 @@ Every option has a price and every price indicates the currency, the amount, if 
 
 * *Binding:*
 
-If binding is set as true, then the client can't sell the product, which is provided by the supplier, with an inferior price established by the provider , if it set
-as as false, the client can sell the product with an inferior price. 
+If binding is set as true, then the client cannot sell the product provided by the supplier for a lower price. If it's set
+as false, the client can sell the product for a lower price.
 
-* *Commission:* 
+* *Commission:*
 
 
 	-  If commission = 0 then the price returned is a net price, and the
-	   provider is informing that the commission **must** be 0.
+	   supplier is disclosing that the commission **must** be 0.
 
-	-  If commission = -1 then the provider is not informing the sale price 
-	   nor if the price is net. This information is obtained when signing with the
-	   provider or also if the binding price is true/false.
+	-  If commission = -1 then the supplier is not disclosing the sale price
+	   or if the price is net. This information is obtained when signing with the
+	   supplier or also if the binding price is true/false.
 
 	-  When commission is greater than 0, for example: commission = 12, it
-	   is a sale price, and this commission is informed for the provider 
+	   is a sale price, and this commission is informed for the supplier
 	   ( this price is mandatory if binding price is true ).
 
 
@@ -62,7 +62,7 @@ as as false, the client can sell the product with an inferior price.
 
 #. **What is a static download and why do we use it?**
 
-    There are times when you want to do a call of your information on-line, 
+    There are times when you want to do a call of your information on-line,
     but this call can take more that 5 minutes, so, how can we do this quicker?
     We will download all of your information necessary to our servers,
     so when this happens, we can send you the static information
